@@ -1,0 +1,3 @@
+[submodule "lib/gkl"]
+	path = lib/gkl
+	url = git@github.com:gregdavill/gsd-kicad-libs.git

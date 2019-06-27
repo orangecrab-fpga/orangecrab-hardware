@@ -1,0 +1,62 @@
+# For PCBs designed using KiCad: http://www.kicad-pcb.org/
+
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*~
+_autosave-*
+*.tmp
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+# *.csv
+
+
+# Add Lattice Diamond ignores
+impl1
+syn_results
+archiv
+.recovery
+*_tcr.dir
+.*.ini
+*.asd
+*.asdb
+*.awb
+*.awc
+*.bak
+*.ccl
+*.cfg
+*.cmd
+*.cst
+*.fdc
+# *.htm
+# *.html
+*.log
+*.ngd
+*.ngo
+*.tcl
+*.svf
+*.trc
+*.vhm
+*.xml
+# *.zip
+*~
+
+build
+__pycache__
+
+.vscode
+*.o
+*.d
+*.bin
+*.elf
+*.hex
