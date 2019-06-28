@@ -9,8 +9,5 @@
   (lib (name gkl_logos)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_logos.pretty)(options "")(descr ""))
   (lib (name gkl_time)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_time.pretty)(options "")(descr ""))
   (lib (name gkl_led)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_led.pretty)(options "")(descr ""))
-  (lib (name pkl_tag_connect)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_tag_connect.pretty)(options "")(descr ""))
-  (lib (name pkl_dipol)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_dipol.pretty)(options "")(descr ""))
-  (lib (name pkl_housings_sot)(type KiCad)(uri ${KIPRJMOD}/../../lib/pkl/pkl_housings_sot.pretty)(options "")(descr ""))
   (lib (name gkl_misc)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_misc.pretty)(options "")(descr ""))
 )
