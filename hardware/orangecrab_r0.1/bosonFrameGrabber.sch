@@ -3,7 +3,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title ""
 Date ""
 Rev ""
@@ -36,5 +36,11 @@ S 6300 2900 1900 900
 U 5ABC9A87
 F0 "sheetIO" 60
 F1 "fileIO.sch" 60
+$EndSheet
+$Sheet
+S 1800 2900 1900 900 
+U 5D1738DB
+F0 "sheetPower" 60
+F1 "filePOWER.sch" 60
 $EndSheet
 $EndSCHEMATC

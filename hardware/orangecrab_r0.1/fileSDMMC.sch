@@ -3,7 +3,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -50,7 +50,7 @@ F 3 "" H 4900 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L bosonFrameGrabber-rescue:Conn_01x11_Male-conn J4
+L Connector:Conn_01x11_Male J4
 U 1 1 5AC0A68B
 P 5650 3850
 F 0 "J4" H 5450 4600 50  0000 C CNN
