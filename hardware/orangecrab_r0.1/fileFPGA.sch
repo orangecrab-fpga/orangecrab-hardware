@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Orange Crab"
+Date "2019-06-28"
+Rev "r0.1"
+Comp "GsD"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -108,14 +108,14 @@ $EndComp
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 3 1 5B099786
-P 1750 5300
-F 0 "U3" H 2650 5450 60  0000 L CNN
-F 1 "ECP5U25" H 1950 5450 60  0000 L CNN
-F 2 "" H 1750 5300 50  0001 C CNN
-F 3 "" H 1750 5300 50  0001 C CNN
-F 4 "LFE5UM-25F-6MG285C " H -800 2050 50  0001 C CNN "PN"
-F 5 " LFE5UM-25F-6MG285C-ND " H -800 2050 50  0001 C CNN "SN-DK"
-	3    1750 5300
+P 1700 5300
+F 0 "U3" H 2600 5450 60  0000 L CNN
+F 1 "ECP5U25" H 1900 5450 60  0000 L CNN
+F 2 "" H 1700 5300 50  0001 C CNN
+F 3 "" H 1700 5300 50  0001 C CNN
+F 4 "LFE5UM-25F-6MG285C " H -850 2050 50  0001 C CNN "PN"
+F 5 " LFE5UM-25F-6MG285C-ND " H -850 2050 50  0001 C CNN "SN-DK"
+	3    1700 5300
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -134,27 +134,27 @@ $EndComp
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 5 1 5B099856
-P 5850 5000
-F 0 "U3" H 6950 5200 60  0000 L CNN
-F 1 "ECP5U25" H 6050 5200 60  0000 L CNN
-F 2 "" H 5850 5000 50  0001 C CNN
-F 3 "" H 5850 5000 50  0001 C CNN
-F 4 "LFE5UM-25F-6MG285C " H 200 50  50  0001 C CNN "PN"
-F 5 " LFE5UM-25F-6MG285C-ND " H 200 50  50  0001 C CNN "SN-DK"
-	5    5850 5000
+P 6650 4700
+F 0 "U3" H 7750 4900 60  0000 L CNN
+F 1 "ECP5U25" H 6850 4900 60  0000 L CNN
+F 2 "" H 6650 4700 50  0001 C CNN
+F 3 "" H 6650 4700 50  0001 C CNN
+F 4 "LFE5UM-25F-6MG285C " H 1000 -250 50  0001 C CNN "PN"
+F 5 " LFE5UM-25F-6MG285C-ND " H 1000 -250 50  0001 C CNN "SN-DK"
+	5    6650 4700
 	-1   0    0    -1  
 $EndComp
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 6 1 5B0998E9
-P 3700 5450
-F 0 "U3" H 4650 5600 60  0000 L CNN
-F 1 "ECP5U25" H 3900 5600 60  0000 L CNN
-F 2 "" H 3700 5450 50  0001 C CNN
-F 3 "" H 3700 5450 50  0001 C CNN
-F 4 "LFE5UM-25F-6MG285C " H 1150 -300 50  0001 C CNN "PN"
-F 5 " LFE5UM-25F-6MG285C-ND " H 1150 -300 50  0001 C CNN "SN-DK"
-	6    3700 5450
+P 4050 5450
+F 0 "U3" H 5000 5600 60  0000 L CNN
+F 1 "ECP5U25" H 4250 5600 60  0000 L CNN
+F 2 "" H 4050 5450 50  0001 C CNN
+F 3 "" H 4050 5450 50  0001 C CNN
+F 4 "LFE5UM-25F-6MG285C " H 1500 -300 50  0001 C CNN "PN"
+F 5 " LFE5UM-25F-6MG285C-ND " H 1500 -300 50  0001 C CNN "SN-DK"
+	6    4050 5450
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -258,15 +258,15 @@ Wire Wire Line
 	9250 3500 10350 3500
 Wire Wire Line
 	9250 3300 9450 3300
-Text Notes 2850 5250 0    80   ~ 0
-BANK 2
 Text Notes 800  5050 0    80   ~ 0
+BANK 2
+Text Notes 3200 5200 0    80   ~ 0
 BANK 7
 Text Notes 1750 2000 0    80   ~ 0
 BANK 1
 Text Notes 1750 900  0    80   ~ 0
 BANK 0
-Text Notes 4900 4650 0    80   ~ 0
+Text Notes 5700 4350 0    80   ~ 0
 BANK 6
 Text Notes 8050 900  0    80   ~ 0
 BANK 8
@@ -289,7 +289,7 @@ Text Notes 7850 700  0    100  ~ 0
 QSPI Config
 Text Notes 4550 700  0    100  ~ 0
 HyperBus
-Text Notes 5050 4750 0    50   ~ 0
+Text Notes 5850 4450 0    50   ~ 0
 1V5\n
 Text Notes 1900 4400 0    100  ~ 0
 SDMMC
@@ -299,9 +299,9 @@ Text Notes 2250 900  0    50   ~ 0
 1V8
 Text Notes 2250 2000 0    50   ~ 0
 1V8
-Text Notes 1350 5050 0    50   ~ 0
+Text Notes 1300 5050 0    50   ~ 0
 1V5
-Text Notes 3400 5250 0    50   ~ 0
+Text Notes 3750 5250 0    50   ~ 0
 1V8
 Text GLabel 9250 2350 2    60   Input ~ 0
 FPGA_RESET
@@ -325,78 +325,304 @@ NoConn ~ 9250 4000
 NoConn ~ 9250 4100
 NoConn ~ 9250 4200
 NoConn ~ 9250 4300
-Text GLabel 5850 6300 2    50   Input ~ 0
+Text GLabel 6650 5900 2    50   Input ~ 0
 RAM_D0
-Text GLabel 5850 5300 2    50   Input ~ 0
+Text GLabel 6650 5300 2    50   Input ~ 0
 RAM_D1
-Text GLabel 5850 6000 2    50   Input ~ 0
+Text GLabel 6650 6000 2    50   Input ~ 0
 RAM_D2
-Text GLabel 5850 5400 2    50   Input ~ 0
+Text GLabel 6650 5400 2    50   Input ~ 0
 RAM_D3
-Text GLabel 5850 5600 2    50   Input ~ 0
+Text GLabel 6650 6100 2    50   Input ~ 0
 RAM_D4
-Text GLabel 5850 5700 2    50   Input ~ 0
+Text GLabel 6650 5100 2    50   Input ~ 0
 RAM_D5
-Text GLabel 5850 5100 2    50   Input ~ 0
+Text GLabel 6650 6200 2    50   Input ~ 0
 RAM_D6
-Text GLabel 5850 6200 2    50   Input ~ 0
+Text GLabel 6650 5000 2    50   Input ~ 0
 RAM_D7
-Text GLabel 3700 7150 2    50   Input ~ 0
+Text GLabel 4050 7150 2    50   Input ~ 0
 RAM_D8
-Text GLabel 3700 6450 2    50   Input ~ 0
+Text GLabel 4050 6750 2    50   Input ~ 0
 RAM_D9
-Text GLabel 3700 6950 2    50   Input ~ 0
+Text GLabel 4050 6250 2    50   Input ~ 0
 RAM_D10
-Text GLabel 3700 6750 2    50   Input ~ 0
+Text GLabel 4050 6850 2    50   Input ~ 0
 RAM_D11
-Text GLabel 3700 5950 2    50   Input ~ 0
+Text GLabel 4050 5750 2    50   Input ~ 0
 RAM_D12
-Text GLabel 3700 6350 2    50   Input ~ 0
+Text GLabel 4050 5850 2    50   Input ~ 0
 RAM_D13
-Text GLabel 3700 6250 2    50   Input ~ 0
+Text GLabel 4050 6350 2    50   Input ~ 0
 RAM_D14
-Text GLabel 3700 6050 2    50   Input ~ 0
+Text GLabel 4050 6050 2    50   Input ~ 0
 RAM_D15
-Text GLabel 1750 5400 2    50   Input ~ 0
+Text GLabel 1700 6000 2    50   Input ~ 0
 RAM_A0
-Text GLabel 1750 5500 2    50   Input ~ 0
+Text GLabel 1700 7000 2    50   Input ~ 0
 RAM_A1
-Text GLabel 1750 6500 2    50   Input ~ 0
+Text GLabel 1700 6400 2    50   Input ~ 0
 RAM_A2
-Text GLabel 1750 5700 2    50   Input ~ 0
+Text GLabel 1700 5300 2    50   Input ~ 0
 RAM_A3
-Text GLabel 1750 6000 2    50   Input ~ 0
+Text GLabel 1700 6500 2    50   Input ~ 0
 RAM_A4
-Text GLabel 1750 5900 2    50   Input ~ 0
+Text GLabel 1700 6100 2    50   Input ~ 0
 RAM_A5
-Text GLabel 1750 6200 2    50   Input ~ 0
+Text GLabel 1700 7300 2    50   Input ~ 0
 RAM_A6
-Text GLabel 1750 6100 2    50   Input ~ 0
+Text GLabel 1700 6800 2    50   Input ~ 0
 RAM_A7
-Text GLabel 1750 6400 2    50   Input ~ 0
+Text GLabel 1700 7200 2    50   Input ~ 0
 RAM_A8
-Text GLabel 1750 6600 2    50   Input ~ 0
-RAM_A9
-Text GLabel 1750 5800 2    50   Input ~ 0
+Text GLabel 1700 5800 2    50   Input ~ 0
 RAM_A10
-Text GLabel 1750 5300 2    50   Input ~ 0
+Text GLabel 1700 6600 2    50   Input ~ 0
 RAM_A11
-Text GLabel 1750 5600 2    50   Input ~ 0
+Text GLabel 1700 6200 2    50   Input ~ 0
 RAM_A12
-Text GLabel 5850 5800 2    50   Input ~ 0
+Text GLabel 6650 5500 2    50   Input ~ 0
 RAM_LDQS
-Text GLabel 5850 5900 2    50   Input ~ 0
+Text GLabel 6650 5600 2    50   Input ~ 0
 RAM_LDQS#
-Text GLabel 3700 6550 2    50   Input ~ 0
+Text GLabel 4050 6550 2    50   Input ~ 0
 RAM_UDQS
-Text GLabel 3700 6650 2    50   Input ~ 0
+Text GLabel 4050 6650 2    50   Input ~ 0
 RAM_UDQS#
-Text GLabel 3700 5750 2    50   Input ~ 0
+Text GLabel 6650 6300 2    50   Input ~ 0
 RAM_CK
-Text GLabel 3700 5850 2    50   Input ~ 0
+Text GLabel 6650 6400 2    50   Input ~ 0
 RAM_CK#
-Text GLabel 3700 6850 2    50   Input ~ 0
+Text GLabel 2550 2400 2    50   Input ~ 0
 REF_CLK
-Text GLabel 3700 5650 2    50   Input ~ 0
+Text GLabel 4050 5650 2    50   Input ~ 0
 RAM_CS#
+$Comp
+L Device:C C19
+U 1 1 5D60FAF8
+P 4750 6400
+F 0 "C19" H 4635 6446 50  0000 R CNN
+F 1 "10n" H 4635 6355 50  0000 R CNN
+F 2 "" H 4788 6250 50  0001 C CNN
+F 3 "~" H 4750 6400 50  0001 C CNN
+	1    4750 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C20
+U 1 1 5D6100F5
+P 4950 6400
+F 0 "C20" H 5065 6446 50  0000 L CNN
+F 1 "0.1uF" H 5065 6355 50  0000 L CNN
+F 2 "" H 4988 6250 50  0001 C CNN
+F 3 "~" H 4950 6400 50  0001 C CNN
+	1    4950 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0120
+U 1 1 5D61188D
+P 4950 6650
+F 0 "#PWR0120" H 4950 6400 50  0001 C CNN
+F 1 "GND" H 4953 6524 50  0000 C CNN
+F 2 "" H 4850 6300 50  0001 C CNN
+F 3 "" H 4950 6650 50  0001 C CNN
+	1    4950 6650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4700 6050 2    50   UnSpc ~ 0
+ECP5_VREF
+Wire Wire Line
+	4050 6150 4600 6150
+Wire Wire Line
+	4600 6150 4600 6050
+Wire Wire Line
+	4600 6050 4700 6050
+Wire Wire Line
+	4600 6150 4750 6150
+Wire Wire Line
+	4750 6150 4750 6250
+Connection ~ 4600 6150
+Wire Wire Line
+	4750 6150 4950 6150
+Wire Wire Line
+	4950 6150 4950 6250
+Connection ~ 4750 6150
+Wire Wire Line
+	4950 6550 4950 6600
+Wire Wire Line
+	4750 6550 4750 6600
+Wire Wire Line
+	4750 6600 4950 6600
+Connection ~ 4950 6600
+Wire Wire Line
+	4950 6600 4950 6650
+$Comp
+L Device:C C1
+U 1 1 5D620548
+P 2400 6550
+F 0 "C1" H 2285 6596 50  0000 R CNN
+F 1 "10n" H 2285 6505 50  0000 R CNN
+F 2 "" H 2438 6400 50  0001 C CNN
+F 3 "~" H 2400 6550 50  0001 C CNN
+	1    2400 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5D620552
+P 2600 6550
+F 0 "C4" H 2715 6596 50  0000 L CNN
+F 1 "0.1uF" H 2715 6505 50  0000 L CNN
+F 2 "" H 2638 6400 50  0001 C CNN
+F 3 "~" H 2600 6550 50  0001 C CNN
+	1    2600 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0125
+U 1 1 5D62055C
+P 2600 6800
+F 0 "#PWR0125" H 2600 6550 50  0001 C CNN
+F 1 "GND" H 2603 6674 50  0000 C CNN
+F 2 "" H 2500 6450 50  0001 C CNN
+F 3 "" H 2600 6800 50  0001 C CNN
+	1    2600 6800
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 6200 2    50   UnSpc ~ 0
+ECP5_VREF
+Wire Wire Line
+	1700 6300 2250 6300
+Wire Wire Line
+	2250 6300 2250 6200
+Wire Wire Line
+	2250 6200 2350 6200
+Wire Wire Line
+	2250 6300 2400 6300
+Wire Wire Line
+	2400 6300 2400 6400
+Connection ~ 2250 6300
+Wire Wire Line
+	2400 6300 2600 6300
+Wire Wire Line
+	2600 6300 2600 6400
+Connection ~ 2400 6300
+Wire Wire Line
+	2600 6700 2600 6750
+Wire Wire Line
+	2400 6700 2400 6750
+Wire Wire Line
+	2400 6750 2600 6750
+Connection ~ 2600 6750
+Wire Wire Line
+	2600 6750 2600 6800
+Text GLabel 4650 7050 2    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	4650 7050 4050 7050
+Text GLabel 1700 6900 2    50   Input ~ 0
+RAM_A9
+Text GLabel 4650 5550 2    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	4650 5550 4050 5550
+Text GLabel 1700 7100 2    50   Input ~ 0
+RAM_RESET#
+Text GLabel 2100 6700 2    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	2100 6700 1700 6700
+Text GLabel 2100 5600 2    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	2100 5600 1700 5600
+Text GLabel 1700 5900 2    50   Input ~ 0
+RAM_BA2
+Text GLabel 1700 5700 2    50   Input ~ 0
+RAM_BA0
+Text GLabel 1700 5400 2    50   Input ~ 0
+RAM_BA1
+Text GLabel 9600 5500 0    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	9850 5500 9600 5500
+$Comp
+L Device:C C25
+U 1 1 5D84AAF2
+P 7350 6050
+F 0 "C25" H 7235 6096 50  0000 R CNN
+F 1 "10n" H 7235 6005 50  0000 R CNN
+F 2 "" H 7388 5900 50  0001 C CNN
+F 3 "~" H 7350 6050 50  0001 C CNN
+	1    7350 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 5D84AAFC
+P 7550 6050
+F 0 "C26" H 7665 6096 50  0000 L CNN
+F 1 "0.1uF" H 7665 6005 50  0000 L CNN
+F 2 "" H 7588 5900 50  0001 C CNN
+F 3 "~" H 7550 6050 50  0001 C CNN
+	1    7550 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0130
+U 1 1 5D84AB06
+P 7550 6300
+F 0 "#PWR0130" H 7550 6050 50  0001 C CNN
+F 1 "GND" H 7553 6174 50  0000 C CNN
+F 2 "" H 7450 5950 50  0001 C CNN
+F 3 "" H 7550 6300 50  0001 C CNN
+	1    7550 6300
+	1    0    0    -1  
+$EndComp
+Text GLabel 7300 5700 2    50   UnSpc ~ 0
+ECP5_VREF
+Wire Wire Line
+	6650 5800 7200 5800
+Wire Wire Line
+	7200 5800 7200 5700
+Wire Wire Line
+	7200 5700 7300 5700
+Wire Wire Line
+	7200 5800 7350 5800
+Wire Wire Line
+	7350 5800 7350 5900
+Connection ~ 7200 5800
+Wire Wire Line
+	7350 5800 7550 5800
+Wire Wire Line
+	7550 5800 7550 5900
+Connection ~ 7350 5800
+Wire Wire Line
+	7550 6200 7550 6250
+Wire Wire Line
+	7350 6200 7350 6250
+Wire Wire Line
+	7350 6250 7550 6250
+Connection ~ 7550 6250
+Wire Wire Line
+	7550 6250 7550 6300
+Text GLabel 9600 5200 0    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	9850 5200 9600 5200
+Text GLabel 9600 5300 0    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	9850 5300 9600 5300
+Text GLabel 4050 5450 2    50   Input ~ 0
+RAM_CKE
+Text GLabel 6650 5200 2    50   Input ~ 0
+RAM_WE#
+Text GLabel 4050 6950 2    50   Input ~ 0
+RAM_ODT
+Text GLabel 6650 4900 2    50   Input ~ 0
+RAM_RAS#
+Text GLabel 4050 5950 2    50   Input ~ 0
+RAM_CAS#
 $EndSCHEMATC

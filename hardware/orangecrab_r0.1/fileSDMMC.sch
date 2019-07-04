@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Orange Crab"
+Date "2019-06-28"
+Rev "r0.1"
+Comp "GsD"
 Comment1 ""
 Comment2 ""
 Comment3 ""

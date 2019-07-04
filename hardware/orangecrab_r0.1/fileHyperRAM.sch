@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 6
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Orange Crab"
+Date "2019-06-28"
+Rev "r0.1"
+Comp "GsD"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -16,189 +16,428 @@ $EndDescr
 $Comp
 L gkl_mem:AT25SF081 U6
 U 1 1 5ABD9FA9
-P 3450 3950
-F 0 "U6" H 3450 4391 60  0000 C CNN
-F 1 "AT25SF081" H 3450 4285 60  0000 C CNN
-F 2 "Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm" H 3450 4400 60  0001 C CNN
-F 3 "" H 3450 4400 60  0001 C CNN
-F 4 "1265-1275-1-ND" H -700 0   50  0001 C CNN "SN-DK"
-F 5 "AT25SF081-MAHD-T" H -700 0   50  0001 C CNN "PN"
-	1    3450 3950
+P 4450 6800
+F 0 "U6" H 4450 7241 60  0000 C CNN
+F 1 "AT25SF081" H 4450 7135 60  0000 C CNN
+F 2 "Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm" H 4450 7250 60  0001 C CNN
+F 3 "" H 4450 7250 60  0001 C CNN
+F 4 "1265-1275-1-ND" H 300 2850 50  0001 C CNN "SN-DK"
+F 5 "AT25SF081-MAHD-T" H 300 2850 50  0001 C CNN "PN"
+	1    4450 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L gkl_power:GND #PWR04
 U 1 1 5ABD9FB0
-P 2800 4200
-F 0 "#PWR04" H 2800 3950 50  0001 C CNN
-F 1 "GND" H 2803 4074 50  0000 C CNN
-F 2 "" H 2700 3850 50  0001 C CNN
-F 3 "" H 2800 4200 50  0001 C CNN
-	1    2800 4200
+P 3800 7050
+F 0 "#PWR04" H 3800 6800 50  0001 C CNN
+F 1 "GND" H 3803 6924 50  0000 C CNN
+F 2 "" H 3700 6700 50  0001 C CNN
+F 3 "" H 3800 7050 50  0001 C CNN
+	1    3800 7050
 	1    0    0    -1  
 $EndComp
 $Comp
 L gkl_power:+3V3 #PWR05
 U 1 1 5ABD9FB6
-P 4100 3700
-F 0 "#PWR05" H 4100 3550 50  0001 C CNN
-F 1 "+3V3" V 4104 3806 50  0000 L CNN
-F 2 "" H 4100 3700 50  0001 C CNN
-F 3 "" H 4100 3700 50  0001 C CNN
-	1    4100 3700
+P 5100 6550
+F 0 "#PWR05" H 5100 6400 50  0001 C CNN
+F 1 "+3V3" V 5104 6656 50  0000 L CNN
+F 2 "" H 5100 6550 50  0001 C CNN
+F 3 "" H 5100 6550 50  0001 C CNN
+	1    5100 6550
 	1    0    0    -1  
 $EndComp
-Text GLabel 2900 3800 0    60   Input ~ 0
+Text GLabel 3900 6650 0    60   Input ~ 0
 SPI_CONFIG_SS
-Text GLabel 4000 4000 2    60   Input ~ 0
+Text GLabel 5000 6850 2    60   Input ~ 0
 SPI_CONFIG_SCK
-Text GLabel 2900 3900 0    60   Input ~ 0
+Text GLabel 3900 6750 0    60   Input ~ 0
 SPI_CONFIG_MISO
-Text GLabel 4000 4100 2    60   Input ~ 0
+Text GLabel 5000 6950 2    60   Input ~ 0
 SPI_CONFIG_MOSI
 Wire Wire Line
-	4000 3800 4100 3800
+	5000 6650 5100 6650
 Wire Wire Line
-	4100 3800 4100 3700
+	5100 6650 5100 6550
 Wire Wire Line
-	2800 4200 2800 4100
+	3800 7050 3800 6950
 Wire Wire Line
-	2800 4100 2900 4100
-Text GLabel 4000 3900 2    60   Input ~ 0
+	3800 6950 3900 6950
+Text GLabel 5000 6750 2    60   Input ~ 0
 QSPI_D3
-Text GLabel 2900 4000 0    60   Input ~ 0
+Text GLabel 3900 6850 0    60   Input ~ 0
 QSPI_D2
 $Comp
 L gkl_mem:MT41K64M16TW-107_J-TR U4
 U 1 1 5CD2F1CC
-P 7400 3200
-F 0 "U4" H 7425 4669 50  0000 C CNN
-F 1 "MT41K64M16TW-107_J-TR" H 7425 4578 50  0000 C CNN
-F 2 "Package_BGA:BGA-96_9.0x13.0mm_Layout2x3x16_P0.8mm" H 7450 4700 50  0001 C CNN
-F 3 "" H 7450 4700 50  0001 C CNN
-	1    7400 3200
+P 7750 3600
+F 0 "U4" H 7775 5069 50  0000 C CNN
+F 1 "MT41K64M16TW-107_J-TR" H 7775 4978 50  0000 C CNN
+F 2 "Package_BGA:BGA-96_9.0x13.0mm_Layout2x3x16_P0.8mm" H 7800 5100 50  0001 C CNN
+F 3 "" H 7800 5100 50  0001 C CNN
+	1    7750 3600
 	1    0    0    -1  
 $EndComp
-Text GLabel 6750 2000 0    50   Input ~ 0
+Text GLabel 7100 2400 0    50   Input ~ 0
 RAM_A0
-Text GLabel 6750 2100 0    50   Input ~ 0
+Text GLabel 7100 2500 0    50   Input ~ 0
 RAM_A1
-Text GLabel 6750 2200 0    50   Input ~ 0
+Text GLabel 7100 2600 0    50   Input ~ 0
 RAM_A2
-Text GLabel 6750 2300 0    50   Input ~ 0
+Text GLabel 7100 2700 0    50   Input ~ 0
 RAM_A3
-Text GLabel 6750 2400 0    50   Input ~ 0
+Text GLabel 7100 2800 0    50   Input ~ 0
 RAM_A4
-Text GLabel 6750 2500 0    50   Input ~ 0
+Text GLabel 7100 2900 0    50   Input ~ 0
 RAM_A5
-Text GLabel 6750 2600 0    50   Input ~ 0
+Text GLabel 7100 3000 0    50   Input ~ 0
 RAM_A6
-Text GLabel 6750 2700 0    50   Input ~ 0
+Text GLabel 7100 3100 0    50   Input ~ 0
 RAM_A7
-Text GLabel 6750 2800 0    50   Input ~ 0
+Text GLabel 7100 3200 0    50   Input ~ 0
 RAM_A8
-Text GLabel 6750 2900 0    50   Input ~ 0
+Text GLabel 7100 3300 0    50   Input ~ 0
 RAM_A9
-Text GLabel 6750 3000 0    50   Input ~ 0
+Text GLabel 7100 3400 0    50   Input ~ 0
 RAM_A10
-Text GLabel 6750 3100 0    50   Input ~ 0
+Text GLabel 7100 3500 0    50   Input ~ 0
 RAM_A11
-Text GLabel 6750 3200 0    50   Input ~ 0
+Text GLabel 7100 3600 0    50   Input ~ 0
 RAM_A12
-Text GLabel 8100 3550 2    50   Input ~ 0
+Text GLabel 8450 3950 2    50   Input ~ 0
 RAM_D0
-Text GLabel 8100 3650 2    50   Input ~ 0
+Text GLabel 8450 4050 2    50   Input ~ 0
 RAM_D1
-Text GLabel 8100 3750 2    50   Input ~ 0
+Text GLabel 8450 4150 2    50   Input ~ 0
 RAM_D2
-Text GLabel 8100 3850 2    50   Input ~ 0
+Text GLabel 8450 4250 2    50   Input ~ 0
 RAM_D3
-Text GLabel 8100 3950 2    50   Input ~ 0
+Text GLabel 8450 4350 2    50   Input ~ 0
 RAM_D4
-Text GLabel 8100 4050 2    50   Input ~ 0
+Text GLabel 8450 4450 2    50   Input ~ 0
 RAM_D5
-Text GLabel 8100 4150 2    50   Input ~ 0
+Text GLabel 8450 4550 2    50   Input ~ 0
 RAM_D6
-Text GLabel 8100 4250 2    50   Input ~ 0
+Text GLabel 8450 4650 2    50   Input ~ 0
 RAM_D7
-Text GLabel 8100 2750 2    50   Input ~ 0
+Text GLabel 8450 3150 2    50   Input ~ 0
 RAM_D8
-Text GLabel 8100 2850 2    50   Input ~ 0
+Text GLabel 8450 3250 2    50   Input ~ 0
 RAM_D9
-Text GLabel 8100 2950 2    50   Input ~ 0
+Text GLabel 8450 3350 2    50   Input ~ 0
 RAM_D10
-Text GLabel 8100 3050 2    50   Input ~ 0
+Text GLabel 8450 3450 2    50   Input ~ 0
 RAM_D11
-Text GLabel 8100 3150 2    50   Input ~ 0
+Text GLabel 8450 3550 2    50   Input ~ 0
 RAM_D12
-Text GLabel 8100 3250 2    50   Input ~ 0
+Text GLabel 8450 3650 2    50   Input ~ 0
 RAM_D13
-Text GLabel 8100 3350 2    50   Input ~ 0
+Text GLabel 8450 3750 2    50   Input ~ 0
 RAM_D14
-Text GLabel 8100 3450 2    50   Input ~ 0
+Text GLabel 8450 3850 2    50   Input ~ 0
 RAM_D15
-Text GLabel 8100 4700 2    50   Input ~ 0
+Text GLabel 8450 5100 2    50   Input ~ 0
 RAM_LDQS
-Text GLabel 8100 4800 2    50   Input ~ 0
+Text GLabel 8450 5200 2    50   Input ~ 0
 RAM_LDQS#
-Text GLabel 8100 4450 2    50   Input ~ 0
+Text GLabel 8450 4850 2    50   Input ~ 0
 RAM_UDQS
-Text GLabel 8100 4550 2    50   Input ~ 0
+Text GLabel 8450 4950 2    50   Input ~ 0
 RAM_UDQS#
-Text GLabel 6750 4600 0    50   Input ~ 0
+Text GLabel 7100 5000 0    50   Input ~ 0
 RAM_CK
-Text GLabel 6750 4700 0    50   Input ~ 0
+Text GLabel 7100 5100 0    50   Input ~ 0
 RAM_CK#
-Wire Wire Line
-	8100 2000 8500 2000
-Wire Wire Line
-	8100 2100 8500 2100
-Wire Wire Line
-	8100 2200 8500 2200
-Wire Wire Line
-	8100 2300 8500 2300
-Wire Wire Line
-	8100 2400 8500 2400
-Wire Wire Line
-	8100 2500 8500 2500
-Wire Wire Line
-	8100 2600 8500 2600
-Text Label 8500 2000 0    50   ~ 0
+Text Label 8750 2400 0    50   ~ 0
 RAM_VDD
-Text Label 8500 2100 0    50   ~ 0
+Text Label 8750 2500 0    50   ~ 0
 RAM_VDDQ
-Text Label 8500 2200 0    50   ~ 0
-RAM_VREFCA
-Text Label 8500 2300 0    50   ~ 0
-RAM_VREFDQ
-Text Label 8500 2400 0    50   ~ 0
-RAM_VSS
-Text Label 8500 2500 0    50   ~ 0
-RAM_VSSQ
-Text Label 8500 2600 0    50   ~ 0
+Text Label 8750 3000 0    50   ~ 0
 RAM_ZQ
-Text GLabel 6750 3300 0    50   Input ~ 0
+Text GLabel 7100 3700 0    50   Input ~ 0
 RAM_BA0
-Text GLabel 6750 3400 0    50   Input ~ 0
+Text GLabel 7100 3800 0    50   Input ~ 0
 RAM_BA1
-Text GLabel 6750 3500 0    50   Input ~ 0
+Text GLabel 7100 3900 0    50   Input ~ 0
 RAM_BA2
-Text GLabel 6750 4800 0    50   Input ~ 0
+Text GLabel 7100 5200 0    50   Input ~ 0
 RAM_CKE
-Text GLabel 6750 4500 0    50   Input ~ 0
+Text GLabel 7100 4900 0    50   Input ~ 0
 RAM_CS#
-Text GLabel 6750 3700 0    50   Input ~ 0
+Text GLabel 7100 4100 0    50   Input ~ 0
 RAM_LDM
-Text GLabel 6750 3800 0    50   Input ~ 0
+Text GLabel 7100 4200 0    50   Input ~ 0
 RAM_ODT
-Text GLabel 6750 3900 0    50   Input ~ 0
+Text GLabel 7100 4300 0    50   Input ~ 0
 RAM_RAS#
-Text GLabel 6750 4000 0    50   Input ~ 0
+Text GLabel 7100 4400 0    50   Input ~ 0
 RAM_CAS#
-Text GLabel 6750 4100 0    50   Input ~ 0
+Text GLabel 7100 4500 0    50   Input ~ 0
 RAM_WE#
-Text GLabel 6750 4200 0    50   Input ~ 0
+Text GLabel 7100 4600 0    50   Input ~ 0
 RAM_RESET#
-Text GLabel 6750 4300 0    50   Input ~ 0
+Text GLabel 7100 4700 0    50   Input ~ 0
 RAM_UDM
+Text GLabel 8700 2600 2    50   UnSpc ~ 0
+VTT_REF
+Text GLabel 2850 1700 2    50   Input ~ 0
+RAM_A0
+Text GLabel 2850 1800 2    50   Input ~ 0
+RAM_A1
+Text GLabel 3200 2850 2    50   Input ~ 0
+RAM_A2
+Text GLabel 3200 2150 2    50   Input ~ 0
+RAM_A3
+Text GLabel 3200 2450 2    50   Input ~ 0
+RAM_A4
+Text GLabel 3200 2350 2    50   Input ~ 0
+RAM_A5
+Text GLabel 3200 2650 2    50   Input ~ 0
+RAM_A6
+Text GLabel 3200 2550 2    50   Input ~ 0
+RAM_A7
+Text GLabel 3200 2750 2    50   Input ~ 0
+RAM_A8
+Text GLabel 3200 2950 2    50   Input ~ 0
+RAM_A9
+Text GLabel 3200 2250 2    50   Input ~ 0
+RAM_A10
+Text GLabel 2850 1600 2    50   Input ~ 0
+RAM_A11
+Text GLabel 2850 1900 2    50   Input ~ 0
+RAM_A12
+Text GLabel 10500 1450 2    50   UnSpc ~ 0
+P1.5V
+$Comp
+L Device:R R19
+U 1 1 5D77B5E4
+P 9050 3300
+F 0 "R19" H 9120 3346 50  0000 L CNN
+F 1 "240R" H 9120 3255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8980 3300 50  0001 C CNN
+F 3 "~" H 9050 3300 50  0001 C CNN
+	1    9050 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0126
+U 1 1 5D77BAED
+P 9050 3550
+F 0 "#PWR0126" H 9050 3300 50  0001 C CNN
+F 1 "GND" H 9053 3424 50  0000 C CNN
+F 2 "" H 8950 3200 50  0001 C CNN
+F 3 "" H 9050 3550 50  0001 C CNN
+	1    9050 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3550 9050 3450
+Wire Wire Line
+	9050 3000 9050 3150
+Wire Wire Line
+	8450 3000 9050 3000
+$Comp
+L Device:C C21
+U 1 1 5D77DFC0
+P 9900 1700
+F 0 "C21" H 10015 1746 50  0000 L CNN
+F 1 "1uF" H 10015 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9938 1550 50  0001 C CNN
+F 3 "~" H 9900 1700 50  0001 C CNN
+	1    9900 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5D77E7A7
+P 10100 1700
+F 0 "C23" H 10215 1746 50  0000 L CNN
+F 1 "22uF" H 10215 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10138 1550 50  0001 C CNN
+F 3 "~" H 10100 1700 50  0001 C CNN
+	1    10100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0127
+U 1 1 5D77EFF1
+P 10100 1950
+F 0 "#PWR0127" H 10100 1700 50  0001 C CNN
+F 1 "GND" H 10103 1824 50  0000 C CNN
+F 2 "" H 10000 1600 50  0001 C CNN
+F 3 "" H 10100 1950 50  0001 C CNN
+	1    10100 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1850 10100 1900
+Wire Wire Line
+	9900 1850 9900 1900
+Wire Wire Line
+	9900 1900 10100 1900
+Connection ~ 10100 1900
+Wire Wire Line
+	10100 1900 10100 1950
+Wire Wire Line
+	9900 1550 9900 1450
+Wire Wire Line
+	9900 1450 9500 1450
+Wire Wire Line
+	9500 1450 9500 2400
+Wire Wire Line
+	8450 2400 9500 2400
+Wire Wire Line
+	9900 1450 10100 1450
+Wire Wire Line
+	10100 1450 10100 1550
+Connection ~ 9900 1450
+$Comp
+L Device:L_Small L4
+U 1 1 5D7814FE
+P 10300 1450
+F 0 "L4" V 10485 1450 50  0000 C CNN
+F 1 "600R" V 10394 1450 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 10300 1450 50  0001 C CNN
+F 3 "~" H 10300 1450 50  0001 C CNN
+	1    10300 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10200 1450 10100 1450
+Connection ~ 10100 1450
+Wire Wire Line
+	10500 1450 10400 1450
+Text GLabel 10500 2500 2    50   UnSpc ~ 0
+P1.5V
+$Comp
+L Device:C C22
+U 1 1 5D7825CC
+P 9900 2750
+F 0 "C22" H 10015 2796 50  0000 L CNN
+F 1 "1uF" H 10015 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9938 2600 50  0001 C CNN
+F 3 "~" H 9900 2750 50  0001 C CNN
+	1    9900 2750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C24
+U 1 1 5D7825D6
+P 10100 2750
+F 0 "C24" H 10215 2796 50  0000 L CNN
+F 1 "22uF" H 10215 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10138 2600 50  0001 C CNN
+F 3 "~" H 10100 2750 50  0001 C CNN
+	1    10100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0128
+U 1 1 5D7825E0
+P 10100 3000
+F 0 "#PWR0128" H 10100 2750 50  0001 C CNN
+F 1 "GND" H 10103 2874 50  0000 C CNN
+F 2 "" H 10000 2650 50  0001 C CNN
+F 3 "" H 10100 3000 50  0001 C CNN
+	1    10100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2900 10100 2950
+Wire Wire Line
+	9900 2900 9900 2950
+Wire Wire Line
+	9900 2950 10100 2950
+Connection ~ 10100 2950
+Wire Wire Line
+	10100 2950 10100 3000
+Wire Wire Line
+	9900 2600 9900 2500
+Wire Wire Line
+	9900 2500 10100 2500
+Wire Wire Line
+	10100 2500 10100 2600
+Connection ~ 9900 2500
+$Comp
+L Device:L_Small L5
+U 1 1 5D7825F4
+P 10300 2500
+F 0 "L5" V 10485 2500 50  0000 C CNN
+F 1 "600R" V 10394 2500 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 10300 2500 50  0001 C CNN
+F 3 "~" H 10300 2500 50  0001 C CNN
+	1    10300 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10200 2500 10100 2500
+Connection ~ 10100 2500
+Wire Wire Line
+	10500 2500 10400 2500
+Wire Wire Line
+	8450 2500 9900 2500
+Wire Wire Line
+	8450 2600 8600 2600
+Wire Wire Line
+	8600 2700 8600 2600
+Wire Wire Line
+	8450 2700 8600 2700
+Connection ~ 8600 2600
+Wire Wire Line
+	8600 2600 8700 2600
+Wire Wire Line
+	9200 2800 9200 2900
+Wire Wire Line
+	8450 2800 9200 2800
+Wire Wire Line
+	8450 2900 9200 2900
+Connection ~ 9200 2900
+Wire Wire Line
+	9200 2900 9200 2950
+$Comp
+L gkl_power:GND #PWR0129
+U 1 1 5D787C35
+P 9200 2950
+F 0 "#PWR0129" H 9200 2700 50  0001 C CNN
+F 1 "GND" H 9203 2824 50  0000 C CNN
+F 2 "" H 9100 2600 50  0001 C CNN
+F 3 "" H 9200 2950 50  0001 C CNN
+	1    9200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5D79244E
+P 2650 1800
+F 0 "RN1" V 2233 1800 50  0000 C CNN
+F 1 "R_Pack04" V 2324 1800 50  0000 C CNN
+F 2 "" V 2925 1800 50  0001 C CNN
+F 3 "~" H 2650 1800 50  0001 C CNN
+	1    2650 1800
+	0    1    1    0   
+$EndComp
+Text GLabel 2150 1300 0    50   UnSpc ~ 0
+VTT_REF
+Wire Wire Line
+	2450 1900 2300 1900
+Wire Wire Line
+	2300 1900 2300 1800
+Wire Wire Line
+	2300 1300 2150 1300
+Wire Wire Line
+	2450 1800 2300 1800
+Connection ~ 2300 1800
+Wire Wire Line
+	2300 1800 2300 1700
+Wire Wire Line
+	2450 1700 2300 1700
+Connection ~ 2300 1700
+Wire Wire Line
+	2300 1700 2300 1600
+Wire Wire Line
+	2450 1600 2300 1600
+Connection ~ 2300 1600
+Wire Wire Line
+	2300 1600 2300 1300
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=Sun 23 Jun 2019 12:24:34 ACST
+update=Thu 04 Jul 2019 22:31:09 ACST
 version=1
 last_client=kicad
 [general]
@@ -26,14 +26,14 @@ ERC_TestSimilarLabels=1
 version=1
 PageLayoutDescrFile=
 LastNetListRead=
-CopperLayerCount=4
+CopperLayerCount=6
 BoardThickness=1.6
 AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
 MinTrackWidth=0.089
-MinViaDiameter=0.3
+MinViaDiameter=0.23
 MinViaDrill=0.15
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
@@ -41,17 +41,19 @@ MinHoleToHole=0.25
 TrackWidth1=0.089
 TrackWidth2=0.089
 TrackWidth3=0.1
-TrackWidth4=0.12
+TrackWidth4=0.121
 TrackWidth5=0.15
 TrackWidth6=0.2
 ViaDiameter1=0.6
 ViaDrill1=0.4
-ViaDiameter2=0.3
+ViaDiameter2=0.28
 ViaDrill2=0.15
-ViaDiameter3=0.45
-ViaDrill3=0.2
-ViaDiameter4=0.53
-ViaDrill4=0.25
+ViaDiameter3=0.3
+ViaDrill3=0.15
+ViaDiameter4=0.45
+ViaDrill4=0.2
+ViaDiameter5=0.53
+ViaDrill5=0.25
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -84,7 +86,7 @@ Name=F.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.In1.Cu]
-Name=In1.Cu
+Name=GND1.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.In2.Cu]
@@ -92,13 +94,13 @@ Name=In2.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.In3.Cu]
-Name=In3.Cu
+Name=PWR.Cu
 Type=0
-Enabled=0
+Enabled=1
 [pcbnew/Layer.In4.Cu]
-Name=In4.Cu
+Name=GND2.Cu
 Type=0
-Enabled=0
+Enabled=1
 [pcbnew/Layer.In5.Cu]
 Name=In5.Cu
 Type=0
