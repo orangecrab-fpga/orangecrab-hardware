@@ -615,14 +615,18 @@ Text GLabel 9600 5300 0    50   UnSpc ~ 0
 P1.5V
 Wire Wire Line
 	9850 5300 9600 5300
-Text GLabel 4050 5450 2    50   Input ~ 0
+Text GLabel 1700 5500 2    50   Input ~ 0
 RAM_CKE
-Text GLabel 6650 5200 2    50   Input ~ 0
+Text GLabel 4050 5450 2    50   Input ~ 0
 RAM_WE#
 Text GLabel 4050 6950 2    50   Input ~ 0
 RAM_ODT
-Text GLabel 6650 4900 2    50   Input ~ 0
+Text GLabel 6650 5200 2    50   Input ~ 0
 RAM_RAS#
 Text GLabel 4050 5950 2    50   Input ~ 0
 RAM_CAS#
+Text GLabel 4050 6450 2    50   Input ~ 0
+RAM_UDM
+Text GLabel 6650 5700 2    50   Input ~ 0
+RAM_LDM
 $EndSCHEMATC
