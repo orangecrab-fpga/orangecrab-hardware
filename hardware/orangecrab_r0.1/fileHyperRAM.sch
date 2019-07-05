@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:OrangeCrab-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -155,12 +156,6 @@ Text Label 8750 2500 0    50   ~ 0
 RAM_VDDQ
 Text Label 8750 3000 0    50   ~ 0
 RAM_ZQ
-Text GLabel 7100 3700 0    50   Input ~ 0
-RAM_BA0
-Text GLabel 7100 3800 0    50   Input ~ 0
-RAM_BA1
-Text GLabel 7100 3900 0    50   Input ~ 0
-RAM_BA2
 Text GLabel 7100 5200 0    50   Input ~ 0
 RAM_CKE
 Text GLabel 7100 4900 0    50   Input ~ 0
@@ -181,31 +176,31 @@ Text GLabel 7100 4700 0    50   Input ~ 0
 RAM_UDM
 Text GLabel 8700 2600 2    50   UnSpc ~ 0
 VTT_REF
-Text GLabel 2850 1700 2    50   Input ~ 0
+Text GLabel 2850 4200 2    50   Input ~ 0
 RAM_A0
-Text GLabel 2850 1800 2    50   Input ~ 0
+Text GLabel 2850 2300 2    50   Input ~ 0
 RAM_A1
-Text GLabel 3200 2850 2    50   Input ~ 0
+Text GLabel 2850 4000 2    50   Input ~ 0
 RAM_A2
-Text GLabel 3200 2150 2    50   Input ~ 0
+Text GLabel 2850 4300 2    50   Input ~ 0
 RAM_A3
-Text GLabel 3200 2450 2    50   Input ~ 0
+Text GLabel 2850 1700 2    50   Input ~ 0
 RAM_A4
-Text GLabel 3200 2350 2    50   Input ~ 0
+Text GLabel 2850 4100 2    50   Input ~ 0
 RAM_A5
-Text GLabel 3200 2650 2    50   Input ~ 0
+Text GLabel 2850 1800 2    50   Input ~ 0
 RAM_A6
-Text GLabel 3200 2550 2    50   Input ~ 0
+Text GLabel 2850 2500 2    50   Input ~ 0
 RAM_A7
-Text GLabel 3200 2750 2    50   Input ~ 0
-RAM_A8
-Text GLabel 3200 2950 2    50   Input ~ 0
-RAM_A9
-Text GLabel 3200 2250 2    50   Input ~ 0
-RAM_A10
-Text GLabel 2850 1600 2    50   Input ~ 0
-RAM_A11
 Text GLabel 2850 1900 2    50   Input ~ 0
+RAM_A8
+Text GLabel 2850 2400 2    50   Input ~ 0
+RAM_A9
+Text GLabel 2850 3600 2    50   Input ~ 0
+RAM_A10
+Text GLabel 2850 2200 2    50   Input ~ 0
+RAM_A11
+Text GLabel 2850 1600 2    50   Input ~ 0
 RAM_A12
 Text GLabel 10500 1450 2    50   UnSpc ~ 0
 P1.5V
@@ -410,9 +405,9 @@ $Comp
 L Device:R_Pack04 RN1
 U 1 1 5D79244E
 P 2650 1800
-F 0 "RN1" V 2233 1800 50  0000 C CNN
-F 1 "R_Pack04" V 2324 1800 50  0000 C CNN
-F 2 "" V 2925 1800 50  0001 C CNN
+F 0 "RN1" V 2350 1700 50  0000 C CNN
+F 1 "50R" V 2350 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 1800 50  0001 C CNN
 F 3 "~" H 2650 1800 50  0001 C CNN
 	1    2650 1800
 	0    1    1    0   
@@ -440,4 +435,203 @@ Wire Wire Line
 Connection ~ 2300 1600
 Wire Wire Line
 	2300 1600 2300 1300
+$Comp
+L Device:R_Pack04 RN2
+U 1 1 5DCA5DAD
+P 2650 2400
+F 0 "RN2" V 2350 2300 50  0000 C CNN
+F 1 "50R" V 2350 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 2400 50  0001 C CNN
+F 3 "~" H 2650 2400 50  0001 C CNN
+	1    2650 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 2500 2300 2500
+Wire Wire Line
+	2300 2500 2300 2400
+Wire Wire Line
+	2450 2400 2300 2400
+Connection ~ 2300 2400
+Wire Wire Line
+	2300 2400 2300 2300
+Wire Wire Line
+	2450 2300 2300 2300
+Connection ~ 2300 2300
+Wire Wire Line
+	2300 2300 2300 2200
+Wire Wire Line
+	2450 2200 2300 2200
+Connection ~ 2300 2200
+Wire Wire Line
+	2300 2200 2300 1900
+Connection ~ 2300 1900
+$Comp
+L Device:R_Pack04 RN3
+U 1 1 5DCA8C56
+P 2650 3000
+F 0 "RN3" V 2350 2900 50  0000 C CNN
+F 1 "50R" V 2350 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 3000 50  0001 C CNN
+F 3 "~" H 2650 3000 50  0001 C CNN
+	1    2650 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 3100 2300 3100
+Wire Wire Line
+	2300 3100 2300 3000
+Wire Wire Line
+	2450 3000 2300 3000
+Connection ~ 2300 3000
+Wire Wire Line
+	2300 3000 2300 2900
+Wire Wire Line
+	2450 2900 2300 2900
+Connection ~ 2300 2900
+Wire Wire Line
+	2300 2900 2300 2800
+Wire Wire Line
+	2450 2800 2300 2800
+Connection ~ 2300 2800
+Wire Wire Line
+	2300 2800 2300 2500
+Connection ~ 2300 2500
+$Comp
+L Device:R_Pack04 RN4
+U 1 1 5DCAEAD7
+P 2650 3600
+F 0 "RN4" V 2350 3500 50  0000 C CNN
+F 1 "50R" V 2350 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 3600 50  0001 C CNN
+F 3 "~" H 2650 3600 50  0001 C CNN
+	1    2650 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 3700 2300 3700
+Wire Wire Line
+	2300 3700 2300 3600
+Wire Wire Line
+	2450 3600 2300 3600
+Connection ~ 2300 3600
+Wire Wire Line
+	2300 3600 2300 3500
+Wire Wire Line
+	2450 3500 2300 3500
+Connection ~ 2300 3500
+Wire Wire Line
+	2300 3500 2300 3400
+Wire Wire Line
+	2450 3400 2300 3400
+Connection ~ 2300 3400
+Wire Wire Line
+	2300 3400 2300 3100
+Connection ~ 2300 3100
+Text GLabel 2850 4600 2    50   Input ~ 0
+RAM_ODT
+Text GLabel 2850 4700 2    50   Input ~ 0
+RAM_RAS#
+Text GLabel 2850 3100 2    50   Input ~ 0
+RAM_CAS#
+Text GLabel 2850 2900 2    50   Input ~ 0
+RAM_WE#
+$Comp
+L Device:R_Pack04 RN5
+U 1 1 5DCB5B9B
+P 2650 4200
+F 0 "RN5" V 2350 4100 50  0000 C CNN
+F 1 "50R" V 2350 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 4200 50  0001 C CNN
+F 3 "~" H 2650 4200 50  0001 C CNN
+	1    2650 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 4300 2300 4300
+Wire Wire Line
+	2300 4300 2300 4200
+Wire Wire Line
+	2450 4200 2300 4200
+Connection ~ 2300 4200
+Wire Wire Line
+	2300 4200 2300 4100
+Wire Wire Line
+	2450 4100 2300 4100
+Connection ~ 2300 4100
+Wire Wire Line
+	2300 4100 2300 4000
+Wire Wire Line
+	2450 4000 2300 4000
+Connection ~ 2300 4000
+Wire Wire Line
+	2300 4000 2300 3700
+Connection ~ 2300 3700
+$Comp
+L Device:R_Pack04 RN6
+U 1 1 5DCB8654
+P 2650 4800
+F 0 "RN6" V 2350 4700 50  0000 C CNN
+F 1 "50R" V 2350 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 4800 50  0001 C CNN
+F 3 "~" H 2650 4800 50  0001 C CNN
+	1    2650 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 4700 2300 4700
+Wire Wire Line
+	2300 4700 2300 4600
+Wire Wire Line
+	2450 4600 2300 4600
+Connection ~ 2300 4600
+Wire Wire Line
+	2300 4600 2300 4300
+Connection ~ 2300 4300
+Text GLabel 2850 3400 2    50   Input ~ 0
+RAM_CKE
+Text GLabel 2850 4800 2    50   Input ~ 0
+RAM_CK
+Text GLabel 2850 4900 2    50   Input ~ 0
+RAM_CK#
+Wire Wire Line
+	2450 4900 2350 4900
+Wire Wire Line
+	2350 4900 2350 4850
+Wire Wire Line
+	2350 4800 2450 4800
+$Comp
+L Device:C C27
+U 1 1 5DCCA90B
+P 2050 4850
+F 0 "C27" V 1900 4850 50  0000 C CNN
+F 1 "10nF" V 2200 4850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 2088 4700 50  0001 C CNN
+F 3 "~" H 2050 4850 50  0001 C CNN
+	1    2050 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 4850 2200 4850
+Connection ~ 2350 4850
+Wire Wire Line
+	2350 4850 2350 4800
+Text GLabel 1800 4850 0    50   UnSpc ~ 0
+VTT_REF
+Wire Wire Line
+	1800 4850 1900 4850
+Text GLabel 7100 3900 0    50   Input ~ 0
+RAM_BA2
+Text GLabel 7100 3800 0    50   Input ~ 0
+RAM_BA1
+Text GLabel 7100 3700 0    50   Input ~ 0
+RAM_BA0
+Text GLabel 2850 3700 2    50   Input ~ 0
+RAM_BA2
+Text GLabel 2850 3500 2    50   Input ~ 0
+RAM_BA1
+Text GLabel 2850 2800 2    50   Input ~ 0
+RAM_BA0
+Text GLabel 2850 3000 2    50   Input ~ 0
+RAM_CS#
 $EndSCHEMATC

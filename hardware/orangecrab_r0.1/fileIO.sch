@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:OrangeCrab-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,55 +14,55 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 8450 1950 0    60   Input ~ 0
+Text GLabel 8350 1550 0    60   Input ~ 0
 LED_A
 $Comp
 L Device:LED D1
 U 1 1 5ABC9AAA
-P 8750 1950
+P 8650 1550
 AR Path="/5ABC9A87/5ABC9AAA" Ref="D1"  Part="1" 
 AR Path="/5D1738DB/5ABC9AAA" Ref="D?"  Part="1" 
-F 0 "D1" H 8742 1695 50  0000 C CNN
-F 1 "LED" H 8742 1786 50  0000 C CNN
-F 2 "LEDs:LED_0603" H 8750 1950 50  0001 C CNN
-F 3 "" H 8750 1950 50  0001 C CNN
-F 4 "APHHS1005SYCK " H 0   0   50  0001 C CNN "PN"
-F 5 "754-1105-1-ND" H 0   0   50  0001 C CNN "SN-DK"
-	1    8750 1950
+F 0 "D1" H 8642 1295 50  0000 C CNN
+F 1 "LED" H 8642 1386 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 8650 1550 50  0001 C CNN
+F 3 "" H 8650 1550 50  0001 C CNN
+F 4 "APHHS1005SYCK " H -100 -400 50  0001 C CNN "PN"
+F 5 "754-1105-1-ND" H -100 -400 50  0001 C CNN "SN-DK"
+	1    8650 1550
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R3
 U 1 1 5ABC9C1C
-P 9300 1950
+P 9200 1550
 AR Path="/5ABC9A87/5ABC9C1C" Ref="R3"  Part="1" 
 AR Path="/5D1738DB/5ABC9C1C" Ref="R?"  Part="1" 
-F 0 "R3" V 9093 1950 50  0000 C CNN
-F 1 "10k" V 9184 1950 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 9230 1950 50  0001 C CNN
-F 3 "" H 9300 1950 50  0001 C CNN
-F 4 "P10KDECT-ND" H 0   0   50  0001 C CNN "SN-DK"
-F 5 "ERA-2AED103X" H 0   0   50  0001 C CNN "PN"
-	1    9300 1950
+F 0 "R3" V 8993 1550 50  0000 C CNN
+F 1 "10k" V 9084 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 9130 1550 50  0001 C CNN
+F 3 "" H 9200 1550 50  0001 C CNN
+F 4 "P10KDECT-ND" H -100 -400 50  0001 C CNN "SN-DK"
+F 5 "ERA-2AED103X" H -100 -400 50  0001 C CNN "PN"
+	1    9200 1550
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8450 1950 8600 1950
+	8350 1550 8500 1550
 Wire Wire Line
-	8900 1950 9150 1950
+	8800 1550 9050 1550
 Wire Wire Line
-	9450 1950 9700 1950
+	9350 1550 9600 1550
 $Comp
 L gkl_power:GND #PWR02
 U 1 1 5ABCA494
-P 9700 1950
+P 9600 1550
 AR Path="/5ABC9A87/5ABCA494" Ref="#PWR02"  Part="1" 
 AR Path="/5D1738DB/5ABCA494" Ref="#PWR?"  Part="1" 
-F 0 "#PWR02" H 9700 1700 50  0001 C CNN
-F 1 "GND" V 9704 1870 50  0000 R CNN
-F 2 "" H 9600 1600 50  0001 C CNN
-F 3 "" H 9700 1950 50  0001 C CNN
-	1    9700 1950
+F 0 "#PWR02" H 9600 1300 50  0001 C CNN
+F 1 "GND" V 9604 1470 50  0000 R CNN
+F 2 "" H 9500 1200 50  0001 C CNN
+F 3 "" H 9600 1550 50  0001 C CNN
+	1    9600 1550
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -77,25 +78,242 @@ F 3 "~" H 8800 4600 50  0001 C CNN
 	1    8800 4600
 	-1   0    0    1   
 $EndComp
-Text Notes 8350 1350 0    50   ~ 0
+Text Notes 8250 950  0    50   ~ 0
 USER LEDS
-Text Notes 7850 3250 0    50   ~ 0
+Text Notes 8050 2200 0    50   ~ 0
 Feather I/O
 $Comp
 L Connector:Conn_01x12_Male J1
 U 1 1 5D1698AE
-P 7000 4350
+P 8800 2850
 AR Path="/5ABC9A87/5D1698AE" Ref="J1"  Part="1" 
 AR Path="/5D1738DB/5D1698AE" Ref="J?"  Part="1" 
-F 0 "J1" H 7100 5100 50  0000 R CNN
-F 1 "Conn_01x12_Male" H 7150 5000 50  0000 R CNN
-F 2 "" H 7000 4350 50  0001 C CNN
-F 3 "~" H 7000 4350 50  0001 C CNN
-	1    7000 4350
+F 0 "J1" H 8900 3600 50  0000 R CNN
+F 1 "Conn_01x12_Male" H 8950 3500 50  0000 R CNN
+F 2 "" H 8800 2850 50  0001 C CNN
+F 3 "~" H 8800 2850 50  0001 C CNN
+	1    8800 2850
 	-1   0    0    -1  
 $EndComp
 Text Notes 8850 5350 0    63   ~ 0
 RESET\n+3V3\nAREF\nGND\nANALOG 0\nANALOG 1\nANALOG 2\nANALOG 3\nANALOG 4\nANALOG 5\nI/O - SCK\nI/O - MOSI\nI/O - MISO\nI/O - RX\nI/O - TX\nI/O
-Text Notes 7050 5000 0    63   ~ 0
+Text Notes 8850 3500 0    63   ~ 0
 VBAT (3 - 4.2V)\nEN\nVBUS (4.5-5.5V)\nI/O\nI/O\nI/O\nI/O\nI/O\nI/O\nI/O\nI/O - SCL\nI/O - SDA
+$Comp
+L gkl_microchip:ATSAMD11D14A U?
+U 1 1 5D1F8BA9
+P 5000 4650
+F 0 "U?" H 5000 5640 60  0000 C CNN
+F 1 "ATSAMD11D14A" H 5000 5534 60  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 4950 5750 60  0001 C CNN
+F 3 "" H 4950 5550 60  0001 C CNN
+F 4 "ATSAMD11D14A-MNT" H 4950 5850 60  0001 C CNN "PN"
+F 5 "1611-ATSAMD11D14A-MNTCT-ND" H 4950 5950 60  0001 C CNN "SN-DK"
+	1    5000 4650
+	1    0    0    -1  
+$EndComp
+Text Notes 4300 6050 0    50   ~ 0
+Either SAMD11 or SAMD10 in QFN24 package\nUsed as a basic ADC/DAC + MUX.\nAccesed by the FPGA over SPI
+Wire Wire Line
+	5800 3950 6050 3950
+Text Label 6050 3950 0    50   ~ 0
+A0
+Wire Wire Line
+	5800 4050 6050 4050
+Text Label 6050 4050 0    50   ~ 0
+AREF
+Wire Wire Line
+	5800 4150 6050 4150
+Text Label 6050 4150 0    50   ~ 0
+A1
+Wire Wire Line
+	5800 4250 6050 4250
+Text Label 6050 4250 0    50   ~ 0
+A2
+Wire Wire Line
+	5800 4350 6050 4350
+Text Label 6050 4350 0    50   ~ 0
+A3
+Wire Wire Line
+	5800 4750 6050 4750
+Text Label 6050 4750 0    50   ~ 0
+A4
+Wire Wire Line
+	5800 4850 6050 4850
+Text Label 6050 4850 0    50   ~ 0
+A5
+Wire Wire Line
+	8600 4200 8350 4200
+Text Label 8350 4200 2    50   ~ 0
+A0
+Wire Wire Line
+	8600 4000 8350 4000
+Text Label 8350 4000 2    50   ~ 0
+AREF
+Wire Wire Line
+	8600 4300 8350 4300
+Text Label 8350 4300 2    50   ~ 0
+A1
+Wire Wire Line
+	8600 4400 8350 4400
+Text Label 8350 4400 2    50   ~ 0
+A2
+Wire Wire Line
+	8600 4500 8350 4500
+Text Label 8350 4500 2    50   ~ 0
+A3
+Wire Wire Line
+	8600 4600 8350 4600
+Text Label 8350 4600 2    50   ~ 0
+A4
+Wire Wire Line
+	8600 4700 8350 4700
+Text Label 8350 4700 2    50   ~ 0
+A5
+Text GLabel 3550 4750 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	4200 4750 3550 4750
+Wire Wire Line
+	4200 5450 4100 5450
+Wire Wire Line
+	4100 5450 4100 5550
+Wire Wire Line
+	4200 5550 4100 5550
+Connection ~ 4100 5550
+Wire Wire Line
+	4100 5550 4100 5650
+$Comp
+L gkl_power:GND #PWR?
+U 1 1 5D2050CD
+P 4100 5650
+F 0 "#PWR?" H 4100 5400 50  0001 C CNN
+F 1 "GND" H 4103 5524 50  0000 C CNN
+F 2 "" H 4000 5300 50  0001 C CNN
+F 3 "" H 4100 5650 50  0001 C CNN
+	1    4100 5650
+	1    0    0    -1  
+$EndComp
+Text GLabel 2850 3650 0    50   UnSpc ~ 0
+P3.3V
+Wire Wire Line
+	3350 3950 3550 3950
+Text Notes 4350 4250 0    50   ~ 0
+SAMD10 lacks USB\nThese are just I/O\n
+Wire Wire Line
+	5800 5150 6000 5150
+Wire Wire Line
+	5800 5250 6000 5250
+Wire Wire Line
+	4200 4850 3550 4850
+Wire Wire Line
+	4200 4950 3550 4950
+Text GLabel 3550 4850 0    50   Input ~ 0
+SWCLK
+Text GLabel 3550 4950 0    50   Input ~ 0
+SWDIO
+Text GLabel 6000 5150 2    50   Input ~ 0
+SPI_0
+Text GLabel 6000 5250 2    50   Input ~ 0
+SPI_1
+Text GLabel 6000 5450 2    50   Input ~ 0
+SPI_3
+Text GLabel 6000 5350 2    50   Input ~ 0
+SPI_2
+Wire Wire Line
+	6000 5350 5800 5350
+Wire Wire Line
+	5800 5450 6000 5450
+$Comp
+L Device:L_Small L?
+U 1 1 5D21157A
+P 3150 3650
+F 0 "L?" V 3335 3650 50  0000 C CNN
+F 1 "L_Small" V 3244 3650 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 3150 3650 50  0001 C CNN
+F 3 "~" H 3150 3650 50  0001 C CNN
+	1    3150 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2850 3650 3050 3650
+Wire Wire Line
+	3250 3650 3350 3650
+Wire Wire Line
+	3350 3650 3350 3950
+$Comp
+L Device:C C?
+U 1 1 5D214B38
+P 3350 4250
+F 0 "C?" H 3236 4296 50  0000 R CNN
+F 1 "100nF" H 3236 4205 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 3388 4100 50  0001 C CNN
+F 3 "~" H 3350 4250 50  0001 C CNN
+	1    3350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D214FF6
+P 3550 4250
+F 0 "C?" H 3665 4296 50  0000 L CNN
+F 1 "4.7uF" H 3665 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3588 4100 50  0001 C CNN
+F 3 "~" H 3550 4250 50  0001 C CNN
+	1    3550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR?
+U 1 1 5D215542
+P 3550 4450
+F 0 "#PWR?" H 3550 4200 50  0001 C CNN
+F 1 "GND" H 3553 4324 50  0000 C CNN
+F 2 "" H 3450 4100 50  0001 C CNN
+F 3 "" H 3550 4450 50  0001 C CNN
+	1    3550 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4450 3550 4400
+Wire Wire Line
+	3550 4100 3550 3950
+Connection ~ 3550 3950
+Wire Wire Line
+	3550 3950 4200 3950
+Wire Wire Line
+	3350 4100 3350 3950
+Connection ~ 3350 3950
+Wire Wire Line
+	3350 4400 3350 4450
+$Comp
+L gkl_power:GND #PWR?
+U 1 1 5D218063
+P 3350 4450
+F 0 "#PWR?" H 3350 4200 50  0001 C CNN
+F 1 "GND" H 3353 4324 50  0000 C CNN
+F 2 "" H 3250 4100 50  0001 C CNN
+F 3 "" H 3350 4450 50  0001 C CNN
+	1    3350 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 4100 8100 4100
+Wire Wire Line
+	8100 4100 8100 5450
+Wire Wire Line
+	8600 3900 8100 3900
+$Comp
+L gkl_power:GND #PWR?
+U 1 1 5D21DDF8
+P 8100 5450
+F 0 "#PWR?" H 8100 5200 50  0001 C CNN
+F 1 "GND" H 8103 5324 50  0000 C CNN
+F 2 "" H 8000 5100 50  0001 C CNN
+F 3 "" H 8100 5450 50  0001 C CNN
+	1    8100 5450
+	1    0    0    -1  
+$EndComp
+Text GLabel 8100 3900 0    50   UnSpc ~ 0
+P3.3V
 $EndSCHEMATC
