@@ -32,17 +32,6 @@ Text GLabel 9250 1850 2    60   Input ~ 0
 SPI_CONFIG_MISO
 Text GLabel 9250 1950 2    60   Input ~ 0
 SPI_CONFIG_MOSI
-$Comp
-L gkl_power:+2V5 #PWR051
-U 1 1 5AC13A0C
-P 9550 5800
-F 0 "#PWR051" H 9550 5650 50  0001 C CNN
-F 1 "+2V5" V 9554 5906 50  0000 L CNN
-F 2 "" H 9550 5800 50  0001 C CNN
-F 3 "" H 9550 5800 50  0001 C CNN
-	1    9550 5800
-	0    -1   -1   0   
-$EndComp
 Text GLabel 9250 1750 2    60   Input ~ 0
 QSPI_D2
 Text GLabel 9250 1650 2    60   Input ~ 0
@@ -218,19 +207,6 @@ Text Notes 4800 1000 0    50   ~ 0
 1V8
 Wire Wire Line
 	9550 5800 9850 5800
-$Comp
-L gkl_power:+1V1 #PWR0103
-U 1 1 5B11CCCB
-P 9700 4900
-F 0 "#PWR0103" H 9700 4750 50  0001 C CNN
-F 1 "+1V1" H 9703 5051 50  0000 C CNN
-F 2 "" H 9700 4900 50  0001 C CNN
-F 3 "" H 9700 4900 50  0001 C CNN
-	1    9700 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9700 4900 9700 5000
 Wire Wire Line
 	9700 5000 9850 5000
 $Comp
@@ -630,4 +606,24 @@ Text GLabel 4050 6450 2    50   Input ~ 0
 RAM_UDM
 Text GLabel 6650 5700 2    50   Input ~ 0
 RAM_LDM
+Text GLabel 9500 5400 0    50   UnSpc ~ 0
+P3.3V
+Wire Wire Line
+	9850 5400 9500 5400
+Text GLabel 9500 5600 0    50   UnSpc ~ 0
+P3.3V
+Wire Wire Line
+	9850 5600 9500 5600
+Text GLabel 9500 5700 0    50   UnSpc ~ 0
+P3.3V
+Wire Wire Line
+	9850 5700 9500 5700
+Text GLabel 9500 5100 0    50   UnSpc ~ 0
+P3.3V
+Wire Wire Line
+	9850 5100 9500 5100
+Text GLabel 9550 5800 0    50   UnSpc ~ 0
+P2.5V
+Text GLabel 9700 5000 0    50   UnSpc ~ 0
+P1.1V
 $EndSCHEMATC
