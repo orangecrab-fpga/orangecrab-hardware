@@ -68,15 +68,15 @@ $EndComp
 $Comp
 L Connector:Conn_01x16_Male J2
 U 1 1 5D0A61DA
-P 8800 4600
+P 8800 4500
 AR Path="/5ABC9A87/5D0A61DA" Ref="J2"  Part="1" 
 AR Path="/5D1738DB/5D0A61DA" Ref="J?"  Part="1" 
-F 0 "J2" H 8700 3550 50  0000 C CNN
-F 1 "Conn_01x16_Male" H 8650 3650 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 8800 4600 50  0001 C CNN
-F 3 "~" H 8800 4600 50  0001 C CNN
-	1    8800 4600
-	-1   0    0    1   
+F 0 "J2" H 8700 3450 50  0000 C CNN
+F 1 "Conn_01x16_Male" H 8650 3550 50  0000 C CNN
+F 2 "gkl_conn:Feather_PinHeader_1x16" H 8800 4500 50  0001 C CNN
+F 3 "~" H 8800 4500 50  0001 C CNN
+	1    8800 4500
+	-1   0    0    -1  
 $EndComp
 Text Notes 8250 950  0    50   ~ 0
 USER LEDS
@@ -90,7 +90,7 @@ AR Path="/5ABC9A87/5D1698AE" Ref="J1"  Part="1"
 AR Path="/5D1738DB/5D1698AE" Ref="J?"  Part="1" 
 F 0 "J1" H 8900 3600 50  0000 R CNN
 F 1 "Conn_01x12_Male" H 8950 3500 50  0000 R CNN
-F 2 "" H 8800 2850 50  0001 C CNN
+F 2 "gkl_conn:Feather_PinHeader_1x12" H 8800 2850 50  0001 C CNN
 F 3 "~" H 8800 2850 50  0001 C CNN
 	1    8800 2850
 	-1   0    0    -1  
@@ -115,32 +115,32 @@ $EndComp
 Text Notes 4300 6050 0    50   ~ 0
 Either SAMD11 or SAMD10 in QFN24 package\nUsed as a basic ADC/DAC + MUX.\nAccesed by the FPGA over SPI
 Wire Wire Line
-	5800 3950 6050 3950
-Text Label 6050 3950 0    50   ~ 0
+	5800 4850 6050 4850
+Text Label 6050 4850 0    50   ~ 0
 A0
 Wire Wire Line
 	5800 4050 6050 4050
 Text Label 6050 4050 0    50   ~ 0
 AREF
 Wire Wire Line
+	5800 4750 6050 4750
+Text Label 6050 4750 0    50   ~ 0
+A1
+Wire Wire Line
+	5800 3950 6050 3950
+Text Label 6050 3950 0    50   ~ 0
+A2
+Wire Wire Line
 	5800 4150 6050 4150
 Text Label 6050 4150 0    50   ~ 0
-A1
+A3
 Wire Wire Line
 	5800 4250 6050 4250
 Text Label 6050 4250 0    50   ~ 0
-A2
+A4
 Wire Wire Line
 	5800 4350 6050 4350
 Text Label 6050 4350 0    50   ~ 0
-A3
-Wire Wire Line
-	5800 4750 6050 4750
-Text Label 6050 4750 0    50   ~ 0
-A4
-Wire Wire Line
-	5800 4850 6050 4850
-Text Label 6050 4850 0    50   ~ 0
 A5
 Wire Wire Line
 	8600 4200 8350 4200

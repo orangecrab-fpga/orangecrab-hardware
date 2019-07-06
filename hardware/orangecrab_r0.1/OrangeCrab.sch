@@ -44,4 +44,48 @@ U 5D1738DB
 F0 "sheetPower" 60
 F1 "filePOWER.sch" 60
 $EndSheet
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5D2429C7
+P 11050 6400
+F 0 "H4" H 11150 6400 50  0001 L CNN
+F 1 "MountingHole" H 11150 6355 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 11050 6400 50  0001 C CNN
+F 3 "~" H 11050 6400 50  0001 C CNN
+	1    11050 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5D24316A
+P 10850 6400
+F 0 "H3" H 10950 6400 50  0001 L CNN
+F 1 "MountingHole" H 10950 6355 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.1mm" H 10850 6400 50  0001 C CNN
+F 3 "~" H 10850 6400 50  0001 C CNN
+	1    10850 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5D243527
+P 10650 6400
+F 0 "H2" H 10750 6400 50  0001 L CNN
+F 1 "MountingHole" H 10750 6355 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 10650 6400 50  0001 C CNN
+F 3 "~" H 10650 6400 50  0001 C CNN
+	1    10650 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5D243531
+P 10450 6400
+F 0 "H1" H 10550 6400 50  0001 L CNN
+F 1 "MountingHole" H 10550 6355 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 10450 6400 50  0001 C CNN
+F 3 "~" H 10450 6400 50  0001 C CNN
+	1    10450 6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
