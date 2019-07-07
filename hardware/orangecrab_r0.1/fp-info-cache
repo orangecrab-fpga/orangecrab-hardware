@@ -1,4 +1,4 @@
-15873178608124326
+15876303539666326
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44743,6 +44743,20 @@ FH28E-30S-0.5SH(05)
 0
 32
 31
+gkl_conn
+FTSH-105-XX-X-DV
+
+
+0
+10
+10
+gkl_conn
+JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical
+JST PH series connector, B2B-PH-SM4-TB (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator
+connector JST PH side entry
+0
+4
+3
 gkl_conn
 MAGJACK
 
