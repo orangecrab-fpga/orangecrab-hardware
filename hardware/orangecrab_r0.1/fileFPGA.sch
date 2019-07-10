@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title "Orange Crab"
 Date "2019-06-28"
 Rev "r0.1"
@@ -14,42 +14,42 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 7950 3600 2    60   Input ~ 0
+Text GLabel 8000 3500 2    60   Input ~ 0
 FPGA_CDONE
-Text GLabel 9550 2150 2    60   Input ~ 0
+Text GLabel 9300 2150 2    60   Input ~ 0
 SPI_CONFIG_SS
-Text GLabel 7750 3200 2    60   Input ~ 0
+Text GLabel 7800 3100 2    60   Input ~ 0
 SPI_CONFIG_SCK
-Text GLabel 9550 1750 2    60   Input ~ 0
+Text GLabel 9300 1750 2    60   Input ~ 0
 SPI_CONFIG_MISO
-Text GLabel 9550 1850 2    60   Input ~ 0
+Text GLabel 9300 1850 2    60   Input ~ 0
 SPI_CONFIG_MOSI
-Text GLabel 9550 1650 2    60   Input ~ 0
+Text GLabel 9300 1650 2    60   Input ~ 0
 QSPI_D2
-Text GLabel 9550 1550 2    60   Input ~ 0
+Text GLabel 9300 1550 2    60   Input ~ 0
 QSPI_D3
-Text GLabel 8800 3800 2    60   Input ~ 0
+Text GLabel 8850 3700 2    60   Input ~ 0
 FPGA_RESET
 $Comp
 L Device:R R4
 U 1 1 5AC144E9
-P 8700 3550
-F 0 "R4" H 8770 3596 50  0000 L CNN
-F 1 "10k" H 8770 3505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 8630 3550 50  0001 C CNN
-F 3 "" H 8700 3550 50  0001 C CNN
-F 4 "P10KDECT-ND" H -1650 300 50  0001 C CNN "SN-DK"
-F 5 "ERA-2AED103X" H -1650 300 50  0001 C CNN "PN"
-	1    8700 3550
+P 8750 3450
+F 0 "R4" H 8820 3496 50  0000 L CNN
+F 1 "10k" H 8820 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8680 3450 50  0001 C CNN
+F 3 "" H 8750 3450 50  0001 C CNN
+F 4 "P10KDECT-ND" H -1600 200 50  0001 C CNN "SN-DK"
+F 5 "ERA-2AED103X" H -1600 200 50  0001 C CNN "PN"
+	1    8750 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8800 3800 8700 3800
+	8850 3700 8750 3700
 Wire Wire Line
-	8700 3700 8700 3800
-Connection ~ 8700 3800
+	8750 3600 8750 3700
+Connection ~ 8750 3700
 Wire Wire Line
-	8700 3400 8700 3300
+	8750 3300 8750 3200
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 1 1 5B09968A
@@ -118,27 +118,27 @@ $EndComp
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 7 1 5B099944
-P 9550 1150
-F 0 "U3" H 11150 1350 60  0000 L CNN
-F 1 "ECP5U25" H 9750 1350 60  0000 L CNN
-F 2 "gkl_housings_bga:csBGA285" H 9550 1150 50  0001 C CNN
-F 3 "" H 9550 1150 50  0001 C CNN
-F 4 "LFE5UM-25F-6MG285C " H 300 -100 50  0001 C CNN "PN"
-F 5 " LFE5UM-25F-6MG285C-ND " H 300 -100 50  0001 C CNN "SN-DK"
-	7    9550 1150
+P 9300 1150
+F 0 "U3" H 10900 1350 60  0000 L CNN
+F 1 "ECP5U25" H 9500 1350 60  0000 L CNN
+F 2 "gkl_housings_bga:csBGA285" H 9300 1150 50  0001 C CNN
+F 3 "" H 9300 1150 50  0001 C CNN
+F 4 "LFE5UM-25F-6MG285C " H 50  -100 50  0001 C CNN "PN"
+F 5 " LFE5UM-25F-6MG285C-ND " H 50  -100 50  0001 C CNN "SN-DK"
+	7    9300 1150
 	-1   0    0    -1  
 $EndComp
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 8 1 5B0999B9
-P 7750 3200
-F 0 "U3" H 8550 3400 60  0000 L CNN
-F 1 "ECP5U25" H 7950 3400 60  0000 L CNN
-F 2 "gkl_housings_bga:csBGA285" H 7750 3200 50  0001 C CNN
-F 3 "" H 7750 3200 50  0001 C CNN
-F 4 "LFE5UM-25F-6MG285C " H -1500 300 50  0001 C CNN "PN"
-F 5 " LFE5UM-25F-6MG285C-ND " H -1500 300 50  0001 C CNN "SN-DK"
-	8    7750 3200
+P 7800 3100
+F 0 "U3" H 8600 3300 60  0000 L CNN
+F 1 "ECP5U25" H 8000 3300 60  0000 L CNN
+F 2 "gkl_housings_bga:csBGA285" H 7800 3100 50  0001 C CNN
+F 3 "" H 7800 3100 50  0001 C CNN
+F 4 "LFE5UM-25F-6MG285C " H -1450 200 50  0001 C CNN "PN"
+F 5 " LFE5UM-25F-6MG285C-ND " H -1450 200 50  0001 C CNN "SN-DK"
+	8    7800 3100
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -180,27 +180,27 @@ Wire Wire Line
 $Comp
 L gkl_power:GND #PWR0104
 U 1 1 5B1207AF
-P 7850 4650
-F 0 "#PWR0104" H 7850 4400 50  0001 C CNN
-F 1 "GND" H 7853 4524 50  0000 C CNN
-F 2 "" H 7750 4300 50  0001 C CNN
-F 3 "" H 7850 4650 50  0001 C CNN
-	1    7850 4650
+P 7900 4550
+F 0 "#PWR0104" H 7900 4300 50  0001 C CNN
+F 1 "GND" H 7903 4424 50  0000 C CNN
+F 2 "" H 7800 4200 50  0001 C CNN
+F 3 "" H 7900 4550 50  0001 C CNN
+	1    7900 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7750 3500 7850 3500
+	7800 3400 7900 3400
 Wire Wire Line
-	7850 3500 7850 4650
+	7900 3400 7900 4550
 Wire Wire Line
-	7750 3300 7850 3300
+	7800 3200 7900 3200
 Wire Wire Line
-	7850 3300 7850 3500
-Connection ~ 7850 3500
+	7900 3200 7900 3400
+Connection ~ 7900 3400
 Wire Wire Line
-	7750 3800 8700 3800
+	7800 3700 8750 3700
 Wire Wire Line
-	7750 3600 7950 3600
+	7800 3500 8000 3500
 Text Notes 1150 900  0    80   ~ 0
 BANK 2
 Text Notes 1150 3500 0    80   ~ 0
@@ -211,13 +211,13 @@ Text Notes 1150 6400 0    80   ~ 0
 BANK 0
 Text Notes 3750 950  0    80   ~ 0
 BANK 6
-Text Notes 8350 800  0    80   ~ 0
+Text Notes 8100 800  0    80   ~ 0
 BANK 8
 Wire Wire Line
-	7950 3400 7750 3400
-Text Notes 8500 900  0    50   ~ 0
+	8000 3300 7800 3300
+Text Notes 8250 900  0    50   ~ 0
 3V3
-Text Notes 9750 1350 0    100  ~ 0
+Text Notes 9850 1300 0    100  ~ 0
 QSPI Config
 Text Notes 3850 1050 0    50   ~ 0
 1V5\n
@@ -229,26 +229,26 @@ Text Notes 1300 1000 0    50   ~ 0
 1V5
 Text Notes 1300 3600 0    50   ~ 0
 1V5
-Text GLabel 9550 2250 2    60   Input ~ 0
+Text GLabel 9300 2350 2    60   Input ~ 0
 FPGA_RESET
-Text GLabel 8000 4200 2    60   Input ~ 0
+Text GLabel 8050 4100 2    60   Input ~ 0
 JTAG_TMS
-Text GLabel 8000 4000 2    60   Input ~ 0
+Text GLabel 8050 3900 2    60   Input ~ 0
 JTAG_TDI
-Text GLabel 8000 3900 2    60   Input ~ 0
+Text GLabel 8050 3800 2    60   Input ~ 0
 JTAG_TCK
 Wire Wire Line
-	8000 4200 7750 4200
+	8050 4100 7800 4100
 Wire Wire Line
-	7750 4100 8000 4100
+	7800 4000 8050 4000
 Wire Wire Line
-	8000 4000 7750 4000
+	8050 3900 7800 3900
 Wire Wire Line
-	7750 3900 8000 3900
-NoConn ~ 7750 4300
-NoConn ~ 7750 4400
-NoConn ~ 7750 4500
-NoConn ~ 7750 4600
+	7800 3800 8050 3800
+NoConn ~ 7800 4200
+NoConn ~ 7800 4300
+NoConn ~ 7800 4400
+NoConn ~ 7800 4500
 Text GLabel 4650 2500 2    50   Input ~ 0
 RAM_D0
 Text GLabel 4650 1900 2    50   Input ~ 0
@@ -640,13 +640,13 @@ Text GLabel 10200 3650 0    60   Input ~ 0
 JTAG_TCK
 Text GLabel 10200 3850 0    60   Input ~ 0
 JTAG_TDI
-Text GLabel 8000 4100 2    60   Input ~ 0
+Text GLabel 8050 4000 2    60   Input ~ 0
 JTAG_TDO
 Text GLabel 10200 3750 0    60   Input ~ 0
 JTAG_TDO
-Text GLabel 7950 3400 2    50   UnSpc ~ 0
+Text GLabel 8000 3300 2    50   UnSpc ~ 0
 P3.3V
-Text GLabel 8700 3300 1    50   UnSpc ~ 0
+Text GLabel 8750 3200 1    50   UnSpc ~ 0
 P3.3V
 Text GLabel 5250 1500 2    50   UnSpc ~ 0
 P1.5V
@@ -669,23 +669,23 @@ F 5 " LFE5UM-25F-6MG285C-ND " H -1000 -3650 50  0001 C CNN "SN-DK"
 	5    4650 1300
 	-1   0    0    -1  
 $EndComp
-Text GLabel 5700 7000 2    50   Input ~ 0
+Text GLabel 5700 5900 2    50   Input ~ 0
 IO_9
-Text GLabel 5700 6800 2    50   Input ~ 0
+Text GLabel 5700 5000 2    50   Input ~ 0
 IO_6
-Text GLabel 5700 6900 2    50   Input ~ 0
+Text GLabel 5700 5200 2    50   Input ~ 0
 IO_5
-Text GLabel 5700 5800 2    50   Input ~ 0
+Text GLabel 5700 4800 2    50   Input ~ 0
 IO_SCL
-Text GLabel 5700 5700 2    50   Input ~ 0
+Text GLabel 5700 4900 2    50   Input ~ 0
 IO_SDA
-Text GLabel 5700 7400 2    50   Input ~ 0
+Text GLabel 5700 6000 2    50   Input ~ 0
 IO_13
-Text GLabel 5700 7200 2    50   Input ~ 0
+Text GLabel 5700 5400 2    50   Input ~ 0
 IO_12
-Text GLabel 5700 7300 2    50   Input ~ 0
+Text GLabel 5700 5600 2    50   Input ~ 0
 IO_11
-Text GLabel 5700 7100 2    50   Input ~ 0
+Text GLabel 5700 5500 2    50   Input ~ 0
 IO_10
 Text GLabel 5700 6400 2    50   Input ~ 0
 IO_SCK
@@ -697,4 +697,52 @@ Text GLabel 5700 6200 2    50   Input ~ 0
 IO_0
 Text GLabel 5700 6100 2    50   Input ~ 0
 IO_1
+Text GLabel 5700 7100 2    50   Input ~ 0
+USB_DN
+Text GLabel 5700 7200 2    50   Input ~ 0
+USB_PULLUP
+Text GLabel 5700 7400 2    50   Input ~ 0
+USB_DP
+Text GLabel 5700 6800 2    50   Input ~ 0
+SD0_DAT0
+Text GLabel 5700 6900 2    50   Input ~ 0
+SD0_DAT1
+Text GLabel 5700 7000 2    50   Input ~ 0
+SD0_DAT2
+Text GLabel 5700 7300 2    50   Input ~ 0
+SD0_DAT3
+Text GLabel 5700 6700 2    50   Input ~ 0
+SD0_CMD
+Text GLabel 5700 6600 2    50   Input ~ 0
+SD0_CLK
+Text GLabel 5700 5800 2    50   Input ~ 0
+SD0_CD
+Text GLabel 5700 5700 2    50   Input ~ 0
+AUX_0
+Text GLabel 5700 5300 2    50   Input ~ 0
+AUX_1
+Text GLabel 5700 5100 2    50   Input ~ 0
+AUX_2
+Text GLabel 5700 4700 2    50   Input ~ 0
+AUX_3
+Text GLabel 1950 7150 2    50   Input ~ 0
+AUX_4
+Text GLabel 1950 7250 2    50   Input ~ 0
+AUX_5
+Text GLabel 9300 2250 2    50   Input ~ 0
+LED_R
+Text GLabel 9300 2050 2    50   Input ~ 0
+LED_G
+Text GLabel 9300 1950 2    50   Input ~ 0
+LED_B
+Text GLabel 3500 6750 2    50   Input ~ 0
+AUX_6
+Text GLabel 3500 6850 2    50   Input ~ 0
+AUX_7
+Text GLabel 3500 7050 2    50   Input ~ 0
+AUX_8
+Text GLabel 3500 7150 2    50   Input ~ 0
+AUX_9
+Text GLabel 3500 7250 2    50   Input ~ 0
+AUX_10
 $EndSCHEMATC

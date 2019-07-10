@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 3 7
 Title "Orange Crab"
 Date "2019-06-28"
 Rev "r0.1"
@@ -1048,4 +1048,23 @@ F 3 "" H 4400 4100 50  0001 C CNN
 	1    4400 4100
 	1    0    0    -1  
 $EndComp
+Text GLabel 4650 4900 0    50   UnSpc ~ 0
+ECP5_VREF
+Text GLabel 5200 4900 2    50   UnSpc ~ 0
+VTT_REF
+$Comp
+L Device:R R3
+U 1 1 5D601972
+P 4900 4900
+F 0 "R3" V 4693 4900 50  0000 C CNN
+F 1 "0R" V 4784 4900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 4830 4900 50  0001 C CNN
+F 3 "~" H 4900 4900 50  0001 C CNN
+	1    4900 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 4900 4750 4900
+Wire Wire Line
+	5050 4900 5200 4900
 $EndSCHEMATC

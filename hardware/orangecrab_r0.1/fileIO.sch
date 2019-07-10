@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 5 7
 Title "Orange Crab"
 Date "2019-06-28"
 Rev "r0.1"
@@ -14,57 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 8350 1550 0    60   Input ~ 0
-LED_A
-$Comp
-L Device:LED D1
-U 1 1 5ABC9AAA
-P 8650 1550
-AR Path="/5ABC9A87/5ABC9AAA" Ref="D1"  Part="1" 
-AR Path="/5D1738DB/5ABC9AAA" Ref="D?"  Part="1" 
-F 0 "D1" H 8642 1295 50  0000 C CNN
-F 1 "LED" H 8642 1386 50  0000 C CNN
-F 2 "LEDs:LED_0603" H 8650 1550 50  0001 C CNN
-F 3 "" H 8650 1550 50  0001 C CNN
-F 4 "APHHS1005SYCK " H -100 -400 50  0001 C CNN "PN"
-F 5 "754-1105-1-ND" H -100 -400 50  0001 C CNN "SN-DK"
-	1    8650 1550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5ABC9C1C
-P 9200 1550
-AR Path="/5ABC9A87/5ABC9C1C" Ref="R3"  Part="1" 
-AR Path="/5D1738DB/5ABC9C1C" Ref="R?"  Part="1" 
-F 0 "R3" V 8993 1550 50  0000 C CNN
-F 1 "10k" V 9084 1550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 9130 1550 50  0001 C CNN
-F 3 "" H 9200 1550 50  0001 C CNN
-F 4 "P10KDECT-ND" H -100 -400 50  0001 C CNN "SN-DK"
-F 5 "ERA-2AED103X" H -100 -400 50  0001 C CNN "PN"
-	1    9200 1550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8350 1550 8500 1550
-Wire Wire Line
-	8800 1550 9050 1550
-Wire Wire Line
-	9350 1550 9600 1550
-$Comp
-L gkl_power:GND #PWR02
-U 1 1 5ABCA494
-P 9600 1550
-AR Path="/5ABC9A87/5ABCA494" Ref="#PWR02"  Part="1" 
-AR Path="/5D1738DB/5ABCA494" Ref="#PWR?"  Part="1" 
-F 0 "#PWR02" H 9600 1300 50  0001 C CNN
-F 1 "GND" V 9604 1470 50  0000 R CNN
-F 2 "" H 9500 1200 50  0001 C CNN
-F 3 "" H 9600 1550 50  0001 C CNN
-	1    9600 1550
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Connector:Conn_01x16_Male J2
 U 1 1 5D0A61DA
@@ -403,4 +352,79 @@ Text GLabel 8050 2350 0    50   Input ~ 0
 VBAT
 Wire Wire Line
 	8600 2350 8050 2350
+Text Notes 1650 1200 0    50   ~ 0
+USB input
+Text GLabel 2550 1750 2    50   UnSpc ~ 0
+USB_DP
+Text GLabel 2550 1850 2    50   UnSpc ~ 0
+USB_DN
+Wire Wire Line
+	2100 1750 2300 1750
+Wire Wire Line
+	2550 1850 2100 1850
+Wire Wire Line
+	1800 2150 1800 2250
+Wire Wire Line
+	1800 2250 1700 2250
+Wire Wire Line
+	1700 2250 1700 2400
+Wire Wire Line
+	1700 2150 1700 2250
+Connection ~ 1700 2250
+$Comp
+L gkl_power:GND #PWR?
+U 1 1 5D4CCC72
+P 1700 2400
+AR Path="/5D1738DB/5D4CCC72" Ref="#PWR?"  Part="1" 
+AR Path="/5ABC9A87/5D4CCC72" Ref="#PWR0121"  Part="1" 
+F 0 "#PWR0121" H 1700 2150 50  0001 C CNN
+F 1 "GND" H 1703 2274 50  0000 C CNN
+F 2 "" H 1600 2050 50  0001 C CNN
+F 3 "" H 1700 2400 50  0001 C CNN
+	1    1700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5D4CCC78
+P 1800 1750
+AR Path="/5D1738DB/5D4CCC78" Ref="J?"  Part="1" 
+AR Path="/5ABC9A87/5D4CCC78" Ref="J3"  Part="1" 
+F 0 "J3" H 1857 2217 50  0000 C CNN
+F 1 "USB_B_Micro" H 1857 2126 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 1950 1700 50  0001 C CNN
+F 3 "~" H 1950 1700 50  0001 C CNN
+	1    1800 1750
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 1550 2    50   UnSpc ~ 0
+USB_PULLUP
+$Comp
+L Device:R R20
+U 1 1 5D4D2223
+P 2550 1550
+F 0 "R20" V 2757 1550 50  0000 C CNN
+F 1 "1.5K" V 2666 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 2480 1550 50  0001 C CNN
+F 3 "~" H 2550 1550 50  0001 C CNN
+	1    2550 1550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 1550 2300 1550
+Wire Wire Line
+	2300 1550 2300 1750
+Connection ~ 2300 1750
+Wire Wire Line
+	2300 1750 2550 1750
+Wire Wire Line
+	2700 1550 2800 1550
+Wire Wire Line
+	2100 1550 2200 1550
+Wire Wire Line
+	2200 1550 2200 1200
+Wire Wire Line
+	2200 1200 2750 1200
+Text GLabel 2750 1200 2    50   UnSpc ~ 0
+PUSB_VBUS
 $EndSCHEMATC

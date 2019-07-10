@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title "Orange Crab"
 Date "2019-06-28"
 Rev "r0.1"
@@ -88,4 +88,10 @@ F 3 "~" H 10450 6400 50  0001 C CNN
 	1    10450 6400
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 6300 4200 1900 1000
+U 5D35D1F5
+F0 "Decoupling" 50
+F1 "decopling.sch" 50
+$EndSheet
 $EndSCHEMATC
