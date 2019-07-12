@@ -1,4 +1,4 @@
-15876303539666326
+15879429140896326
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44765,6 +44765,13 @@ MAGJACK
 18
 15
 gkl_conn
+micro_sd_1051620001
+
+
+0
+15
+10
+gkl_conn
 molex_microsd_1040310811
 
 
@@ -45037,6 +45044,13 @@ EVQP4
 0
 4
 4
+gkl_misc
+PTS_810_SMT_Switch
+
+
+0
+4
+2
 gkl_misc
 X40-stepper
 

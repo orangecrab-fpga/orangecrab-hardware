@@ -1,26 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Conn_01x02_Male
-#
-DEF Connector_Conn_01x02_Male J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Conn_01x02_Male" 0 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??_*
-$ENDFPLIST
-DRAW
-S 34 -95 0 -105 1 1 6 F
-S 34 5 0 -5 1 1 6 F
-P 2 1 1 6 50 -100 34 -100 N
-P 2 1 1 6 50 0 34 0 N
-X Pin_1 1 200 0 150 L 50 50 1 1 P
-X Pin_2 2 200 -100 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Connector_Conn_01x12_Male
 #
 DEF Connector_Conn_01x12_Male J 0 40 Y N 1 F N
@@ -168,6 +148,28 @@ X Pin_9 9 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Generic_MountingPin_Conn_01x02_MountingPin
+#
+DEF Connector_Generic_MountingPin_Conn_01x02_MountingPin J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic_MountingPin_Conn_01x02_MountingPin" 50 -200 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??-1MP*
+$ENDFPLIST
+DRAW
+T 0 0 -165 15 0 1 1 Mounting Normal 0 C C
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+P 2 1 1 6 -40 -180 40 -180 N
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+X MountPin MP 0 -300 120 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Generic_MountingPin_Conn_01x09_MountingPin
 #
 DEF Connector_Generic_MountingPin_Conn_01x09_MountingPin J 0 40 Y N 1 F N
@@ -201,6 +203,24 @@ X Pin_7 7 -200 -200 150 R 50 50 1 1 P
 X Pin_8 8 -200 -300 150 R 50 50 1 1 P
 X Pin_9 9 -200 -400 150 R 50 50 1 1 P
 X MountPin MP 0 -600 120 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_TestPoint_Flag
+#
+DEF Connector_TestPoint_Flag TP 0 30 N N 1 F N
+F0 "TP" 135 70 50 H V C CNN
+F1 "Connector_TestPoint_Flag" 130 165 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+S 35 110 230 35 0 1 10 f
+P 2 0 1 10 0 0 35 35 N
+X 1 1 0 0 0 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -409,6 +429,23 @@ $FPLIST
 $ENDFPLIST
 DRAW
 C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
+# Switch_SW_Push
+#
+DEF Switch_SW_Push SW 0 40 N N 1 F N
+F0 "SW" 50 100 50 H V L CNN
+F1 "Switch_SW_Push" 0 -60 50 H V C CNN
+F2 "" 0 200 50 H I C CNN
+F3 "" 0 200 50 H I C CNN
+DRAW
+C -80 0 20 0 1 0 N
+C 80 0 20 0 1 0 N
+P 2 0 1 0 0 50 0 120 N
+P 2 0 1 0 100 50 -100 50 N
+X 1 1 -200 0 100 R 50 50 0 1 P
+X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
@@ -1002,6 +1039,22 @@ DRAW
 P 2 0 1 0 0 -50 0 0 N
 P 2 0 1 12 50 -50 -50 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# gkl_time_TYETBCSANF-32.000000
+#
+DEF gkl_time_TYETBCSANF-32.000000 OSC 0 40 Y Y 1 F N
+F0 "OSC" 0 300 50 H V C CNN
+F1 "gkl_time_TYETBCSANF-32.000000" 0 200 50 H V C CNN
+F2 "" 0 250 50 H I C CNN
+F3 "" 0 250 50 H I C CNN
+DRAW
+S -250 150 250 -150 0 1 12 f
+X NC 1 -400 50 150 R 50 50 1 1 I
+X GND 2 -400 -50 150 R 50 50 1 1 I
+X OUT 3 400 -50 150 L 50 50 1 1 I
+X VDD 4 400 50 150 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #

@@ -28,28 +28,8 @@ Text GLabel 9300 1650 2    60   Input ~ 0
 QSPI_D2
 Text GLabel 9300 1550 2    60   Input ~ 0
 QSPI_D3
-Text GLabel 8850 3700 2    60   Input ~ 0
+Text GLabel 8050 3700 2    60   Input ~ 0
 FPGA_RESET
-$Comp
-L Device:R R4
-U 1 1 5AC144E9
-P 8750 3450
-F 0 "R4" H 8820 3496 50  0000 L CNN
-F 1 "10k" H 8820 3405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 8680 3450 50  0001 C CNN
-F 3 "" H 8750 3450 50  0001 C CNN
-F 4 "P10KDECT-ND" H -1600 200 50  0001 C CNN "SN-DK"
-F 5 "ERA-2AED103X" H -1600 200 50  0001 C CNN "PN"
-	1    8750 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8850 3700 8750 3700
-Wire Wire Line
-	8750 3600 8750 3700
-Connection ~ 8750 3700
-Wire Wire Line
-	8750 3300 8750 3200
 $Comp
 L gkl_lattice:ECP5U25-MG285 U3
 U 1 1 5B09968A
@@ -197,8 +177,6 @@ Wire Wire Line
 Wire Wire Line
 	7900 3200 7900 3400
 Connection ~ 7900 3400
-Wire Wire Line
-	7800 3700 8750 3700
 Wire Wire Line
 	7800 3500 8000 3500
 Text Notes 1150 900  0    80   ~ 0
@@ -646,8 +624,6 @@ Text GLabel 10200 3750 0    60   Input ~ 0
 JTAG_TDO
 Text GLabel 8000 3300 2    50   UnSpc ~ 0
 P3.3V
-Text GLabel 8750 3200 1    50   UnSpc ~ 0
-P3.3V
 Text GLabel 5250 1500 2    50   UnSpc ~ 0
 P1.5V
 Wire Wire Line
@@ -703,19 +679,19 @@ Text GLabel 5700 7200 2    50   Input ~ 0
 USB_PULLUP
 Text GLabel 5700 7400 2    50   Input ~ 0
 USB_DP
-Text GLabel 5700 6800 2    50   Input ~ 0
+Text GLabel 5700 5800 2    50   Input ~ 0
 SD0_DAT0
-Text GLabel 5700 6900 2    50   Input ~ 0
+Text GLabel 5700 6700 2    50   Input ~ 0
 SD0_DAT1
-Text GLabel 5700 7000 2    50   Input ~ 0
+Text GLabel 5700 6600 2    50   Input ~ 0
 SD0_DAT2
 Text GLabel 5700 7300 2    50   Input ~ 0
 SD0_DAT3
-Text GLabel 5700 6700 2    50   Input ~ 0
+Text GLabel 5700 6900 2    50   Input ~ 0
 SD0_CMD
-Text GLabel 5700 6600 2    50   Input ~ 0
+Text GLabel 5700 6800 2    50   Input ~ 0
 SD0_CLK
-Text GLabel 5700 5800 2    50   Input ~ 0
+Text GLabel 5700 7000 2    50   Input ~ 0
 SD0_CD
 Text GLabel 5700 5700 2    50   Input ~ 0
 AUX_0
@@ -745,4 +721,46 @@ Text GLabel 3500 7150 2    50   Input ~ 0
 AUX_9
 Text GLabel 3500 7250 2    50   Input ~ 0
 AUX_10
+$Comp
+L gkl_time:TYETBCSANF-32.000000 OSC1
+U 1 1 5D75A2DF
+P 7500 5750
+F 0 "OSC1" H 7500 6068 50  0000 C CNN
+F 1 "TYETBCSANF-32.000000" H 7500 5977 50  0000 C CNN
+F 2 "gkl_time:Oscilator_2.5x2.0" H 7500 6000 50  0001 C CNN
+F 3 "" H 7500 6000 50  0001 C CNN
+	1    7500 5750
+	1    0    0    -1  
+$EndComp
+Text GLabel 7900 5800 2    50   Input ~ 0
+REF_CLK
+Text GLabel 7900 5700 2    50   UnSpc ~ 0
+P3.3V
+Text GLabel 7100 5700 0    50   UnSpc ~ 0
+P3.3V
+$Comp
+L gkl_power:GND #PWR0162
+U 1 1 5D75BEEF
+P 7050 5900
+F 0 "#PWR0162" H 7050 5650 50  0001 C CNN
+F 1 "GND" H 7053 5774 50  0000 C CNN
+F 2 "" H 6950 5550 50  0001 C CNN
+F 3 "" H 7050 5900 50  0001 C CNN
+	1    7050 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 5900 7050 5800
+Wire Wire Line
+	7050 5800 7100 5800
+Wire Wire Line
+	7800 3700 8050 3700
+Text GLabel 9300 1150 2    60   Input ~ 0
+AUX_20
+Text GLabel 9300 1250 2    60   Input ~ 0
+AUX_21
+Text GLabel 9300 1350 2    60   Input ~ 0
+AUX_22
+Text GLabel 9300 1450 2    60   Input ~ 0
+AUX_23
 $EndSCHEMATC

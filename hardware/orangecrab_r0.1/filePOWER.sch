@@ -14,7 +14,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 6050 1950 2    50   ~ 0
+Text Notes 6100 2150 2    50   ~ 0
 Battery Input
 Text Notes 3550 250  0    50   ~ 0
 Battery Charger
@@ -30,17 +30,6 @@ F 4 "BQ24232RGTR" H 3150 1950 50  0001 C CNN "PN"
 F 5 "Texas Instruments" H 3150 1950 50  0001 C CNN "Mfg"
 	1    3150 1950
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J5
-U 1 1 5D179AC3
-P 5500 1900
-F 0 "J5" H 5550 2200 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 5300 2100 50  0000 C CNN
-F 2 "gkl_conn:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical" H 5500 1900 50  0001 C CNN
-F 3 "~" H 5500 1900 50  0001 C CNN
-	1    5500 1900
-	-1   0    0    -1  
 $EndComp
 $Comp
 L gkl_pmic:FAN53541 U2
@@ -302,8 +291,6 @@ F 3 "~" H 7000 5100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7000 5250 7000 5300
-Wire Wire Line
 	7000 5800 7750 5800
 Connection ~ 7750 5800
 Wire Wire Line
@@ -357,7 +344,7 @@ Wire Wire Line
 	4700 2000 4700 1900
 Connection ~ 4700 1900
 Wire Wire Line
-	4700 1900 5300 1900
+	4700 1900 4950 1900
 Wire Wire Line
 	4550 1750 4550 2400
 Wire Wire Line
@@ -763,10 +750,10 @@ Text GLabel 6500 3100 0    50   UnSpc ~ 0
 VSYS
 Text GLabel 6500 4900 0    50   UnSpc ~ 0
 VSYS
-Text GLabel 5600 1400 2    50   UnSpc ~ 0
+Text GLabel 5050 1400 2    50   UnSpc ~ 0
 VSYS
 Wire Wire Line
-	5600 1400 4550 1400
+	5050 1400 4550 1400
 Connection ~ 4550 1400
 Wire Wire Line
 	5300 2000 5200 2000
@@ -952,7 +939,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 1500 7750 1400
 Wire Wire Line
-	7750 1200 7250 1200
+	7750 1200 7500 1200
 Wire Wire Line
 	7850 1200 7750 1200
 Connection ~ 7750 1200
@@ -966,8 +953,6 @@ Wire Wire Line
 Connection ~ 7750 1400
 Wire Wire Line
 	7750 1400 7750 1300
-Wire Wire Line
-	7850 1700 7750 1700
 Wire Wire Line
 	7850 2400 7750 2400
 Wire Wire Line
@@ -988,25 +973,25 @@ Wire Wire Line
 	7750 1800 7750 2100
 Connection ~ 7750 2200
 Wire Wire Line
-	7850 2000 6600 2000
+	7850 2000 6250 2000
 Wire Wire Line
-	6600 2000 6600 1750
+	6250 2000 6250 1750
 $Comp
 L Device:R R13
 U 1 1 5D42715D
-P 6600 1600
-F 0 "R13" H 6500 1550 50  0000 C CNN
-F 1 "100k" H 6450 1650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 6530 1600 50  0001 C CNN
-F 3 "~" H 6600 1600 50  0001 C CNN
-	1    6600 1600
+P 6250 1600
+F 0 "R13" H 6100 1550 50  0000 C CNN
+F 1 "100k" H 6100 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 6180 1600 50  0001 C CNN
+F 3 "~" H 6250 1600 50  0001 C CNN
+	1    6250 1600
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	6600 1450 6600 1200
-Connection ~ 6600 1200
+	6250 1450 6250 1200
+Connection ~ 6250 1200
 Wire Wire Line
-	6600 1200 6500 1200
+	6250 1200 6150 1200
 $Comp
 L gkl_power:GND #PWR0113
 U 1 1 5D42716A
@@ -1029,67 +1014,62 @@ F 3 "" H 9450 2550 50  0001 C CNN
 	1    9450 2550
 	1    0    0    -1  
 $EndComp
-Text Label 7600 2000 2    50   ~ 0
+Text Label 7250 2000 2    50   ~ 0
 PGOOD_P1.1V
 $Comp
 L Device:C C3
 U 1 1 5D42717F
-P 7000 1400
-F 0 "C3" H 6886 1354 50  0000 R CNN
-F 1 "10uF" H 6886 1445 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7038 1250 50  0001 C CNN
-F 3 "~" H 7000 1400 50  0001 C CNN
-	1    7000 1400
+P 6650 1400
+F 0 "C3" H 6536 1354 50  0000 R CNN
+F 1 "10uF" H 6536 1445 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6688 1250 50  0001 C CNN
+F 3 "~" H 6650 1400 50  0001 C CNN
+	1    6650 1400
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:C C5
 U 1 1 5D427189
-P 7250 1400
-F 0 "C5" H 7135 1354 50  0000 R CNN
-F 1 "10nF" H 7135 1445 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0201_0603Metric" H 7288 1250 50  0001 C CNN
-F 3 "~" H 7250 1400 50  0001 C CNN
-	1    7250 1400
+P 6900 1400
+F 0 "C5" H 6785 1354 50  0000 R CNN
+F 1 "10nF" H 6785 1445 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 6938 1250 50  0001 C CNN
+F 3 "~" H 6900 1400 50  0001 C CNN
+	1    6900 1400
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7250 1550 7250 1600
+	6900 1550 6900 1600
 Wire Wire Line
-	7250 1600 7000 1600
+	6900 1600 6650 1600
 Wire Wire Line
-	7000 1600 7000 2100
+	6650 1600 6650 2100
 Wire Wire Line
-	7000 2100 7750 2100
+	6650 2100 7750 2100
 Connection ~ 7750 2100
 Wire Wire Line
 	7750 2100 7750 2200
 Wire Wire Line
-	7000 1550 7000 1600
-Connection ~ 7000 1600
+	6650 1550 6650 1600
+Connection ~ 6650 1600
 Wire Wire Line
-	7000 1250 7000 1200
-Connection ~ 7000 1200
+	6650 1250 6650 1200
+Connection ~ 6650 1200
 Wire Wire Line
-	7000 1200 6600 1200
+	6650 1200 6250 1200
 Wire Wire Line
-	7250 1250 7250 1200
-Connection ~ 7250 1200
+	6900 1250 6900 1200
+Connection ~ 6900 1200
 Wire Wire Line
-	7250 1200 7000 1200
+	6900 1200 6650 1200
 Text GLabel 10700 1700 2    50   UnSpc ~ 0
 P1.1V
-Text GLabel 6500 1200 0    50   UnSpc ~ 0
+Text GLabel 6150 1200 0    50   UnSpc ~ 0
 VSYS
-Wire Wire Line
-	7750 1500 7750 1700
-Connection ~ 7750 1500
 Wire Wire Line
 	6600 3100 7000 3100
 Wire Wire Line
 	6600 4900 7000 4900
-Wire Wire Line
-	7000 5300 7000 5800
 $Comp
 L Device:LED_ARGB D2
 U 1 1 5D2588EC
@@ -1353,8 +1333,6 @@ Wire Wire Line
 	2750 6250 2750 6150
 Wire Wire Line
 	2800 6250 2750 6250
-Text Label 2650 6150 2    50   ~ 0
-PGOOD_LAST
 Wire Wire Line
 	2800 6150 2750 6150
 Wire Wire Line
@@ -1401,21 +1379,16 @@ $EndComp
 $Comp
 L gkl_power:GND #PWR0145
 U 1 1 5D85A10F
-P 2550 4900
-F 0 "#PWR0145" H 2550 4650 50  0001 C CNN
-F 1 "GND" H 2553 4774 50  0000 C CNN
-F 2 "" H 2450 4550 50  0001 C CNN
-F 3 "" H 2550 4900 50  0001 C CNN
-	1    2550 4900
+P 2200 4900
+F 0 "#PWR0145" H 2200 4650 50  0001 C CNN
+F 1 "GND" H 2203 4774 50  0000 C CNN
+F 2 "" H 2100 4550 50  0001 C CNN
+F 3 "" H 2200 4900 50  0001 C CNN
+	1    2200 4900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2750 4500 2550 4500
-Connection ~ 2750 4500
-Wire Wire Line
-	2750 4700 2750 4500
-Wire Wire Line
-	2900 4700 2750 4700
+	2900 4700 2850 4700
 Wire Wire Line
 	3900 4700 3900 4900
 Wire Wire Line
@@ -1423,14 +1396,12 @@ Wire Wire Line
 Wire Wire Line
 	4100 4850 4100 4900
 Wire Wire Line
-	2550 4850 2550 4900
+	2200 4850 2200 4900
 Wire Wire Line
-	2550 4500 2250 4500
-Connection ~ 2550 4500
+	2200 4500 1900 4500
+Connection ~ 2200 4500
 Wire Wire Line
-	2550 4550 2550 4500
-Wire Wire Line
-	2900 4500 2750 4500
+	2200 4550 2200 4500
 Wire Wire Line
 	4100 4500 4450 4500
 Connection ~ 4100 4500
@@ -1455,16 +1426,16 @@ $EndComp
 $Comp
 L Device:C C46
 U 1 1 5D757AA5
-P 2550 4700
-F 0 "C46" H 2665 4791 50  0000 L CNN
-F 1 "4.7uF" H 2665 4700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2588 4550 50  0001 C CNN
-F 3 "~" H 2550 4700 50  0001 C CNN
-F 4 "10V, X5R" H 2665 4609 50  0000 L CNN "Info"
-	1    2550 4700
+P 2200 4700
+F 0 "C46" H 2315 4791 50  0000 L CNN
+F 1 "4.7uF" H 2315 4700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2238 4550 50  0001 C CNN
+F 3 "~" H 2200 4700 50  0001 C CNN
+F 4 "10V, X5R" H 2315 4609 50  0000 L CNN "Info"
+	1    2200 4700
 	-1   0    0    -1  
 $EndComp
-Text GLabel 2250 4500 0    50   UnSpc ~ 0
+Text GLabel 1900 4500 0    50   UnSpc ~ 0
 P3.3V
 $Comp
 L gkl_pmic:NCP167 U10
@@ -1487,4 +1458,72 @@ Text GLabel 2100 1250 0    50   UnSpc ~ 0
 PUSB_VBUS
 Wire Wire Line
 	7000 3450 7000 4000
+$Comp
+L Connector_Generic_MountingPin:Conn_01x02_MountingPin J5
+U 1 1 5D8317B6
+P 5500 1900
+F 0 "J5" H 5450 2050 50  0000 L CNN
+F 1 "JST" H 5600 2050 50  0000 L CNN
+F 2 "gkl_conn:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical" H 5500 1900 50  0001 C CNN
+F 3 "~" H 5500 1900 50  0001 C CNN
+	1    5500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0166
+U 1 1 5D8325AB
+P 5500 2200
+F 0 "#PWR0166" H 5500 1950 50  0001 C CNN
+F 1 "GND" H 5503 2074 50  0000 C CNN
+F 2 "" H 5400 1850 50  0001 C CNN
+F 3 "" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 5050 1800 2    50   UnSpc ~ 0
+VBATT
+Wire Wire Line
+	5050 1800 4950 1800
+Wire Wire Line
+	4950 1800 4950 1900
+Wire Wire Line
+	7000 5250 7000 5800
+Connection ~ 4950 1900
+Wire Wire Line
+	4950 1900 5300 1900
+Text Label 2850 4700 2    50   ~ 0
+PGOOD_P1.1V
+Wire Wire Line
+	2200 4500 2900 4500
+Text Label 7550 3900 2    50   ~ 0
+PGOOD_P1.5V
+Text Label 7550 5700 2    50   ~ 0
+PGOOD_P3.3V
+Text Label 2650 6150 2    50   ~ 0
+PGOOD_P1.5V
+Text GLabel 7250 1700 0    50   UnSpc ~ 0
+EN
+Wire Wire Line
+	7250 1700 7500 1700
+$Comp
+L Device:R R25
+U 1 1 5D9B61C6
+P 7500 1450
+F 0 "R25" H 7350 1400 50  0000 C CNN
+F 1 "100k" H 7350 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 7430 1450 50  0001 C CNN
+F 3 "~" H 7500 1450 50  0001 C CNN
+	1    7500 1450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7500 1600 7500 1700
+Connection ~ 7500 1700
+Wire Wire Line
+	7500 1700 7850 1700
+Wire Wire Line
+	7500 1300 7500 1200
+Connection ~ 7500 1200
+Wire Wire Line
+	7500 1200 6900 1200
 $EndSCHEMATC
