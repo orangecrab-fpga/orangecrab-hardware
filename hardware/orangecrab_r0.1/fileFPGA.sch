@@ -756,11 +756,11 @@ Wire Wire Line
 Wire Wire Line
 	7800 3700 8050 3700
 Text GLabel 9300 1150 2    60   Input ~ 0
-AUX_20
+AUX_11
 Text GLabel 9300 1250 2    60   Input ~ 0
-AUX_21
+AUX_12
 Text GLabel 9300 1350 2    60   Input ~ 0
-AUX_22
+AUX_13
 Text GLabel 9300 1450 2    60   Input ~ 0
-AUX_23
+AUX_14
 $EndSCHEMATC
