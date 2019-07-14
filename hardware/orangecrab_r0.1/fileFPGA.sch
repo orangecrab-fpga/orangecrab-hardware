@@ -759,4 +759,45 @@ Text GLabel 9300 1350 2    60   Input ~ 0
 AUX_13
 Text GLabel 9300 1450 2    60   Input ~ 0
 AUX_14
+Text GLabel 5250 1300 2    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	5250 1300 4650 1300
+Wire Wire Line
+	5250 3200 4650 3200
+Text GLabel 5250 3200 2    50   UnSpc ~ 0
+P1.5V
+Wire Wire Line
+	5250 3300 4650 3300
+Text GLabel 5250 3300 2    50   UnSpc ~ 0
+P1.5V
+$Comp
+L gkl_power:GND #PWR0167
+U 1 1 5E31762C
+P 5150 3650
+F 0 "#PWR0167" H 5150 3400 50  0001 C CNN
+F 1 "GND" H 5153 3524 50  0000 C CNN
+F 2 "" H 5050 3300 50  0001 C CNN
+F 3 "" H 5150 3650 50  0001 C CNN
+	1    5150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3400 5150 3400
+Wire Wire Line
+	5150 3400 5150 3500
+Wire Wire Line
+	4650 3500 5150 3500
+Connection ~ 5150 3500
+Wire Wire Line
+	5150 3500 5150 3600
+Wire Wire Line
+	4650 3600 5150 3600
+Connection ~ 5150 3600
+Wire Wire Line
+	5150 3600 5150 3650
+Text GLabel 4650 3700 2    50   Input ~ 0
+EXT_PLL+
+Text GLabel 4650 3800 2    50   Input ~ 0
+EXT_PLL-
 $EndSCHEMATC

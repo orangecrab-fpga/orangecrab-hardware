@@ -913,4 +913,34 @@ Wire Wire Line
 	5900 3650 5650 3650
 Text GLabel 5900 3650 2    50   Input ~ 0
 AUX_14
+Text GLabel 5900 4000 2    50   Input ~ 0
+EXT_PLL+
+Text GLabel 5900 4100 2    50   Input ~ 0
+EXT_PLL-
+$Comp
+L Connector:TestPoint_Flag TP19
+U 1 1 5E3DC451
+P 5650 4000
+F 0 "TP19" H 6100 4050 50  0000 R CNN
+F 1 "SMD_TP" H 5606 4003 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 4000 50  0001 C CNN
+F 3 "~" H 5850 4000 50  0001 C CNN
+	1    5650 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4000 5650 4000
+$Comp
+L Connector:TestPoint_Flag TP20
+U 1 1 5E3DC45C
+P 5650 4100
+F 0 "TP20" H 6100 4150 50  0000 R CNN
+F 1 "SMD_TP" H 5606 4103 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 4100 50  0001 C CNN
+F 3 "~" H 5850 4100 50  0001 C CNN
+	1    5650 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4100 5650 4100
 $EndSCHEMATC

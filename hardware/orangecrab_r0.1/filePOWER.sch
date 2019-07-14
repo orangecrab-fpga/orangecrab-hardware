@@ -1452,8 +1452,6 @@ Wire Wire Line
 	2100 1250 2200 1250
 Wire Wire Line
 	2200 1250 2200 1400
-Wire Wire Line
-	2200 1400 2550 1400
 Text GLabel 2100 1250 0    50   UnSpc ~ 0
 PUSB_VBUS
 Wire Wire Line
@@ -1526,4 +1524,32 @@ Wire Wire Line
 Connection ~ 7500 1200
 Wire Wire Line
 	7500 1200 6900 1200
+Wire Wire Line
+	2550 1700 2500 1700
+$Comp
+L gkl_power:GND #PWR?
+U 1 1 5E42D569
+P 2250 1700
+F 0 "#PWR?" H 2250 1450 50  0001 C CNN
+F 1 "GND" H 2253 1574 50  0000 C CNN
+F 2 "" H 2150 1350 50  0001 C CNN
+F 3 "" H 2250 1700 50  0001 C CNN
+	1    2250 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 1600 2500 1600
+Wire Wire Line
+	2500 1600 2500 1700
+Connection ~ 2500 1700
+Wire Wire Line
+	2500 1700 2250 1700
+Wire Wire Line
+	2200 1400 2550 1400
+Text GLabel 1950 1800 0    50   UnSpc ~ 0
+VSYS
+Wire Wire Line
+	1950 1800 2550 1800
+Text Notes 950  1700 0    50   ~ 0
+Charge Current Set by ILIM
 $EndSCHEMATC

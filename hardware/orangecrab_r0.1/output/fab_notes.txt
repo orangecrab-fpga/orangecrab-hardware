@@ -1,0 +1,54 @@
+Part number:		OrangeCrab-r0.1
+
+General fabrication notes
+
+	* Boards are be individually routed.
+	* Board material is S1000-2
+	* Vibrant/Bright Orange solder mask (Colour reference: #FF8000) on both sides of board. All vias to be tented.
+	* High DPI White LPI legend on top side of board.
+	* Pad finish is ENIG.
+	* Finished board thickness is 1.6 mm.
+	* Place UL mark and date code on backside of board.
+
+Impedances
+
+	Control to within 10%.
+
+	Layer 3 microstrip (ref to layer 2 Ground / 4 Power)
+		121 μm trace = 50 ohm single ended
+
+	Layer 6 microstrip (ref to layer 5 Ground)
+		121 μm trace = 50 ohm single ended
+
+Suggested stackup Adjust to meet impedances
+	1	35 μm (1 oz) copper			Signal
+		0.1mm prepreg
+	2	35 μm (1 oz) copper			Ground
+        0.1mm prepreg
+    3   35 μm (1oz) copper          Signal
+		Core(s) and prepregs as needed for 1.6mm finished PCB thickness
+	4	35 μm (1 oz) copper			Power
+		0.1mm prepreg
+	5	35 μm (1 oz) copper			Ground
+		0.1mm prepreg
+	6	35 μm (1 oz) copper			Signal
+
+File naming
+	OrangeCrab-Edge_Cuts.gbr	    Board outline
+	OrangeCrab.drl				    Through-board plated holes
+	OrangeCrab-NPTH.drl			    Through-board unplated holes
+	OrangeCrab-F_SilkS.gbr		    Front silkscreen
+	OrangeCrab-F_Mask.gbr		    Front solder mask
+	OrangeCrab-F_Cu.gbr			    Layer 1 copper (Front)
+	OrangeCrab-In1_Cu.gbr		    Layer 2 copper
+	OrangeCrab-In2_Cu.gbr		    Layer 3 copper
+	OrangeCrab-In3_Cu.gbr		    Layer 4 copper
+	OrangeCrab-In4_Cu.gbr		    Layer 5 copper
+	OrangeCrab-B_Cu.gbr			    Layer 6 copper (Back)
+	OrangeCrab-B_Mask.gbr		    Back solder mask
+    OrangeCrab-B_SilkS.gbr          Back silkscreen
+
+
+    OrangeCrab-PTH-drl_map.pdf      Drill Map Reference plated
+    OrangeCrab-NPTH-drl_map.pdf     Drill Map Reference non-plated
+    
