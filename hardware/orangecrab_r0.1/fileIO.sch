@@ -898,4 +898,19 @@ Wire Wire Line
 	5900 3550 5650 3550
 Text GLabel 5900 3550 2    50   Input ~ 0
 AUX_13
+$Comp
+L Connector:TestPoint_Flag TP18
+U 1 1 5DA695FA
+P 5650 3650
+F 0 "TP18" H 6100 3700 50  0000 R CNN
+F 1 "SMD_TP" H 5606 3653 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 3650 50  0001 C CNN
+F 3 "~" H 5850 3650 50  0001 C CNN
+	1    5650 3650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3650 5650 3650
+Text GLabel 5900 3650 2    50   Input ~ 0
+AUX_14
 $EndSCHEMATC

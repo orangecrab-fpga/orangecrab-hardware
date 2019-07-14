@@ -139,13 +139,13 @@ RAM_D14
 Text GLabel 8400 4350 2    50   Input ~ 0
 RAM_D15
 Text GLabel 8400 5600 2    50   Input ~ 0
-RAM_LDQS
+RAM_LDQS+
 Text GLabel 8400 5700 2    50   Input ~ 0
-RAM_LDQS#
+RAM_LDQS-
 Text GLabel 8400 5350 2    50   Input ~ 0
-RAM_UDQS
+RAM_UDQS+
 Text GLabel 8400 5450 2    50   Input ~ 0
-RAM_UDQS#
+RAM_UDQS-
 Text GLabel 7050 5500 0    50   Input ~ 0
 RAM_CK
 Text GLabel 7050 5600 0    50   Input ~ 0
