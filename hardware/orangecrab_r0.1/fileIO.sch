@@ -954,10 +954,10 @@ JTAG_TDI
 Text GLabel 3500 3450 0    60   Input ~ 0
 JTAG_TDO
 $Comp
-L Connector:TestPoint_Flag TP?
+L Connector:TestPoint_Flag TP21
 U 1 1 5D3E1178
 P 3500 3250
-F 0 "TP?" H 3950 3300 50  0000 R CNN
+F 0 "TP21" H 3950 3300 50  0000 R CNN
 F 1 "SMD_TP" H 3456 3253 50  0001 R CNN
 F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3250 50  0001 C CNN
 F 3 "~" H 3700 3250 50  0001 C CNN
@@ -965,10 +965,10 @@ F 3 "~" H 3700 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint_Flag TP?
+L Connector:TestPoint_Flag TP22
 U 1 1 5D3E1182
 P 3500 3350
-F 0 "TP?" H 3950 3400 50  0000 R CNN
+F 0 "TP22" H 3950 3400 50  0000 R CNN
 F 1 "SMD_TP" H 3456 3353 50  0001 R CNN
 F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3350 50  0001 C CNN
 F 3 "~" H 3700 3350 50  0001 C CNN
@@ -976,10 +976,10 @@ F 3 "~" H 3700 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint_Flag TP?
+L Connector:TestPoint_Flag TP23
 U 1 1 5D3E118C
 P 3500 3450
-F 0 "TP?" H 3950 3500 50  0000 R CNN
+F 0 "TP23" H 3950 3500 50  0000 R CNN
 F 1 "SMD_TP" H 3456 3453 50  0001 R CNN
 F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3450 50  0001 C CNN
 F 3 "~" H 3700 3450 50  0001 C CNN
@@ -987,10 +987,10 @@ F 3 "~" H 3700 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint_Flag TP?
+L Connector:TestPoint_Flag TP24
 U 1 1 5D3E1196
 P 3500 3550
-F 0 "TP?" H 3950 3600 50  0000 R CNN
+F 0 "TP24" H 3950 3600 50  0000 R CNN
 F 1 "SMD_TP" H 3456 3553 50  0001 R CNN
 F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3550 50  0001 C CNN
 F 3 "~" H 3700 3550 50  0001 C CNN
@@ -998,14 +998,40 @@ F 3 "~" H 3700 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint_Flag TP?
+L Connector:TestPoint_Flag TP25
 U 1 1 5D3E11A0
 P 3500 3650
-F 0 "TP?" H 3950 3700 50  0000 R CNN
+F 0 "TP25" H 3950 3700 50  0000 R CNN
 F 1 "SMD_TP" H 3456 3653 50  0001 R CNN
 F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3650 50  0001 C CNN
 F 3 "~" H 3700 3650 50  0001 C CNN
 	1    3500 3650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3F9EEC
+P 3500 2800
+F 0 "TP?" H 3950 2850 50  0000 R CNN
+F 1 "SMD_TP" H 3456 2803 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 2800 50  0001 C CNN
+F 3 "~" H 3700 2800 50  0001 C CNN
+	1    3500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3FA2AF
+P 3500 2900
+F 0 "TP?" H 3950 2950 50  0000 R CNN
+F 1 "SMD_TP" H 3456 2903 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 2900 50  0001 C CNN
+F 3 "~" H 3700 2900 50  0001 C CNN
+	1    3500 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3500 2800 0    50   UnSpc ~ 0
+USB_DP
+Text GLabel 3500 2900 0    50   UnSpc ~ 0
+USB_DN
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=Tue 16 Jul 2019 19:49:32 ACST
+update=Tue 16 Jul 2019 20:48:52 ACST
 version=1
 last_client=kicad
 [general]
@@ -61,6 +61,9 @@ dPairViaGap1=0.25
 dPairWidth2=0.105
 dPairGap2=0.15
 dPairViaGap2=0.15
+dPairWidth3=0.13
+dPairGap3=0.15
+dPairViaGap3=0.2
 SilkLineWidth=0.15
 SilkTextSizeV=1
 SilkTextSizeH=1

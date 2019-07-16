@@ -10,8 +10,8 @@
 
 ## Passive components
 * [ ] Power/voltage/tolerance ratings specified as required
-* [ ] Ceramic capacitors appropriately de-rated for C/V curve
-* [ ] Polarized components specified in schematic if using electrolytic caps etc
+* [X] Ceramic capacitors appropriately de-rated for C/V curve
+* [X] Polarized components specified in schematic if using electrolytic caps etc
 
 ## Power supply
 
@@ -24,8 +24,9 @@
 
 * [NA] Under/overvoltage protection configured correctly if used
 * [X] Verify estimated power usage per rail against regulator rating
-* [ ] Current-sense resistors on power rails after regulator output caps, not in switching loop
-* [ ] Remote sense used on low voltage or high current rails
+* [NA] Current-sense resistors on power rails after regulator output caps, not in switching loop
+ * To reduce BOM this have been omitted, will cut traces during board bringup to validate power supplies.
+* [NA] Remote sense used on low voltage or high current rails
 * [ ] Linear regulators are stable with selected output cap ESR
 * [ ] Confirm power rail sequencing against device datasheets
 
@@ -67,7 +68,7 @@
 
 ### Strap/init pins
 * [ ] Pullup/pulldowns on all signals that need defined state at boot
-* [ ] Strap pins connected to correct rail for desired state
+* [X] Strap pins connected to correct rail for desired state
 * [x] JTAG/ICSP connector provided for all programmable devices
     * GsD: SAMD has test pads exposed via test-points
 * [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
@@ -87,6 +88,7 @@
 * [ ] Test points on interesting signals which may need probing for bringup/debug
  * Added bottom test points to JTAG
  * DDR3 has termination on all Address lines, Upper byte traces are accesible on back layer.
+ * Added USB Test pads
 
 ## Thermal
 
