@@ -24,15 +24,15 @@ Impedances
 
 Suggested stackup Adjust to meet impedances
 	1	35 μm (1 oz) copper			Signal
-		0.1mm prepreg
+		0.075mm prepreg
 	2	35 μm (1 oz) copper			Ground
-        0.1mm prepreg
+        0.075mm prepreg
     3   35 μm (1oz) copper          Signal
 		Core(s) and prepregs as needed for 1.6mm finished PCB thickness
 	4	35 μm (1 oz) copper			Power
-		0.1mm prepreg
+		0.075mm prepreg
 	5	35 μm (1 oz) copper			Ground
-		0.1mm prepreg
+		0.075mm prepreg
 	6	35 μm (1 oz) copper			Signal
 
 File naming
