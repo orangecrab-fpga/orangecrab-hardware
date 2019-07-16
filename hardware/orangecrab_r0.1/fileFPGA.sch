@@ -670,11 +670,11 @@ IO_0
 Text GLabel 5700 6100 2    50   Input ~ 0
 IO_1
 Text GLabel 5700 7100 2    50   Input ~ 0
-USB_DN
+USB_D-
 Text GLabel 5700 7200 2    50   Input ~ 0
 USB_PULLUP
 Text GLabel 5700 7400 2    50   Input ~ 0
-USB_DP
+USB_D+
 Text GLabel 5700 5800 2    50   Input ~ 0
 SD0_DAT0
 Text GLabel 5700 6700 2    50   Input ~ 0
