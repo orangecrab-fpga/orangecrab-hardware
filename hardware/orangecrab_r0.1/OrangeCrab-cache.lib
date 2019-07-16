@@ -1014,20 +1014,6 @@ X S5 9 -550 -50 150 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# gkl_power_+3V3
-#
-DEF gkl_power_+3V3 #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "gkl_power_+3V3" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 12 -50 75 50 75 N
-P 2 0 1 0 0 0 0 75 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # gkl_power_GND
 #
 DEF gkl_power_GND #PWR 0 0 Y Y 1 F P

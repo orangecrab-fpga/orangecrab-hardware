@@ -146,4 +146,65 @@ F 3 "" H 4300 3650 50  0001 C CNN
 	1    4300 3650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5D5ABE41
+P 2850 2950
+AR Path="/5ABD38F2/5D5ABE41" Ref="RN?"  Part="1" 
+AR Path="/5AC0A2A0/5D5ABE41" Ref="RN7"  Part="1" 
+F 0 "RN7" V 2550 2850 50  0000 C CNN
+F 1 "10K" V 2550 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3125 2950 50  0001 C CNN
+F 3 "~" H 2850 2950 50  0001 C CNN
+F 4 "CRA06S08349R9FTA" H 2850 2950 50  0001 C CNN "PN"
+	1    2850 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 2400 0    60   Input ~ 0
+P3.3V
+Wire Wire Line
+	2350 2400 2650 2400
+Wire Wire Line
+	2650 2400 2650 2750
+Wire Wire Line
+	2650 2400 2750 2400
+Wire Wire Line
+	2750 2400 2750 2750
+Connection ~ 2650 2400
+Wire Wire Line
+	2750 2400 2850 2400
+Wire Wire Line
+	2850 2400 2850 2750
+Connection ~ 2750 2400
+Wire Wire Line
+	2850 2400 2950 2400
+Wire Wire Line
+	2950 2400 2950 2750
+Connection ~ 2850 2400
+Text GLabel 2650 3150 3    60   Input ~ 0
+SD0_DAT2
+Text GLabel 2750 3150 3    60   Input ~ 0
+SD0_CMD
+Text GLabel 2850 3150 3    60   Input ~ 0
+SD0_DAT0
+Text GLabel 2950 3150 3    60   Input ~ 0
+SD0_DAT1
+$Comp
+L Device:R R28
+U 1 1 5D5AD51E
+P 3150 2950
+F 0 "R28" H 3220 2996 50  0000 L CNN
+F 1 "10K" H 3220 2905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 3080 2950 50  0001 C CNN
+F 3 "~" H 3150 2950 50  0001 C CNN
+	1    3150 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 3150 3100 3    60   Input ~ 0
+SD0_CD
+Wire Wire Line
+	2950 2400 3150 2400
+Wire Wire Line
+	3150 2400 3150 2800
+Connection ~ 2950 2400
 $EndSCHEMATC

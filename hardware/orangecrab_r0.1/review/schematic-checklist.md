@@ -2,14 +2,14 @@
 
 ## General
 
-- [ ] CAD ERC 100% clean. If some errors are invalid due to toolchain quirks, each exception must be inspected and signed off as invalid.
-- [ ] Verify pin numbers of all schematic symbols against datasheet (if not yet board proven).
-- [ ] Schematic symbol matches chosen component package
-- [ ] Thermal pads are connected to correct power rail (may not always be ground)
+- [NA] CAD ERC 100% clean. If some errors are invalid due to toolchain quirks, each exception must be inspected and signed off as invalid.
+- [X] Verify pin numbers of all schematic symbols against datasheet (if not yet board proven).
+- [X] Schematic symbol matches chosen component package
+- [X] Thermal pads are connected to correct power rail (may not always be ground)
 - [x] Debug interfaces are not power gated in sleep mode
 
 ## Passive components
-* [ ] Power/voltage/tolerance ratings specified as required
+* [X] Power/voltage/tolerance ratings specified as required
 * [X] Ceramic capacitors appropriately de-rated for C/V curve
 * [X] Polarized components specified in schematic if using electrolytic caps etc
 
@@ -27,32 +27,32 @@
 * [NA] Current-sense resistors on power rails after regulator output caps, not in switching loop
  * To reduce BOM this have been omitted, will cut traces during board bringup to validate power supplies.
 * [NA] Remote sense used on low voltage or high current rails
-* [ ] Linear regulators are stable with selected output cap ESR
-* [ ] Confirm power rail sequencing against device datasheets
+* [X] Linear regulators are stable with selected output cap ESR
+* [X] Confirm power rail sequencing against device datasheets
 
 ### Decoupling
-* [ ] Decoupling present for all ICs
-* [ ] Decoupling meets/exceeds vendor recommendations if specified
-* [ ] Bulk decoupling present at PSU
+* [X] Decoupling present for all ICs
+* [X] Decoupling meets/exceeds vendor recommendations if specified
+* [X] Bulk decoupling present at PSU
 
 ### General
-* [ ] All power inputs fed by correct voltage
-* [ ] Check high-power discrete semiconductors and passives to confirm they can handle expected load
-* [ ] Analog rails filtered/isolated from digital circuitry as needed
+* [X] All power inputs fed by correct voltage
+* [NA] Check high-power discrete semiconductors and passives to confirm they can handle expected load
+* [X] Analog rails filtered/isolated from digital circuitry as needed
 
 ## Signals
 
 ### Digital
 
-* [ ] Signals are correct logic level for input pin
-* [ ] Pullups on all open-drain outputs
-* [ ] Pulldowns on all PECL outputs
-* [ ] Termination on all high-speed signals
-* [ ] AC coupling caps on gigabit transceivers
-* [ ] TX/RX paired correctly for UART, SPI, MGT, etc
-* [ ] Differential pair polarity / pairing correct
-* [ ] Active high/low enable signal polarity correct
-* [ ] I/O banking rules met on FPGAs etc
+* [X] Signals are correct logic level for input pin
+* [X] Pullups on all open-drain outputs
+* [NA] Pulldowns on all PECL outputs
+* [X] Termination on all high-speed signals
+* [NA] AC coupling caps on gigabit transceivers
+* [X] TX/RX paired correctly for UART, SPI, MGT, etc
+* [X] Differential pair polarity / pairing correct
+* [X] Active high/low enable signal polarity correct
+* [X] I/O banking rules met on FPGAs etc
 
 ### Analog
 
@@ -82,7 +82,7 @@
 ### Debugging / reworkability
 
 * [NA] Use 0-ohm resistors vs direct hard-wiring for strap pins when possible
-* [ ] Provide multiple ground clips/points for scope probes
+* [X] Provide multiple ground clips/points for scope probes
 * [x] Dedicated ground in close proximity to analog test points
 * [X] Test points on all power rails
 * [x] Test points on interesting signals which may need probing for bringup/debug
