@@ -292,9 +292,9 @@ RAM_UDQS+
 Text GLabel 2000 5050 2    50   Input ~ 0
 RAM_UDQS-
 Text GLabel 4650 2900 2    50   Input ~ 0
-RAM_CK
+RAM_CK+
 Text GLabel 4650 3000 2    50   Input ~ 0
-RAM_CK#
+RAM_CK-
 Text GLabel 3500 6950 2    50   Input ~ 0
 REF_CLK
 Text GLabel 2000 4050 2    50   Input ~ 0

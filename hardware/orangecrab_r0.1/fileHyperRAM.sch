@@ -147,9 +147,9 @@ RAM_UDQS+
 Text GLabel 8400 5450 2    50   Input ~ 0
 RAM_UDQS-
 Text GLabel 7050 5500 0    50   Input ~ 0
-RAM_CK
+RAM_CK+
 Text GLabel 7050 5600 0    50   Input ~ 0
-RAM_CK#
+RAM_CK-
 Text Label 8700 2900 0    50   ~ 0
 RAM_VDD
 Text Label 8700 3000 0    50   ~ 0
@@ -591,9 +591,9 @@ Connection ~ 2300 4300
 Text GLabel 2850 3400 2    50   Input ~ 0
 RAM_CKE
 Text GLabel 2850 4800 2    50   Input ~ 0
-RAM_CK
+RAM_CK+
 Text GLabel 2850 4900 2    50   Input ~ 0
-RAM_CK#
+RAM_CK-
 Wire Wire Line
 	2450 4900 2350 4900
 Wire Wire Line

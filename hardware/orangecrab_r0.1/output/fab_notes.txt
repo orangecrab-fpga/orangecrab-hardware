@@ -16,9 +16,11 @@ Impedances
 
 	Layer 3 microstrip (ref to layer 2 Ground / 4 Power)
 		121 μm trace = 50 ohm single ended
+		105 μm trace / 150 μm space = 100 ohm differential
 
 	Layer 6 microstrip (ref to layer 5 Ground)
 		121 μm trace = 50 ohm single ended
+		105 μm trace / 150 μm space = 100 ohm differential
 
 Suggested stackup Adjust to meet impedances
 	1	35 μm (1 oz) copper			Signal
