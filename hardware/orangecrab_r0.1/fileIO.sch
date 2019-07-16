@@ -943,4 +943,69 @@ F 3 "~" H 5850 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5900 4100 5650 4100
+Text GLabel 3500 3250 0    60   Input ~ 0
+JTAG_TMS
+Text GLabel 3500 3650 0    60   Input ~ 0
+FPGA_RESET
+Text GLabel 3500 3350 0    60   Input ~ 0
+JTAG_TCK
+Text GLabel 3500 3550 0    60   Input ~ 0
+JTAG_TDI
+Text GLabel 3500 3450 0    60   Input ~ 0
+JTAG_TDO
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3E1178
+P 3500 3250
+F 0 "TP?" H 3950 3300 50  0000 R CNN
+F 1 "SMD_TP" H 3456 3253 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3250 50  0001 C CNN
+F 3 "~" H 3700 3250 50  0001 C CNN
+	1    3500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3E1182
+P 3500 3350
+F 0 "TP?" H 3950 3400 50  0000 R CNN
+F 1 "SMD_TP" H 3456 3353 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3350 50  0001 C CNN
+F 3 "~" H 3700 3350 50  0001 C CNN
+	1    3500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3E118C
+P 3500 3450
+F 0 "TP?" H 3950 3500 50  0000 R CNN
+F 1 "SMD_TP" H 3456 3453 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3450 50  0001 C CNN
+F 3 "~" H 3700 3450 50  0001 C CNN
+	1    3500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3E1196
+P 3500 3550
+F 0 "TP?" H 3950 3600 50  0000 R CNN
+F 1 "SMD_TP" H 3456 3553 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3550 50  0001 C CNN
+F 3 "~" H 3700 3550 50  0001 C CNN
+	1    3500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP?
+U 1 1 5D3E11A0
+P 3500 3650
+F 0 "TP?" H 3950 3700 50  0000 R CNN
+F 1 "SMD_TP" H 3456 3653 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3650 50  0001 C CNN
+F 3 "~" H 3700 3650 50  0001 C CNN
+	1    3500 3650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

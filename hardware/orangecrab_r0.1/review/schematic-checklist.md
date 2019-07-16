@@ -60,10 +60,10 @@
 
 ### Clocks
 
-* [ ] All oscillators meet required jitter / frequency tolerance. Be extra cautious with MEMS oscillators as these tend to have higher jitter.
-* [ ] Correct load caps provided for discrete crystals
-* [ ] Crystals only used if IC has an integrated crystal driver
-* [ ] Banking / clock capable input rules met for clocks going to FPGAs
+* [X] All oscillators meet required jitter / frequency tolerance. Be extra cautious with MEMS oscillators as these tend to have higher jitter.
+* [NA] Correct load caps provided for discrete crystals
+* [X] Crystals only used if IC has an integrated crystal driver
+* [X] Banking / clock capable input rules met for clocks going to FPGAs
 
 ### Strap/init pins
 * [ ] Pullup/pulldowns on all signals that need defined state at boot
@@ -71,7 +71,7 @@
 * [x] JTAG/ICSP connector provided for all programmable devices
     * GsD: SAMD has test pads exposed via test-points
 * [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
-* [ ] Reference resistors correct value and reference rail
+* [NA] Reference resistors correct value and reference rail
 
 ### External interface protection
 
@@ -80,11 +80,13 @@
 
 ### Debugging / reworkability
 
-* [ ] Use 0-ohm resistors vs direct hard-wiring for strap pins when possible
+* [NA] Use 0-ohm resistors vs direct hard-wiring for strap pins when possible
 * [ ] Provide multiple ground clips/points for scope probes
 * [x] Dedicated ground in close proximity to analog test points
 * [ ] Test points on all power rails
 * [ ] Test points on interesting signals which may need probing for bringup/debug
+ * Added bottom test points to JTAG
+ * DDR3 has termination on all Address lines, Upper byte traces are accesible on back layer.
 
 ## Thermal
 
