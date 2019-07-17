@@ -932,7 +932,7 @@ F 3 "~" H 10550 1900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Notes 10100 1250 0    50   ~ 0
-1.5V @ 5A\n- DDR3\n
+1.1V @ 5A\n- ECP5 VCC\n
 Wire Wire Line
 	7850 1500 7750 1500
 Wire Wire Line
