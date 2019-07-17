@@ -1,11 +1,10 @@
 # Orange Crab
-![alt-text](documentation/images/top_render_001.png "Top")
 
+![alt-text](documentation/images/render_002.jpg "Top")
 ## ECP5 DDR3 memory in a Feather form-factor.
 
 	Project status: Still in Development (Use stuff here if you want, but there is no support.)
 
-![alt-text](documentation/images/bot_render_001.png "Bottom")
 
 ## Hardware
 
@@ -20,3 +19,5 @@
 * Extra test points breaking out extra I/O
 
 ### Insert PCB Top/Bot Render
+![alt-text](documentation/images/top_render_001.png "Top")
+![alt-text](documentation/images/bot_render_001.png "Bottom")
