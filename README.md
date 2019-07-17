@@ -18,6 +18,5 @@
 * 25/50MHz Oscillator
 * Extra test points breaking out extra I/O
 
-### Insert PCB Top/Bot Render
-![alt-text](documentation/images/top_render_001.png "Top")
-![alt-text](documentation/images/bot_render_001.png "Bottom")
+!["Top render"](documentation/images/top_render_001.png "Top")
+!["Bottom render"](documentation/images/bot_render_001.png "Bottom")
