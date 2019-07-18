@@ -27,7 +27,7 @@ F 3 "~" H 8800 4500 50  0001 C CNN
 	1    8800 4500
 	-1   0    0    -1  
 $EndComp
-Text Notes 5800 2050 0    50   ~ 0
+Text Notes 8700 750  0    50   ~ 0
 USER LEDS
 Text Notes 8050 2200 0    50   ~ 0
 Feather I/O
@@ -543,160 +543,70 @@ Wire Wire Line
 Wire Wire Line
 	6150 4850 6150 5200
 $Comp
-L Connector:TestPoint_Flag TP4
-U 1 1 5D6EF24F
-P 4550 3250
-F 0 "TP4" H 5000 3300 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3253 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3250 50  0001 C CNN
-F 3 "~" H 4750 3250 50  0001 C CNN
-	1    4550 3250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP5
-U 1 1 5D6EF259
-P 4550 3350
-F 0 "TP5" H 5000 3400 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3353 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3350 50  0001 C CNN
-F 3 "~" H 4750 3350 50  0001 C CNN
-	1    4550 3350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP6
-U 1 1 5D6EF263
-P 4550 3450
-F 0 "TP6" H 5000 3500 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3453 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3450 50  0001 C CNN
-F 3 "~" H 4750 3450 50  0001 C CNN
-	1    4550 3450
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 3250 4550 3250
-Wire Wire Line
-	4800 3350 4550 3350
-Wire Wire Line
-	4800 3450 4550 3450
-Text GLabel 4800 3250 2    50   Input ~ 0
-AUX_0
-Text GLabel 4800 3350 2    50   Input ~ 0
-AUX_1
-Text GLabel 4800 3450 2    50   Input ~ 0
-AUX_2
-$Comp
-L Connector:TestPoint_Flag TP7
-U 1 1 5D6F52D1
-P 4550 3550
-F 0 "TP7" H 5000 3600 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3553 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3550 50  0001 C CNN
-F 3 "~" H 4750 3550 50  0001 C CNN
-	1    4550 3550
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP8
-U 1 1 5D6F52DB
-P 4550 3650
-F 0 "TP8" H 5000 3700 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3653 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3650 50  0001 C CNN
-F 3 "~" H 4750 3650 50  0001 C CNN
-	1    4550 3650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP9
-U 1 1 5D6F52E5
-P 4550 3750
-F 0 "TP9" H 5000 3800 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3753 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3750 50  0001 C CNN
-F 3 "~" H 4750 3750 50  0001 C CNN
-	1    4550 3750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 3550 4550 3550
-Wire Wire Line
-	4800 3650 4550 3650
-Wire Wire Line
-	4800 3750 4550 3750
-Text GLabel 4800 3550 2    50   Input ~ 0
-AUX_3
-Text GLabel 4800 3650 2    50   Input ~ 0
-AUX_4
-Text GLabel 4800 3750 2    50   Input ~ 0
-AUX_5
-$Comp
 L Device:LED_ARGB D1
 U 1 1 5D7004F0
-P 6000 2650
-F 0 "D1" H 6000 3147 50  0000 C CNN
-F 1 "LED_ARGB" H 6000 3056 50  0000 C CNN
-F 2 "gkl_led:0404LED_RGB" H 6000 2600 50  0001 C CNN
-F 3 "~" H 6000 2600 50  0001 C CNN
-	1    6000 2650
+P 8900 1350
+F 0 "D1" H 8900 1847 50  0000 C CNN
+F 1 "LED_ARGB" H 8900 1756 50  0000 C CNN
+F 2 "gkl_led:0404LED_RGB" H 8900 1300 50  0001 C CNN
+F 3 "~" H 8900 1300 50  0001 C CNN
+	1    8900 1350
 	1    0    0    -1  
 $EndComp
-Text GLabel 6400 2650 2    50   UnSpc ~ 0
+Text GLabel 9300 1350 2    50   UnSpc ~ 0
 P3.3V
 Wire Wire Line
-	6400 2650 6200 2650
+	9300 1350 9100 1350
 $Comp
 L Device:R R22
 U 1 1 5D7076CF
-P 5550 2450
-F 0 "R22" V 5650 2600 50  0000 C CNN
-F 1 "4.7K" V 5650 2300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5480 2450 50  0001 C CNN
-F 3 "~" H 5550 2450 50  0001 C CNN
-	1    5550 2450
+P 8450 1150
+F 0 "R22" V 8550 1300 50  0000 C CNN
+F 1 "4.7K" V 8550 1000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8380 1150 50  0001 C CNN
+F 3 "~" H 8450 1150 50  0001 C CNN
+	1    8450 1150
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R23
 U 1 1 5D707E5D
-P 5550 2650
-F 0 "R23" V 5650 2800 50  0000 C CNN
-F 1 "4.7K" V 5650 2500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5480 2650 50  0001 C CNN
-F 3 "~" H 5550 2650 50  0001 C CNN
-	1    5550 2650
+P 8450 1350
+F 0 "R23" V 8550 1500 50  0000 C CNN
+F 1 "4.7K" V 8550 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8380 1350 50  0001 C CNN
+F 3 "~" H 8450 1350 50  0001 C CNN
+	1    8450 1350
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R24
 U 1 1 5D708585
-P 5550 2850
-F 0 "R24" V 5650 3000 50  0000 C CNN
-F 1 "4.7K" V 5650 2700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5480 2850 50  0001 C CNN
-F 3 "~" H 5550 2850 50  0001 C CNN
-	1    5550 2850
+P 8450 1550
+F 0 "R24" V 8550 1700 50  0000 C CNN
+F 1 "4.7K" V 8550 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 8380 1550 50  0001 C CNN
+F 3 "~" H 8450 1550 50  0001 C CNN
+	1    8450 1550
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5700 2450 5800 2450
+	8600 1150 8700 1150
 Wire Wire Line
-	5800 2650 5700 2650
+	8700 1350 8600 1350
 Wire Wire Line
-	5700 2850 5800 2850
+	8600 1550 8700 1550
 Wire Wire Line
-	5400 2450 5200 2450
+	8300 1150 8100 1150
 Wire Wire Line
-	5400 2650 5200 2650
+	8300 1350 8100 1350
 Wire Wire Line
-	5400 2850 5200 2850
-Text GLabel 5200 2450 0    50   UnSpc ~ 0
+	8300 1550 8100 1550
+Text GLabel 8100 1150 0    50   UnSpc ~ 0
 LED_R
-Text GLabel 5200 2650 0    50   UnSpc ~ 0
+Text GLabel 8100 1350 0    50   UnSpc ~ 0
 LED_G
-Text GLabel 5200 2850 0    50   UnSpc ~ 0
+Text GLabel 8100 1550 0    50   UnSpc ~ 0
 LED_B
 $Comp
 L Switch:SW_Push SW1
@@ -780,338 +690,138 @@ F 3 "" H 6100 1650 50  0001 C CNN
 $EndComp
 Text GLabel 8050 2550 0    50   UnSpc ~ 0
 PUSB_VBUS
-$Comp
-L Connector:TestPoint_Flag TP10
-U 1 1 5DA32411
-P 4550 3850
-F 0 "TP10" H 5000 3900 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3853 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3850 50  0001 C CNN
-F 3 "~" H 4750 3850 50  0001 C CNN
-	1    4550 3850
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 3850 4550 3850
-Text GLabel 4800 3850 2    50   Input ~ 0
-AUX_6
-$Comp
-L Connector:TestPoint_Flag TP11
-U 1 1 5DA36755
-P 4550 3950
-F 0 "TP11" H 5000 4000 50  0000 R CNN
-F 1 "SMD_TP" H 4506 3953 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 3950 50  0001 C CNN
-F 3 "~" H 4750 3950 50  0001 C CNN
-	1    4550 3950
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 3950 4550 3950
-Text GLabel 4800 3950 2    50   Input ~ 0
-AUX_7
-$Comp
-L Connector:TestPoint_Flag TP12
-U 1 1 5DA3AC38
-P 4550 4050
-F 0 "TP12" H 5000 4100 50  0000 R CNN
-F 1 "SMD_TP" H 4506 4053 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 4050 50  0001 C CNN
-F 3 "~" H 4750 4050 50  0001 C CNN
-	1    4550 4050
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 4050 4550 4050
-Text GLabel 4800 4050 2    50   Input ~ 0
-AUX_8
-$Comp
-L Connector:TestPoint_Flag TP13
-U 1 1 5DA3AC44
-P 4550 4150
-F 0 "TP13" H 5000 4200 50  0000 R CNN
-F 1 "SMD_TP" H 4506 4153 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 4750 4150 50  0001 C CNN
-F 3 "~" H 4750 4150 50  0001 C CNN
-	1    4550 4150
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 4150 4550 4150
-Text GLabel 4800 4150 2    50   Input ~ 0
-AUX_9
-$Comp
-L Connector:TestPoint_Flag TP14
-U 1 1 5DA4C7DC
-P 5650 3250
-F 0 "TP14" H 6100 3300 50  0000 R CNN
-F 1 "SMD_TP" H 5606 3253 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 3250 50  0001 C CNN
-F 3 "~" H 5850 3250 50  0001 C CNN
-	1    5650 3250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 3250 5650 3250
-Text GLabel 5900 3250 2    50   Input ~ 0
-AUX_10
-$Comp
-L Connector:TestPoint_Flag TP15
-U 1 1 5DA52689
-P 5650 3350
-F 0 "TP15" H 6100 3400 50  0000 R CNN
-F 1 "SMD_TP" H 5606 3353 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 3350 50  0001 C CNN
-F 3 "~" H 5850 3350 50  0001 C CNN
-	1    5650 3350
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 3350 5650 3350
-Text GLabel 5900 3350 2    50   Input ~ 0
-AUX_11
-$Comp
-L Connector:TestPoint_Flag TP16
-U 1 1 5DA57170
-P 5650 3450
-F 0 "TP16" H 6100 3500 50  0000 R CNN
-F 1 "SMD_TP" H 5606 3453 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 3450 50  0001 C CNN
-F 3 "~" H 5850 3450 50  0001 C CNN
-	1    5650 3450
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 3450 5650 3450
-Text GLabel 5900 3450 2    50   Input ~ 0
-AUX_12
-$Comp
-L Connector:TestPoint_Flag TP17
-U 1 1 5DA5717C
-P 5650 3550
-F 0 "TP17" H 6100 3600 50  0000 R CNN
-F 1 "SMD_TP" H 5606 3553 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 3550 50  0001 C CNN
-F 3 "~" H 5850 3550 50  0001 C CNN
-	1    5650 3550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 3550 5650 3550
-Text GLabel 5900 3550 2    50   Input ~ 0
-AUX_13
-$Comp
-L Connector:TestPoint_Flag TP18
-U 1 1 5DA695FA
-P 5650 3650
-F 0 "TP18" H 6100 3700 50  0000 R CNN
-F 1 "SMD_TP" H 5606 3653 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 3650 50  0001 C CNN
-F 3 "~" H 5850 3650 50  0001 C CNN
-	1    5650 3650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 3650 5650 3650
-Text GLabel 5900 3650 2    50   Input ~ 0
-AUX_14
-Text GLabel 5900 4000 2    50   Input ~ 0
+Text GLabel 2850 4100 2    50   Input ~ 0
 EXT_PLL+
-Text GLabel 5900 4100 2    50   Input ~ 0
+Text GLabel 2850 4200 2    50   Input ~ 0
 EXT_PLL-
 $Comp
 L Connector:TestPoint_Flag TP19
 U 1 1 5E3DC451
-P 5650 4000
-F 0 "TP19" H 6100 4050 50  0000 R CNN
-F 1 "SMD_TP" H 5606 4003 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 4000 50  0001 C CNN
-F 3 "~" H 5850 4000 50  0001 C CNN
-	1    5650 4000
+P 2600 4100
+F 0 "TP19" H 3050 4150 50  0000 R CNN
+F 1 "SMD_TP" H 2556 4103 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2800 4100 50  0001 C CNN
+F 3 "~" H 2800 4100 50  0001 C CNN
+	1    2600 4100
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 4000 5650 4000
+	2850 4100 2600 4100
 $Comp
 L Connector:TestPoint_Flag TP20
 U 1 1 5E3DC45C
-P 5650 4100
-F 0 "TP20" H 6100 4150 50  0000 R CNN
-F 1 "SMD_TP" H 5606 4103 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 5850 4100 50  0001 C CNN
-F 3 "~" H 5850 4100 50  0001 C CNN
-	1    5650 4100
+P 2600 4200
+F 0 "TP20" H 3050 4250 50  0000 R CNN
+F 1 "SMD_TP" H 2556 4203 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2800 4200 50  0001 C CNN
+F 3 "~" H 2800 4200 50  0001 C CNN
+	1    2600 4200
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 4100 5650 4100
-Text GLabel 3500 3250 0    60   Input ~ 0
-JTAG_TMS
-Text GLabel 3500 3650 0    60   Input ~ 0
-FPGA_RESET
-Text GLabel 3500 3350 0    60   Input ~ 0
-JTAG_TCK
-Text GLabel 3500 3550 0    60   Input ~ 0
-JTAG_TDI
-Text GLabel 3500 3450 0    60   Input ~ 0
-JTAG_TDO
-$Comp
-L Connector:TestPoint_Flag TP21
-U 1 1 5D3E1178
-P 3500 3250
-F 0 "TP21" H 3950 3300 50  0000 R CNN
-F 1 "SMD_TP" H 3456 3253 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3250 50  0001 C CNN
-F 3 "~" H 3700 3250 50  0001 C CNN
-	1    3500 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP22
-U 1 1 5D3E1182
-P 3500 3350
-F 0 "TP22" H 3950 3400 50  0000 R CNN
-F 1 "SMD_TP" H 3456 3353 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3350 50  0001 C CNN
-F 3 "~" H 3700 3350 50  0001 C CNN
-	1    3500 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP23
-U 1 1 5D3E118C
-P 3500 3450
-F 0 "TP23" H 3950 3500 50  0000 R CNN
-F 1 "SMD_TP" H 3456 3453 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3450 50  0001 C CNN
-F 3 "~" H 3700 3450 50  0001 C CNN
-	1    3500 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP24
-U 1 1 5D3E1196
-P 3500 3550
-F 0 "TP24" H 3950 3600 50  0000 R CNN
-F 1 "SMD_TP" H 3456 3553 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3550 50  0001 C CNN
-F 3 "~" H 3700 3550 50  0001 C CNN
-	1    3500 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Flag TP25
-U 1 1 5D3E11A0
-P 3500 3650
-F 0 "TP25" H 3950 3700 50  0000 R CNN
-F 1 "SMD_TP" H 3456 3653 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 3650 50  0001 C CNN
-F 3 "~" H 3700 3650 50  0001 C CNN
-	1    3500 3650
-	1    0    0    -1  
-$EndComp
+	2850 4200 2600 4200
 $Comp
 L Connector:TestPoint_Flag TP26
 U 1 1 5D3F9EEC
-P 3500 2800
-F 0 "TP26" H 3950 2850 50  0000 R CNN
-F 1 "SMD_TP" H 3456 2803 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 2800 50  0001 C CNN
-F 3 "~" H 3700 2800 50  0001 C CNN
-	1    3500 2800
+P 3150 2850
+F 0 "TP26" H 3600 2900 50  0000 R CNN
+F 1 "SMD_TP" H 3106 2853 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3350 2850 50  0001 C CNN
+F 3 "~" H 3350 2850 50  0001 C CNN
+	1    3150 2850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint_Flag TP27
 U 1 1 5D3FA2AF
-P 3500 2900
-F 0 "TP27" H 3950 2950 50  0000 R CNN
-F 1 "SMD_TP" H 3456 2903 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3700 2900 50  0001 C CNN
-F 3 "~" H 3700 2900 50  0001 C CNN
-	1    3500 2900
+P 3150 2950
+F 0 "TP27" H 3600 3000 50  0000 R CNN
+F 1 "SMD_TP" H 3106 2953 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 3350 2950 50  0001 C CNN
+F 3 "~" H 3350 2950 50  0001 C CNN
+	1    3150 2950
 	1    0    0    -1  
 $EndComp
-Text GLabel 3500 2800 0    50   UnSpc ~ 0
+Text GLabel 3150 2850 0    50   UnSpc ~ 0
 USB_D+
-Text GLabel 3500 2900 0    50   UnSpc ~ 0
+Text GLabel 3150 2950 0    50   UnSpc ~ 0
 USB_D-
 $Comp
 L Connector:TestPoint_Flag TP31
 U 1 1 5D41439B
-P 2100 3600
-F 0 "TP31" H 2550 3650 50  0000 R CNN
-F 1 "SMD_TP" H 2056 3603 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2300 3600 50  0001 C CNN
-F 3 "~" H 2300 3600 50  0001 C CNN
-	1    2100 3600
+P 1750 3650
+F 0 "TP31" H 2200 3700 50  0000 R CNN
+F 1 "SMD_TP" H 1706 3653 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 1950 3650 50  0001 C CNN
+F 3 "~" H 1950 3650 50  0001 C CNN
+	1    1750 3650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint_Flag TP32
 U 1 1 5D4143A5
-P 2100 3700
-F 0 "TP32" H 2550 3750 50  0000 R CNN
-F 1 "SMD_TP" H 2056 3703 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2300 3700 50  0001 C CNN
-F 3 "~" H 2300 3700 50  0001 C CNN
-	1    2100 3700
+P 1750 3750
+F 0 "TP32" H 2200 3800 50  0000 R CNN
+F 1 "SMD_TP" H 1706 3753 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 1950 3750 50  0001 C CNN
+F 3 "~" H 1950 3750 50  0001 C CNN
+	1    1750 3750
 	1    0    0    -1  
 $EndComp
-Text GLabel 2100 3400 0    50   UnSpc ~ 0
+Text GLabel 1750 3450 0    50   UnSpc ~ 0
 P3.3V
 $Comp
 L Connector:TestPoint_Flag TP30
 U 1 1 5D419CCA
-P 2100 3500
-F 0 "TP30" H 2550 3550 50  0000 R CNN
-F 1 "SMD_TP" H 2056 3503 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2300 3500 50  0001 C CNN
-F 3 "~" H 2300 3500 50  0001 C CNN
-	1    2100 3500
+P 1750 3550
+F 0 "TP30" H 2200 3600 50  0000 R CNN
+F 1 "SMD_TP" H 1706 3553 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 1950 3550 50  0001 C CNN
+F 3 "~" H 1950 3550 50  0001 C CNN
+	1    1750 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint_Flag TP29
 U 1 1 5D41EE81
-P 2100 3400
-F 0 "TP29" H 2550 3450 50  0000 R CNN
-F 1 "SMD_TP" H 2056 3403 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2300 3400 50  0001 C CNN
-F 3 "~" H 2300 3400 50  0001 C CNN
-	1    2100 3400
+P 1750 3450
+F 0 "TP29" H 2200 3500 50  0000 R CNN
+F 1 "SMD_TP" H 1706 3453 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 1950 3450 50  0001 C CNN
+F 3 "~" H 1950 3450 50  0001 C CNN
+	1    1750 3450
 	1    0    0    -1  
 $EndComp
-Text GLabel 2100 3500 0    50   UnSpc ~ 0
+Text GLabel 1750 3550 0    50   UnSpc ~ 0
 P2.5V
-Text GLabel 2100 3600 0    50   UnSpc ~ 0
+Text GLabel 1750 3650 0    50   UnSpc ~ 0
 P1.5V
-Text GLabel 2100 3700 0    50   UnSpc ~ 0
+Text GLabel 1750 3750 0    50   UnSpc ~ 0
 P1.1V
 $Comp
 L Connector:TestPoint_Flag TP33
 U 1 1 5D441BC1
-P 2100 3300
-F 0 "TP33" H 2550 3350 50  0000 R CNN
-F 1 "SMD_TP" H 2056 3303 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2300 3300 50  0001 C CNN
-F 3 "~" H 2300 3300 50  0001 C CNN
-	1    2100 3300
+P 1750 3350
+F 0 "TP33" H 2200 3400 50  0000 R CNN
+F 1 "SMD_TP" H 1706 3353 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 1950 3350 50  0001 C CNN
+F 3 "~" H 1950 3350 50  0001 C CNN
+	1    1750 3350
 	1    0    0    -1  
 $EndComp
-Text GLabel 2100 3300 0    50   UnSpc ~ 0
+Text GLabel 1750 3350 0    50   UnSpc ~ 0
 VTT
-Text GLabel 2100 3200 0    50   UnSpc ~ 0
+Text GLabel 1750 3250 0    50   UnSpc ~ 0
 VTT_REF
 $Comp
 L Connector:TestPoint_Flag TP28
 U 1 1 5D448686
-P 2100 3200
-F 0 "TP28" H 2550 3250 50  0000 R CNN
-F 1 "SMD_TP" H 2056 3203 50  0001 R CNN
-F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 2300 3200 50  0001 C CNN
-F 3 "~" H 2300 3200 50  0001 C CNN
-	1    2100 3200
+P 1750 3250
+F 0 "TP28" H 2200 3300 50  0000 R CNN
+F 1 "SMD_TP" H 1706 3253 50  0001 R CNN
+F 2 "gkl_misc:TestPoint_Pad_D0.5mm" H 1950 3250 50  0001 C CNN
+F 3 "~" H 1950 3250 50  0001 C CNN
+	1    1750 3250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1135,4 +845,129 @@ Wire Wire Line
 Connection ~ 2750 4750
 Wire Wire Line
 	2750 4750 3250 4750
+Text GLabel 6200 3800 2    50   Input ~ 0
+AUX_6+
+Text GLabel 5700 3800 0    50   Input ~ 0
+AUX_7
+Text GLabel 5700 3000 0    50   Input ~ 0
+AUX_3+
+Text GLabel 5700 2900 0    50   Input ~ 0
+AUX_3-
+Text GLabel 6200 3000 2    50   Input ~ 0
+AUX_0+
+Text GLabel 6200 2900 2    50   Input ~ 0
+AUX_0-
+Text GLabel 6200 3300 2    50   Input ~ 0
+AUX_1+
+Text GLabel 6200 3200 2    50   Input ~ 0
+AUX_1-
+Text GLabel 6200 3600 2    50   Input ~ 0
+AUX_2+
+Text GLabel 6200 3500 2    50   Input ~ 0
+AUX_2-
+Text GLabel 5700 3600 0    50   Input ~ 0
+AUX_5+
+Text GLabel 5700 3500 0    50   Input ~ 0
+AUX_5-
+Text GLabel 5700 3300 0    50   Input ~ 0
+AUX_4+
+Text GLabel 5700 3200 0    50   Input ~ 0
+AUX_4-
+$Comp
+L Connector_Generic:Conn_02x15_Odd_Even J7
+U 1 1 5D6AE2E0
+P 5900 3500
+F 0 "J7" H 5950 4417 50  0000 C CNN
+F 1 "Conn_02x15_Odd_Even" H 5950 4326 50  0000 C CNN
+F 2 "gkl_conn:DF12(3.0)-30DP-0.5V(86)" H 5900 3500 50  0001 C CNN
+F 3 "~" H 5900 3500 50  0001 C CNN
+	1    5900 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5700 4100 0    50   UnSpc ~ 0
+P3.3V
+Text GLabel 5700 4200 0    50   UnSpc ~ 0
+P3.3V
+$Comp
+L gkl_power:GND #PWR0172
+U 1 1 5D6C3708
+P 6650 4300
+F 0 "#PWR0172" H 6650 4050 50  0001 C CNN
+F 1 "GND" H 6653 4174 50  0000 C CNN
+F 2 "" H 6550 3950 50  0001 C CNN
+F 3 "" H 6650 4300 50  0001 C CNN
+	1    6650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0173
+U 1 1 5D6C3CA9
+P 5200 4350
+F 0 "#PWR0173" H 5200 4100 50  0001 C CNN
+F 1 "GND" H 5203 4224 50  0000 C CNN
+F 2 "" H 5100 4000 50  0001 C CNN
+F 3 "" H 5200 4350 50  0001 C CNN
+	1    5200 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4350 5200 4000
+Wire Wire Line
+	5200 2800 5700 2800
+Wire Wire Line
+	5700 3100 5200 3100
+Connection ~ 5200 3100
+Wire Wire Line
+	5200 3100 5200 2800
+Wire Wire Line
+	5700 3400 5200 3400
+Connection ~ 5200 3400
+Wire Wire Line
+	5200 3400 5200 3100
+Wire Wire Line
+	5700 3700 5200 3700
+Connection ~ 5200 3700
+Wire Wire Line
+	5200 3700 5200 3400
+Wire Wire Line
+	5700 4000 5200 4000
+Connection ~ 5200 4000
+Wire Wire Line
+	5200 4000 5200 3700
+Wire Wire Line
+	6200 2800 6650 2800
+Wire Wire Line
+	6650 2800 6650 3100
+Wire Wire Line
+	6200 3100 6650 3100
+Connection ~ 6650 3100
+Wire Wire Line
+	6650 3100 6650 3400
+Wire Wire Line
+	6200 3400 6650 3400
+Connection ~ 6650 3400
+Wire Wire Line
+	6650 3400 6650 3700
+Wire Wire Line
+	6200 3700 6650 3700
+Connection ~ 6650 3700
+Wire Wire Line
+	6650 3700 6650 4000
+Wire Wire Line
+	6200 4000 6650 4000
+Connection ~ 6650 4000
+Wire Wire Line
+	6650 4000 6650 4100
+Wire Wire Line
+	6200 4100 6650 4100
+Connection ~ 6650 4100
+Wire Wire Line
+	6650 4100 6650 4200
+Wire Wire Line
+	6200 4200 6650 4200
+Connection ~ 6650 4200
+Wire Wire Line
+	6650 4200 6650 4300
+Text GLabel 6200 3900 2    50   Input ~ 0
+AUX_6-
 $EndSCHEMATC

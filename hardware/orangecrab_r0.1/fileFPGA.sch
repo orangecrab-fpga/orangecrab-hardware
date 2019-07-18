@@ -14,8 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 8000 3500 2    60   Input ~ 0
-FPGA_CDONE
 Text GLabel 9300 2150 2    60   Input ~ 0
 SPI_CONFIG_SS
 Text GLabel 7800 3100 2    60   Input ~ 0
@@ -177,8 +175,6 @@ Wire Wire Line
 Wire Wire Line
 	7900 3200 7900 3400
 Connection ~ 7900 3400
-Wire Wire Line
-	7800 3500 8000 3500
 Text Notes 1150 900  0    80   ~ 0
 BANK 2
 Text Notes 1150 3500 0    80   ~ 0
@@ -642,34 +638,12 @@ F 5 " LFE5UM-25F-6MG285C-ND " H -1000 -3650 50  0001 C CNN "SN-DK"
 	5    4650 1300
 	-1   0    0    -1  
 $EndComp
-Text GLabel 5700 5900 2    50   Input ~ 0
-IO_9
-Text GLabel 5700 5000 2    50   Input ~ 0
-IO_6
-Text GLabel 5700 5200 2    50   Input ~ 0
-IO_5
-Text GLabel 5700 4800 2    50   Input ~ 0
-IO_SCL
-Text GLabel 5700 4900 2    50   Input ~ 0
-IO_SDA
-Text GLabel 5700 6000 2    50   Input ~ 0
+Text GLabel 5700 5700 2    50   Input ~ 0
 IO_13
 Text GLabel 5700 5400 2    50   Input ~ 0
 IO_12
-Text GLabel 5700 5600 2    50   Input ~ 0
-IO_11
-Text GLabel 5700 5500 2    50   Input ~ 0
-IO_10
-Text GLabel 5700 6400 2    50   Input ~ 0
-IO_SCK
 Text GLabel 5700 6500 2    50   Input ~ 0
-IO_MOSI
-Text GLabel 5700 6300 2    50   Input ~ 0
-IO_MISO
-Text GLabel 5700 6200 2    50   Input ~ 0
-IO_0
-Text GLabel 5700 6100 2    50   Input ~ 0
-IO_1
+AUX_7
 Text GLabel 5700 7100 2    50   Input ~ 0
 USB_D-
 Text GLabel 5700 7200 2    50   Input ~ 0
@@ -690,34 +664,26 @@ Text GLabel 5700 6800 2    50   Input ~ 0
 SD0_CLK
 Text GLabel 5700 7000 2    50   Input ~ 0
 SD0_CD
-Text GLabel 5700 5700 2    50   Input ~ 0
-AUX_0
-Text GLabel 5700 5300 2    50   Input ~ 0
-AUX_1
-Text GLabel 5700 5100 2    50   Input ~ 0
-AUX_2
-Text GLabel 5700 4700 2    50   Input ~ 0
-AUX_3
 Text GLabel 1950 7150 2    50   Input ~ 0
-AUX_4
+IO_5
 Text GLabel 1950 7250 2    50   Input ~ 0
-AUX_5
+IO_SDA
 Text GLabel 9300 2250 2    50   Input ~ 0
 LED_R
 Text GLabel 9300 2050 2    50   Input ~ 0
 LED_G
-Text GLabel 9300 1950 2    50   Input ~ 0
+Text GLabel 5700 5300 2    50   Input ~ 0
 LED_B
 Text GLabel 3500 6750 2    50   Input ~ 0
-AUX_6
+IO_6
 Text GLabel 3500 6850 2    50   Input ~ 0
-AUX_7
+IO_SCL
 Text GLabel 3500 7050 2    50   Input ~ 0
-AUX_8
+IO_11
 Text GLabel 3500 7150 2    50   Input ~ 0
-AUX_9
+IO_10
 Text GLabel 3500 7250 2    50   Input ~ 0
-AUX_10
+IO_9
 $Comp
 L gkl_time:TYETBCSANF-32.000000 OSC1
 U 1 1 5D75A2DF
@@ -754,13 +720,13 @@ Wire Wire Line
 Wire Wire Line
 	7800 3700 8300 3700
 Text GLabel 9300 1150 2    60   Input ~ 0
-AUX_11
+IO_MISO
 Text GLabel 9300 1250 2    60   Input ~ 0
-AUX_12
+IO_MOSI
 Text GLabel 9300 1350 2    60   Input ~ 0
-AUX_13
+IO_0
 Text GLabel 9300 1450 2    60   Input ~ 0
-AUX_14
+IO_1
 Text GLabel 5250 1300 2    50   UnSpc ~ 0
 P1.5V
 Wire Wire Line
@@ -883,4 +849,36 @@ Text GLabel 7400 5900 0    60   Input ~ 0
 QSPI_D2
 Text GLabel 8600 5600 1    50   UnSpc ~ 0
 P3.3V
+Text GLabel 9300 1950 2    60   Input ~ 0
+IO_SCK
+NoConn ~ 7800 3600
+NoConn ~ 7800 3500
+Text GLabel 5700 4900 2    50   Input ~ 0
+AUX_6+
+Text GLabel 5700 5000 2    50   Input ~ 0
+AUX_6-
+Text GLabel 5700 5900 2    50   Input ~ 0
+AUX_3+
+Text GLabel 5700 6000 2    50   Input ~ 0
+AUX_3-
+Text GLabel 5700 6300 2    50   Input ~ 0
+AUX_0+
+Text GLabel 5700 6400 2    50   Input ~ 0
+AUX_0-
+Text GLabel 5700 5100 2    50   Input ~ 0
+AUX_1+
+Text GLabel 5700 5200 2    50   Input ~ 0
+AUX_1-
+Text GLabel 5700 5500 2    50   Input ~ 0
+AUX_2+
+Text GLabel 5700 5600 2    50   Input ~ 0
+AUX_2-
+Text GLabel 5700 4700 2    50   Input ~ 0
+AUX_5+
+Text GLabel 5700 4800 2    50   Input ~ 0
+AUX_5-
+Text GLabel 5700 6100 2    50   Input ~ 0
+AUX_4+
+Text GLabel 5700 6200 2    50   Input ~ 0
+AUX_4-
 $EndSCHEMATC

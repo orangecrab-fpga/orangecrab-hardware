@@ -181,13 +181,13 @@ Wire Wire Line
 Wire Wire Line
 	2950 2400 2950 2750
 Connection ~ 2850 2400
-Text GLabel 2650 3150 3    60   Input ~ 0
-SD0_DAT2
-Text GLabel 2750 3150 3    60   Input ~ 0
-SD0_CMD
-Text GLabel 2850 3150 3    60   Input ~ 0
-SD0_DAT0
 Text GLabel 2950 3150 3    60   Input ~ 0
+SD0_DAT2
+Text GLabel 2850 3150 3    60   Input ~ 0
+SD0_CMD
+Text GLabel 2750 3150 3    60   Input ~ 0
+SD0_DAT0
+Text GLabel 2650 3150 3    60   Input ~ 0
 SD0_DAT1
 $Comp
 L Device:R R28

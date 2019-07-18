@@ -1,4 +1,4 @@
-15863445637399676
+15882556863048326
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44624,6 +44624,27 @@ UL/CSA 6x32mm Ceramic Slow Blow Fuse
 0
 2
 2
+gkl_antenna
+0433AT62A0020 - 433MHz 25x5x1mm chip antenna
+
+
+0
+2
+2
+gkl_antenna
+0900AT43A0070 - 900MHz Wide band ISM Chip Antenna
+
+
+0
+3
+2
+gkl_antenna
+GPS_ANT
+
+
+0
+1
+1
 gkl_conn
 10118194c_usb_microb
 
@@ -44835,20 +44856,6 @@ XF2M-2415-1A
 26
 25
 gkl_housings_bga
-BGA-529_23x23_12.0x12.0mm
-
-
-0
-1094
-547
-gkl_housings_bga
-BGA-529_23x23_12.0x12.0mm_POP
-
-
-0
-336
-168
-gkl_housings_bga
 caBGA_381_17x17
 
 
@@ -44967,6 +44974,34 @@ QFN DFN_QFN
 0
 14
 13
+gkl_housings_son
+SAW-5
+
+
+0
+5
+5
+gkl_housings_son
+X2SON_4_1.0x1.0mm
+
+
+0
+5
+4
+gkl_housings_son
+XSON6
+
+
+0
+6
+6
+gkl_housings_son
+XSON7
+
+
+0
+7
+7
 gkl_led
 0404LED_RGB
 
@@ -44981,6 +45016,20 @@ capacitor 0402
 0
 2
 2
+gkl_logos
+gsd_logo_small
+
+
+0
+0
+0
+gkl_logos
+oshw_small
+
+
+0
+0
+0
 gkl_misc
 0197054201
 
@@ -45023,6 +45072,41 @@ X40-stepper
 0
 8
 8
+gkl_time
+ABS05_32.768KHz Crystal
+
+
+0
+2
+2
+gkl_time
+CDFN3225-4LD-PL-1
+
+
+0
+4
+4
+gkl_time
+Oscilator_2.5x2.0
+
+
+0
+4
+4
+gkl_ublox
+MAX_M8
+
+
+0
+18
+18
+gkl_ublox
+NEO-M8
+
+
+0
+24
+24
 Heatsink
 Heatsink_35x26mm_1xFixation3mm_Fischer-SK486-35
 Heatsink, 35mm x 26mm, 1x Fixation 3mm, Fischer SK486-35
