@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:OrangeCrab-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -451,7 +451,7 @@ F 5 "CL03A104KQ3NNNC" H 4050 2650 50  0001 C CNN "PN"
 	1    0    0    -1  
 $EndComp
 Text GLabel 4050 2400 1    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	3850 2500 3850 2450
 Wire Wire Line
@@ -508,7 +508,7 @@ F 5 "CL03A104KQ3NNNC" H 4900 2650 50  0001 C CNN "PN"
 	1    0    0    -1  
 $EndComp
 Text GLabel 4900 2400 1    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	4700 2500 4700 2450
 Wire Wire Line

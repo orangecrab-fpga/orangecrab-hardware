@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:OrangeCrab-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -824,7 +824,7 @@ $EndComp
 Text GLabel 1750 3550 0    50   UnSpc ~ 0
 P2.5V
 Text GLabel 1750 3650 0    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Text GLabel 1750 3750 0    50   UnSpc ~ 0
 P1.1V
 $Comp

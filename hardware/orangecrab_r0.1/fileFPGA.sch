@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:OrangeCrab-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -432,7 +432,7 @@ Connection ~ 2900 2700
 Wire Wire Line
 	2900 2700 2900 2750
 Text GLabel 2600 5450 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	2600 5450 2000 5450
 Text GLabel 2000 2850 2    50   Input ~ 0
@@ -440,11 +440,11 @@ RAM_A9
 Text GLabel 2000 3050 2    50   Input ~ 0
 RAM_RESET#
 Text GLabel 2400 2650 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	2400 2650 2000 2650
 Text GLabel 2400 1550 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	2400 1550 2000 1550
 Text GLabel 2000 1850 2    50   Input ~ 0
@@ -454,7 +454,7 @@ RAM_BA0
 Text GLabel 2000 1350 2    50   Input ~ 0
 RAM_BA1
 Text GLabel 9850 5400 0    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	10100 5400 9850 5400
 $Comp
@@ -522,11 +522,11 @@ Connection ~ 5550 2850
 Wire Wire Line
 	5550 2850 5550 2900
 Text GLabel 9850 5100 0    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	10100 5100 9850 5100
 Text GLabel 9850 5200 0    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	10100 5200 9850 5200
 Text GLabel 2000 1450 2    50   Input ~ 0
@@ -639,11 +639,11 @@ JTAG_TDO
 Text GLabel 8000 3300 2    50   UnSpc ~ 0
 P3.3V
 Text GLabel 5250 1500 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	5250 1500 4650 1500
 Text GLabel 5250 3100 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	5250 3100 4650 3100
 $Comp
@@ -751,17 +751,17 @@ IO_0
 Text GLabel 9300 1450 2    60   Input ~ 0
 IO_1
 Text GLabel 5250 1300 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	5250 1300 4650 1300
 Wire Wire Line
 	5250 3200 4650 3200
 Text GLabel 5250 3200 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	5250 3300 4650 3300
 Text GLabel 5250 3300 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 $Comp
 L gkl_power:GND #PWR0167
 U 1 1 5E31762C

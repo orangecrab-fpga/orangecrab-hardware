@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:OrangeCrab-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -150,7 +150,7 @@ RAM_A11
 Text GLabel 2850 1600 2    50   Input ~ 0
 RAM_A12
 Text GLabel 10450 1950 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 $Comp
 L Device:R R19
 U 1 1 5D77B5E4
@@ -259,7 +259,7 @@ Connection ~ 10050 1950
 Wire Wire Line
 	10450 1950 10350 1950
 Text GLabel 10450 3000 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 $Comp
 L Device:C C22
 U 1 1 5D7825CC

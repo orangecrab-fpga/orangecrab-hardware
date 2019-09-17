@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:OrangeCrab-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -315,7 +315,7 @@ Wire Wire Line
 	7000 4950 7000 4900
 Connection ~ 7000 4900
 Text GLabel 10700 3600 2    50   UnSpc ~ 0
-P1.5V
+P1.35V
 $Comp
 L Device:C C12
 U 1 1 5D22FC1A
@@ -536,7 +536,7 @@ L Device:R R16
 U 1 1 5D3D688D
 P 9450 4050
 F 0 "R16" H 9520 4096 50  0000 L CNN
-F 1 "115k" H 9520 4005 50  0000 L CNN
+F 1 "147k" H 9520 4005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 9380 4050 50  0001 C CNN
 F 3 "~" H 9450 4050 50  0001 C CNN
 F 4 "‎Yageo‎" H 9450 4050 50  0001 C CNN "Mfg"
@@ -680,7 +680,7 @@ F 5 "GRM155R60J106ME15D" H 10550 3800 50  0001 C CNN "PN"
 	-1   0    0    1   
 $EndComp
 Text Notes 10100 3150 0    50   ~ 0
-1.5V @ 5A\n- DDR3\n
+1.35V @ 5A\n- DDR3L
 Wire Wire Line
 	7850 3400 7750 3400
 Wire Wire Line
@@ -722,27 +722,27 @@ Wire Wire Line
 	7750 3700 7750 4000
 Connection ~ 7750 4100
 Wire Wire Line
-	7850 3900 6600 3900
+	7850 3900 6800 3900
 Wire Wire Line
-	6600 3900 6600 3650
+	6800 3900 6800 3650
 $Comp
 L Device:R R14
 U 1 1 5D3D690A
-P 6600 3500
-F 0 "R14" H 6500 3450 50  0000 C CNN
-F 1 "100k" H 6450 3550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 6530 3500 50  0001 C CNN
-F 3 "~" H 6600 3500 50  0001 C CNN
-F 4 "‎Yageo‎" H 6600 3500 50  0001 C CNN "Mfg"
-F 5 "RC0201FR-07100KL" H 6600 3500 50  0001 C CNN "PN"
-	1    6600 3500
+P 6800 3500
+F 0 "R14" H 6650 3450 50  0000 C CNN
+F 1 "100k" H 6650 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 6730 3500 50  0001 C CNN
+F 3 "~" H 6800 3500 50  0001 C CNN
+F 4 "‎Yageo‎" H 6800 3500 50  0001 C CNN "Mfg"
+F 5 "RC0201FR-07100KL" H 6800 3500 50  0001 C CNN "PN"
+	1    6800 3500
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	6600 3350 6600 3100
-Connection ~ 6600 3100
+	6800 3350 6800 3100
+Connection ~ 6800 3100
 Wire Wire Line
-	6600 3100 6500 3100
+	6800 3100 6500 3100
 $Comp
 L gkl_power:GND #PWR0105
 U 1 1 5D3D6917
@@ -1125,7 +1125,7 @@ P1.1V
 Text GLabel 6150 1200 0    50   UnSpc ~ 0
 VSYS
 Wire Wire Line
-	6600 3100 7000 3100
+	6800 3100 7000 3100
 Wire Wire Line
 	6600 4900 7000 4900
 $Comp
@@ -1359,7 +1359,7 @@ F 3 "" H 2000 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1450 5950 0    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Wire Wire Line
 	1550 5950 1450 5950
 $Comp
@@ -1412,9 +1412,9 @@ Wire Wire Line
 Wire Wire Line
 	2700 5850 2800 5850
 Text GLabel 2700 5850 0    50   UnSpc ~ 0
-P1.5V
+P1.35V
 Text Notes 3000 5500 0    50   ~ 0
-DDR3 VTT Generator
+DDR3L VTT Generator
 $Comp
 L gkl_pmic:TPS51206 U?
 U 1 1 5D20B7C7
@@ -1564,12 +1564,12 @@ Text Label 2850 4700 2    50   ~ 0
 PGOOD_P1.1V
 Wire Wire Line
 	2200 4500 2900 4500
-Text Label 7550 3900 2    50   ~ 0
-PGOOD_P1.5V
+Text Label 7650 3900 2    50   ~ 0
+PGOOD_P1.35V
 Text Label 7550 5700 2    50   ~ 0
 PGOOD_P3.3V
 Text Label 2650 6150 2    50   ~ 0
-PGOOD_P1.5V
+PGOOD_P1.35V
 Text GLabel 7250 1700 0    50   UnSpc ~ 0
 EN
 Wire Wire Line
@@ -1693,7 +1693,7 @@ Wire Wire Line
 Text Notes 9600 2350 0    50   ~ 0
 1.1V
 Text Notes 9600 4250 0    50   ~ 0
-1.5V
+1.35V
 Text Notes 9600 6100 0    50   ~ 0
 3.3V
 $EndSCHEMATC
