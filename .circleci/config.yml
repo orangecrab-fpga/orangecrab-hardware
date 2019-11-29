@@ -1,55 +1,41 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
+# Build OrangeCrab Gateware/Firmware on CI
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.6.1
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
+      # Use Ubuntu Base Image
+      - image: ubuntu:18.04
 
     working_directory: ~/repo
 
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
       - run:
-          name: install dependencies
+          name: install litex-buildenv
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
+            git clone https://github.com/timvideos/litex-buildenv
+            export CPU=vexriscv             # Soft CPU architecture
+            export CPU_VARIANT=minimal      # Use a resource-constrained variant to make up5k happy
+            export PLATFORM=orangecrab      # Target platform Icebreaker, or PLATFORM=tinyfpga_bx for TinyFPGA BX
+            export FIRMWARE=micropython
+            export TARGET=base
+            export HDMI2USB_UDEV_IGNORE=1
+            cd litex-build
+            bash ./scripts/download-env.sh
+            source ./scripts/enter-env.sh
       - run:
-          name: run tests
+          name: export VexriscV and attempt to build with pjtrellis
           command: |
-            . venv/bin/activate
-            python manage.py test
-
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+             cd litex-buildenv
+             export CPU=vexriscv             # Soft CPU architecture
+             export CPU_VARIANT=minimal      # Use a resource-constrained variant to make up5k happy
+             export PLATFORM=orangecrab      # Target platform Icebreaker, or PLATFORM=tinyfpga_bx for TinyFPGA BX
+             export FIRMWARE=micropython
+             export TARGET=base
+             export HDMI2USB_UDEV_IGNORE=1
+             source ./scripts/enter-env.sh
+             cd ..
+             cd gateware/litex_ddr3_test
+             python OrangeCrab-bitstream.py base
+             
