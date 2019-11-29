@@ -6,7 +6,6 @@
 # DDR3: 800 MT/s
 
 import math
-from collections import OrderedDict
 
 from migen import *
 from migen.genlib.misc import timeline, BitSlip
@@ -16,29 +15,8 @@ from migen.genlib.misc import WaitTimer
 
 from litex.soc.interconnect.csr import *
 
-from litedram.common import PhySettings
+from litedram.common import *
 from litedram.phy.dfi import *
-
-# Helpers ------------------------------------------------------------------------------------------
-
-def get_cl_cw(memtype, tck):
-    f_to_cl_cwl = OrderedDict()
-    if memtype == "DDR3":
-        f_to_cl_cwl[800e6]  = (6, 5)
-    else:
-        raise ValueError
-    for f, (cl, cwl) in f_to_cl_cwl.items():
-        if tck >= 2/f:
-            return cl, cwl
-    raise ValueError
-
-def get_sys_latency(nphases, cas_latency):
-    return math.ceil(cas_latency/nphases)
-
-def get_sys_phases(nphases, sys_latency, cas_latency):
-    dat_phase = sys_latency*nphases - cas_latency
-    cmd_phase = (dat_phase - 1)%nphases
-    return cmd_phase, dat_phase
 
 # Lattice ECP5 DDR PHY Initialization --------------------------------------------------------------
 
@@ -73,8 +51,6 @@ class ECP5DDRPHYInit(Module):
         self.specials += MultiReg(_lock, lock)
         self.sync += lock_d.eq(lock)
         self.comb += new_lock.eq(lock & ~lock_d)
-
-        
 
         # DDRDLLA/DDQBUFM/ECLK initialization sequence ---------------------------------------------
         t = 8 # in cycles
@@ -113,6 +89,7 @@ class ECP5DDRPHY(Module, AutoCSR):
         nranks = 1 if not hasattr(pads, "cs_n") else len(pads.cs_n)
         databits = len(pads.dq)
         nphases = 2
+        assert databits%8 == 0
 
         # Init -------------------------------------------------------------------------------------
         self.submodules.init = ClockDomainsRenamer("init")(ECP5DDRPHYInit("sys2x"))
@@ -139,37 +116,27 @@ class ECP5DDRPHY(Module, AutoCSR):
         rdcmdphase, rdphase = get_sys_phases(nphases, cl_sys_latency, cl)
         wrcmdphase, wrphase = get_sys_phases(nphases, cwl_sys_latency, cwl)
         self.settings = PhySettings(
-            memtype=memtype,
-            databits=databits,
-            dfi_databits=4*databits,
-            nranks=nranks,
-            nphases=nphases,
-            rdphase=rdphase,
-            wrphase=wrphase,
-            rdcmdphase=rdcmdphase,
-            wrcmdphase=wrcmdphase,
-            cl=cl,
-            cwl=cwl,
-            read_latency=2 + cl_sys_latency + 2 + log2_int(4//nphases) + 6,
-            write_latency=cwl_sys_latency
+            memtype       = memtype,
+            databits      = databits,
+            dfi_databits  = 4*databits,
+            nranks        = nranks,
+            nphases       = nphases,
+            rdphase       = rdphase,
+            wrphase       = wrphase,
+            rdcmdphase    = rdcmdphase,
+            wrcmdphase    = wrcmdphase,
+            cl            = cl,
+            cwl           = cwl,
+            read_latency  = 2 + cl_sys_latency + 2 + log2_int(4//nphases) + 6,
+            write_latency = cwl_sys_latency
         )
 
         # DFI Interface ----------------------------------------------------------------------------
-        self.dfi = Interface(addressbits, bankbits, nranks, 4*databits, 4)
+        self.dfi = dfi = Interface(addressbits, bankbits, nranks, 4*databits, 4)
 
         # # #
 
         bl8_sel = Signal()
-
-
-        self.specials
-
-        # VCCIO
-        for i in range(len(pads.vccio)):
-            self.comb += pads.vccio[i].eq(1)
-        for i in range(len(pads.gnd)):
-            self.comb += pads.gnd[i].eq(0)
-
 
         # Clock ------------------------------------------------------------------------------------
         for i in range(len(pads.clk_p)):
@@ -181,7 +148,7 @@ class ECP5DDRPHY(Module, AutoCSR):
                     i_D2=0,
                     i_D3=1,
                     i_ECLK=ClockSignal("sys2x"),
-                    i_SCLK=ClockSignal("sys"),
+                    i_SCLK=ClockSignal(),
                     i_RST=ResetSignal("sys2x"),
                     o_Q=pads.clk_p[i]
                 ),
@@ -191,44 +158,45 @@ class ECP5DDRPHY(Module, AutoCSR):
         for i in range(addressbits):
             self.specials += \
                 Instance("ODDRX2F",
-                    i_D0=self.dfi.phases[0].address[i],
-                    i_D1=self.dfi.phases[0].address[i],
-                    i_D2=self.dfi.phases[1].address[i],
-                    i_D3=self.dfi.phases[1].address[i],
+                    i_D0=dfi.phases[0].address[i],
+                    i_D1=dfi.phases[0].address[i],
+                    i_D2=dfi.phases[1].address[i],
+                    i_D3=dfi.phases[1].address[i],
                     i_ECLK=ClockSignal("sys2x"),
-                    i_SCLK=ClockSignal("sys"),
+                    i_SCLK=ClockSignal(),
                     i_RST=ResetSignal("sys2x"),
                     o_Q=pads.a[i]
                 )
         for i in range(bankbits):
             self.specials += \
                  Instance("ODDRX2F",
-                    i_D0=self.dfi.phases[0].bank[i],
-                    i_D1=self.dfi.phases[0].bank[i],
-                    i_D2=self.dfi.phases[1].bank[i],
-                    i_D3=self.dfi.phases[1].bank[i],
+                    i_D0=dfi.phases[0].bank[i],
+                    i_D1=dfi.phases[0].bank[i],
+                    i_D2=dfi.phases[1].bank[i],
+                    i_D3=dfi.phases[1].bank[i],
                     i_ECLK=ClockSignal("sys2x"),
-                    i_SCLK=ClockSignal("sys"),
+                    i_SCLK=ClockSignal(),
                     i_RST=ResetSignal("sys2x"),
                     o_Q=pads.ba[i]
                 )
-        controls = ["ras_n", "cas_n", "we_n", "odt", "cs_n","cke", "reset_n"]
-        
-        
+        controls = ["ras_n", "cas_n", "we_n", "cke", "odt"]
+        if hasattr(pads, "reset_n"):
+            controls.append("reset_n")
+        if hasattr(pads, "cs_n"):
+            controls.append("cs_n")
         for name in controls:
             for i in range(len(getattr(pads, name))):
                 self.specials += \
                     Instance("ODDRX2F",
-                        i_D0=getattr(self.dfi.phases[0], name)[i],
-                        i_D1=getattr(self.dfi.phases[0], name)[i],
-                        i_D2=getattr(self.dfi.phases[1], name)[i],
-                        i_D3=getattr(self.dfi.phases[1], name)[i],
+                        i_D0=getattr(dfi.phases[0], name)[i],
+                        i_D1=getattr(dfi.phases[0], name)[i],
+                        i_D2=getattr(dfi.phases[1], name)[i],
+                        i_D3=getattr(dfi.phases[1], name)[i],
                         i_ECLK=ClockSignal("sys2x"),
-                        i_SCLK=ClockSignal("sys"),
+                        i_SCLK=ClockSignal(),
                         i_RST=ResetSignal("sys2x"),
                         o_Q=getattr(pads, name)[i]
                 )
-
 
         # DQ ---------------------------------------------------------------------------------------
         oe_dq = Signal()
@@ -313,10 +281,10 @@ class ECP5DDRPHY(Module, AutoCSR):
             dm_o_data_d = Signal(8)
             dm_o_data_muxed = Signal(4)
             self.comb += dm_o_data.eq(Cat(
-                self.dfi.phases[0].wrdata_mask[0*databits//8+i], self.dfi.phases[0].wrdata_mask[1*databits//8+i],
-                self.dfi.phases[0].wrdata_mask[2*databits//8+i], self.dfi.phases[0].wrdata_mask[3*databits//8+i],
-                self.dfi.phases[1].wrdata_mask[0*databits//8+i], self.dfi.phases[1].wrdata_mask[1*databits//8+i],
-                self.dfi.phases[1].wrdata_mask[2*databits//8+i], self.dfi.phases[1].wrdata_mask[3*databits//8+i]),
+                dfi.phases[0].wrdata_mask[0*databits//8+i], dfi.phases[0].wrdata_mask[1*databits//8+i],
+                dfi.phases[0].wrdata_mask[2*databits//8+i], dfi.phases[0].wrdata_mask[3*databits//8+i],
+                dfi.phases[1].wrdata_mask[0*databits//8+i], dfi.phases[1].wrdata_mask[1*databits//8+i],
+                dfi.phases[1].wrdata_mask[2*databits//8+i], dfi.phases[1].wrdata_mask[3*databits//8+i]),
             )
             self.sync += dm_o_data_d.eq(dm_o_data)
             self.sync += \
@@ -374,10 +342,10 @@ class ECP5DDRPHY(Module, AutoCSR):
                 dq_o_data_d = Signal(8)
                 dq_o_data_muxed = Signal(4)
                 self.comb += dq_o_data.eq(Cat(
-                    self.dfi.phases[0].wrdata[0*databits+j], self.dfi.phases[0].wrdata[1*databits+j],
-                    self.dfi.phases[0].wrdata[2*databits+j], self.dfi.phases[0].wrdata[3*databits+j],
-                    self.dfi.phases[1].wrdata[0*databits+j], self.dfi.phases[1].wrdata[1*databits+j],
-                    self.dfi.phases[1].wrdata[2*databits+j], self.dfi.phases[1].wrdata[3*databits+j])
+                    dfi.phases[0].wrdata[0*databits+j], dfi.phases[0].wrdata[1*databits+j],
+                    dfi.phases[0].wrdata[2*databits+j], dfi.phases[0].wrdata[3*databits+j],
+                    dfi.phases[1].wrdata[0*databits+j], dfi.phases[1].wrdata[1*databits+j],
+                    dfi.phases[1].wrdata[2*databits+j], dfi.phases[1].wrdata[3*databits+j])
                 )
                 self.sync += dq_o_data_d.eq(dq_o_data)
                 self.sync += \
@@ -439,10 +407,10 @@ class ECP5DDRPHY(Module, AutoCSR):
                 dq_bitslip_o_d = Signal(4)
                 self.sync += dq_bitslip_o_d.eq(dq_bitslip.o)
                 self.comb += [
-                    self.dfi.phases[0].rddata[0*databits+j].eq(dq_bitslip_o_d[0]), self.dfi.phases[0].rddata[1*databits+j].eq(dq_bitslip_o_d[1]),
-                    self.dfi.phases[0].rddata[2*databits+j].eq(dq_bitslip_o_d[2]), self.dfi.phases[0].rddata[3*databits+j].eq(dq_bitslip_o_d[3]),
-                    self.dfi.phases[1].rddata[0*databits+j].eq(dq_bitslip.o[0]), self.dfi.phases[1].rddata[1*databits+j].eq(dq_bitslip.o[1]),
-                    self.dfi.phases[1].rddata[2*databits+j].eq(dq_bitslip.o[2]), self.dfi.phases[1].rddata[3*databits+j].eq(dq_bitslip.o[3]),
+                    dfi.phases[0].rddata[0*databits+j].eq(dq_bitslip_o_d[0]), dfi.phases[0].rddata[1*databits+j].eq(dq_bitslip_o_d[1]),
+                    dfi.phases[0].rddata[2*databits+j].eq(dq_bitslip_o_d[2]), dfi.phases[0].rddata[3*databits+j].eq(dq_bitslip_o_d[3]),
+                    dfi.phases[1].rddata[0*databits+j].eq(dq_bitslip.o[0]), dfi.phases[1].rddata[1*databits+j].eq(dq_bitslip.o[1]),
+                    dfi.phases[1].rddata[2*databits+j].eq(dq_bitslip.o[2]), dfi.phases[1].rddata[3*databits+j].eq(dq_bitslip.o[3]),
                 ]
                 self.specials += \
                     Instance("TSHX2DQA",
@@ -462,7 +430,7 @@ class ECP5DDRPHY(Module, AutoCSR):
         #  ODDRX2DQA latency
         #  cl_sys_latency
         #  IDDRX2DQA latency
-        rddata_en = self.dfi.phases[self.settings.rdphase].rddata_en
+        rddata_en = dfi.phases[self.settings.rdphase].rddata_en
         rddata_ens = Array([Signal() for i in range(self.settings.read_latency-1)])
         for i in range(self.settings.read_latency-1):
             n_rddata_en = Signal()
@@ -470,15 +438,16 @@ class ECP5DDRPHY(Module, AutoCSR):
             self.comb += rddata_ens[i].eq(rddata_en)
             rddata_en = n_rddata_en
         self.sync += [phase.rddata_valid.eq(rddata_en)
-            for phase in self.dfi.phases]
-        self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+0] | rddata_ens[cl_sys_latency+1])
+            for phase in dfi.phases]
+        #self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+0] | rddata_ens[cl_sys_latency+1]) # Works only with wishbone-bridge test
+        self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+1] | rddata_ens[cl_sys_latency+2]) # Works only with SoC
         oe = Signal()
         last_wrdata_en = Signal(cwl_sys_latency+3)
-        wrphase = self.dfi.phases[self.settings.wrphase]
+        wrphase = dfi.phases[self.settings.wrphase]
         self.sync += last_wrdata_en.eq(Cat(wrphase.wrdata_en, last_wrdata_en[:-1]))
         self.comb += oe.eq(
             last_wrdata_en[cwl_sys_latency-1] |
-            last_wrdata_en[cwl_sys_latency+0] |
+            last_wrdata_en[cwl_sys_latency]   |
             last_wrdata_en[cwl_sys_latency+1] |
             last_wrdata_en[cwl_sys_latency+2])
         self.sync += oe_dqs.eq(oe), oe_dq.eq(oe)

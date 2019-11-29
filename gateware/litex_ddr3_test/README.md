@@ -2,6 +2,8 @@
 
 ``` Currently under-development ``` 
 
+``` Note: to get these to work you may have to alter ecp5ddrphy.py #442 ```
+
 ## Build Instructins
 ```console
 $ python3 OrangeCrab-bitstream.py ddr3_test
@@ -34,7 +36,7 @@ Then back in your original terminal you can run the python files that interact w
 This will connect to the board and return the Bitstream ID String
 ```console
 $ python3 test_identifier.py
-  fpga_id: Versa ECP5 test SoC 2019-11-29 11:45:32
+  fpga_id: OrangeCrab test SoC 2019-11-29 11:45:32
 ```
 
 If you do not see a valid 'fpga_id' here then likely your serial setup is incorrect.

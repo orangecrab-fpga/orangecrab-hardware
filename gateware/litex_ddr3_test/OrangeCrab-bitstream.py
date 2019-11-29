@@ -99,7 +99,7 @@ class DDR3TestSoC(SoCSDRAM):
                           cpu_type=None, l2_size=32,
                           with_uart=None,
                           csr_data_width=32,
-                          ident="Versa ECP5 test SoC", ident_version=True)
+                          ident="OrangeCrab test SoC", ident_version=True)
 
         # crg
         crg = DDR3TestCRG(platform, sys_clk_freq)
@@ -152,10 +152,11 @@ class BaseSoC(SoCSDRAM):
     csr_map.update(SoCSDRAM.csr_map)
     def __init__(self, toolchain="diamond", **kwargs):
         platform = OrangeCrab.Platform(toolchain=toolchain)
-        sys_clk_freq = int(50e6)
+        sys_clk_freq = int(48e6)
         SoCSDRAM.__init__(self, platform, clk_freq=sys_clk_freq,
                           cpu_type="vexriscv",
                           integrated_rom_size=0x8000,
+                          ident="OrangeCrab test SoC",
                           **kwargs)
 
         # crg
