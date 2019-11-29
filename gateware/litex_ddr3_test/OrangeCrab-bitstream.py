@@ -20,7 +20,7 @@ from litex.soc.interconnect import wishbone
 
 from litedram.modules import MT41K64M16
 from ecp5ddrphy import ECP5DDRPHY, ECP5DDRPHYInit
-#from litedram.sdram_init import get_sdram_phy_py_header
+from litedram.init import get_sdram_phy_py_header
 from litedram.frontend.bist import LiteDRAMBISTGenerator
 from litedram.frontend.bist import LiteDRAMBISTChecker
 
@@ -40,10 +40,8 @@ class DDR3TestCRG(Module):
         self.clock_domains.cd_sys = ClockDomain()
         self.clock_domains.cd_sys2x = ClockDomain()
         self.clock_domains.cd_sys2x_i = ClockDomain(reset_less=True)
-        
-        self.clock_domains.cd_sys_a = ClockDomain()
-        self.clock_domains.cd_sys2x_a = ClockDomain(reset_less=True)
-        self.clock_domains.cd_sys2x_a_i = ClockDomain(reset_less=True)   
+        self.clock_domains.cd_sys2x_eb = ClockDomain(reset_less=True)
+         
 
         # # #
 
@@ -51,8 +49,9 @@ class DDR3TestCRG(Module):
 
         # clk / rst
         clk100 = platform.request("clk100")
-        rst_n = platform.request("rst_n")
-        platform.add_period_constraint(clk100, 10.0)
+        #rst_n = platform.request("rst_n")
+        rst_n = Signal(reset=1)
+        platform.add_period_constraint(clk100, 20.0)
 
         # power on reset
         por_count = Signal(16, reset=2**16-1)
@@ -63,33 +62,23 @@ class DDR3TestCRG(Module):
 
         # pll
         self.submodules.pll = pll = ECP5PLL()
-        pll.register_clkin(clk100, 100e6)
-        pll.create_clkout(self.cd_sys2x_i, 2*sys_clk_freq)
-        pll.create_clkout(self.cd_init, 25e6)
+        pll.register_clkin(clk100, 48e6)
+        pll.create_clkout(self.cd_sys2x_eb, 2*sys_clk_freq)
+        pll.create_clkout(self.cd_init, 24e6)
         self.specials += [
             Instance("ECLKSYNCB",
                 i_ECLKI=self.cd_sys2x_i.clk,
                 i_STOP=self.stop,
                 o_ECLKO=self.cd_sys2x.clk),
-            Instance("ECLKSYNCB",
-                i_ECLKI=self.cd_sys2x_a_i.clk,
-                i_STOP=self.stop,
-                o_ECLKO=self.cd_sys2x_a.clk),
             Instance("ECLKBRIDGECS",
-                i_CLK0=self.cd_sys2x_i.clk,
-                o_ECSOUT=self.cd_sys2x_a_i.clk),
+                i_CLK0=self.cd_sys2x_eb.clk,
+                o_ECSOUT=self.cd_sys2x_i.clk),
             Instance("CLKDIVF",
                 p_DIV="2.0",
                 i_ALIGNWD=0,
                 i_CLKI=self.cd_sys2x.clk,
                 i_RST=self.cd_sys2x.rst,
                 o_CDIVX=self.cd_sys.clk),
-            Instance("CLKDIVF",
-                p_DIV="2.0",
-                i_ALIGNWD=0,
-                i_CLKI=self.cd_sys2x_a.clk,
-                i_RST=0,
-                o_CDIVX=self.cd_sys_a.clk),
             AsyncResetSynchronizer(self.cd_init, ~por_done | ~pll.locked | ~rst_n),
             AsyncResetSynchronizer(self.cd_sys, ~por_done | ~pll.locked | ~rst_n)
         ]
@@ -105,7 +94,7 @@ class DDR3TestSoC(SoCSDRAM):
     def __init__(self, toolchain="diamond"):
         platform = OrangeCrab.Platform(toolchain=toolchain)
         
-        sys_clk_freq = int(50e6)
+        sys_clk_freq = int(48e6)
         SoCSDRAM.__init__(self, platform, clk_freq=sys_clk_freq,
                           cpu_type=None, l2_size=32,
                           with_uart=None,

@@ -167,6 +167,8 @@ class ECP5DDRPHY(Module, AutoCSR):
         # VCCIO
         for i in range(len(pads.vccio)):
             self.comb += pads.vccio[i].eq(1)
+        for i in range(len(pads.gnd)):
+            self.comb += pads.gnd[i].eq(0)
 
 
         # Clock ------------------------------------------------------------------------------------
@@ -179,7 +181,7 @@ class ECP5DDRPHY(Module, AutoCSR):
                     i_D2=0,
                     i_D3=1,
                     i_ECLK=ClockSignal("sys2x"),
-                    i_SCLK=ClockSignal(),
+                    i_SCLK=ClockSignal("sys"),
                     i_RST=ResetSignal("sys2x"),
                     o_Q=pads.clk_p[i]
                 ),
@@ -193,8 +195,8 @@ class ECP5DDRPHY(Module, AutoCSR):
                     i_D1=self.dfi.phases[0].address[i],
                     i_D2=self.dfi.phases[1].address[i],
                     i_D3=self.dfi.phases[1].address[i],
-                    i_ECLK=ClockSignal("sys2x_a"),
-                    i_SCLK=ClockSignal("sys_a"),
+                    i_ECLK=ClockSignal("sys2x"),
+                    i_SCLK=ClockSignal("sys"),
                     i_RST=ResetSignal("sys2x"),
                     o_Q=pads.a[i]
                 )
@@ -205,13 +207,12 @@ class ECP5DDRPHY(Module, AutoCSR):
                     i_D1=self.dfi.phases[0].bank[i],
                     i_D2=self.dfi.phases[1].bank[i],
                     i_D3=self.dfi.phases[1].bank[i],
-                    i_ECLK=ClockSignal("sys2x_a"),
-                    i_SCLK=ClockSignal("sys_a"),
+                    i_ECLK=ClockSignal("sys2x"),
+                    i_SCLK=ClockSignal("sys"),
                     i_RST=ResetSignal("sys2x"),
                     o_Q=pads.ba[i]
                 )
-        controls = ["ras_n", "cas_n", "we_n", "odt", "cs_n"]
-        controls_a = ["cke", "reset_n"]
+        controls = ["ras_n", "cas_n", "we_n", "odt", "cs_n","cke", "reset_n"]
         
         
         for name in controls:
@@ -223,24 +224,11 @@ class ECP5DDRPHY(Module, AutoCSR):
                         i_D2=getattr(self.dfi.phases[1], name)[i],
                         i_D3=getattr(self.dfi.phases[1], name)[i],
                         i_ECLK=ClockSignal("sys2x"),
-                        i_SCLK=ClockSignal(),
+                        i_SCLK=ClockSignal("sys"),
                         i_RST=ResetSignal("sys2x"),
                         o_Q=getattr(pads, name)[i]
                 )
 
-        for name in controls_a:
-            for i in range(len(getattr(pads, name))):
-                self.specials += \
-                    Instance("ODDRX2F",
-                        i_D0=getattr(self.dfi.phases[0], name)[i],
-                        i_D1=getattr(self.dfi.phases[0], name)[i],
-                        i_D2=getattr(self.dfi.phases[1], name)[i],
-                        i_D3=getattr(self.dfi.phases[1], name)[i],
-                        i_ECLK=ClockSignal("sys2x_a"),
-                        i_SCLK=ClockSignal("sys_a"),
-                        i_RST=ResetSignal("sys2x"),
-                        o_Q=getattr(pads, name)[i]
-                )
 
         # DQ ---------------------------------------------------------------------------------------
         oe_dq = Signal()
@@ -483,14 +471,14 @@ class ECP5DDRPHY(Module, AutoCSR):
             rddata_en = n_rddata_en
         self.sync += [phase.rddata_valid.eq(rddata_en)
             for phase in self.dfi.phases]
-        self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+1] | rddata_ens[cl_sys_latency+2])
+        self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+0] | rddata_ens[cl_sys_latency+1])
         oe = Signal()
         last_wrdata_en = Signal(cwl_sys_latency+3)
         wrphase = self.dfi.phases[self.settings.wrphase]
         self.sync += last_wrdata_en.eq(Cat(wrphase.wrdata_en, last_wrdata_en[:-1]))
         self.comb += oe.eq(
             last_wrdata_en[cwl_sys_latency-1] |
-            last_wrdata_en[cwl_sys_latency]   |
+            last_wrdata_en[cwl_sys_latency+0] |
             last_wrdata_en[cwl_sys_latency+1] |
             last_wrdata_en[cwl_sys_latency+2])
         self.sync += oe_dqs.eq(oe), oe_dq.eq(oe)
