@@ -14,6 +14,8 @@ jobs:
       - run:
           name: install litex-buildenv
           command: |
+            apt-get update
+            apt-get install git
             git clone https://github.com/timvideos/litex-buildenv
             export CPU=vexriscv             # Soft CPU architecture
             export CPU_VARIANT=minimal      # Use a resource-constrained variant to make up5k happy
