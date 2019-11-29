@@ -16,7 +16,8 @@ jobs:
           command: |
             apt-get update
             apt-get install -y git sudo
-            git clone https://github.com/timvideos/litex-buildenv
+            useradd ubuntu
+            sudo -u ubuntu git clone https://github.com/timvideos/litex-buildenv
             export CPU=vexriscv             # Soft CPU architecture
             export CPU_VARIANT=minimal      # Use a resource-constrained variant to make up5k happy
             export PLATFORM=orangecrab      # Target platform Icebreaker, or PLATFORM=tinyfpga_bx for TinyFPGA BX
@@ -24,7 +25,6 @@ jobs:
             export TARGET=base
             export HDMI2USB_UDEV_IGNORE=1
             cd litex-buildenv
-            useradd ubuntu
             sudo -u ubuntu ./scripts/download-env.sh
             source ./scripts/enter-env.sh
       - run:
