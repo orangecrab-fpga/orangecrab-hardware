@@ -24,7 +24,7 @@ jobs:
             export TARGET=base
             export HDMI2USB_UDEV_IGNORE=1
             cd litex-buildenv
-            bash ./scripts/download-env.sh
+            sudo -u ubuntu ./scripts/download-env.sh
             source ./scripts/enter-env.sh
       - run:
           name: export VexriscV and attempt to build with pjtrellis
