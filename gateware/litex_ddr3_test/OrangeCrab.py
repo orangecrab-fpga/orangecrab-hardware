@@ -13,7 +13,7 @@ _io = [
 
     ("user_led", 0, Pins("V17"), IOStandard("LVCMOS25")),
     ("user_led", 1, Pins("T17"), IOStandard("LVCMOS25")),
-    ("user_led", 2, Pins("R17"), IOStandard("LVCMOS25")),
+    ("user_led", 2, Pins("J3"), IOStandard("LVCMOS25")),
 
 
     ("serial", 0,
