@@ -31,7 +31,8 @@ jobs:
             sudo chown -hR ubuntu litex-buildenv
             cd litex-buildenv
             ./scripts/debian-setup.sh
-            source ./scripts/enter-env.sh
+            sudo -u ubuntu ./scripts/download-env.sh
+            sudo -u ubuntu bash -c "source ./scripts/enter-env.sh"
       - run:
           name: export VexriscV and attempt to build with pjtrellis
           command: |
