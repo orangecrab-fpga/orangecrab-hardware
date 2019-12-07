@@ -263,29 +263,29 @@ Text GLabel 2000 5250 2    50   Input ~ 0
 RAM_D6
 Text GLabel 2000 4450 2    50   Input ~ 0
 RAM_D7
-Text GLabel 2000 1950 2    50   Input ~ 0
-RAM_A0
-Text GLabel 2000 2950 2    50   Input ~ 0
-RAM_A1
-Text GLabel 2000 2350 2    50   Input ~ 0
-RAM_A2
-Text GLabel 2000 1250 2    50   Input ~ 0
-RAM_A3
-Text GLabel 2000 2450 2    50   Input ~ 0
-RAM_A4
 Text GLabel 2000 2050 2    50   Input ~ 0
-RAM_A5
+RAM_A0
 Text GLabel 2000 3250 2    50   Input ~ 0
+RAM_A1
+Text GLabel 2000 2450 2    50   Input ~ 0
+RAM_A2
+Text GLabel 2000 2150 2    50   Input ~ 0
+RAM_A3
+Text GLabel 2000 1950 2    50   Input ~ 0
+RAM_A4
+Text GLabel 2000 2650 2    50   Input ~ 0
+RAM_A5
+Text GLabel 2000 2350 2    50   Input ~ 0
 RAM_A6
-Text GLabel 2000 2750 2    50   Input ~ 0
+Text GLabel 2000 3050 2    50   Input ~ 0
 RAM_A7
-Text GLabel 2000 3150 2    50   Input ~ 0
+Text GLabel 2000 2950 2    50   Input ~ 0
 RAM_A8
 Text GLabel 2000 1750 2    50   Input ~ 0
 RAM_A10
 Text GLabel 2000 2550 2    50   Input ~ 0
 RAM_A11
-Text GLabel 2000 2150 2    50   Input ~ 0
+Text GLabel 2000 1650 2    50   Input ~ 0
 RAM_A12
 Text GLabel 4650 2100 2    50   Input ~ 0
 RAM_LDQS+
@@ -431,11 +431,11 @@ Wire Wire Line
 Connection ~ 2900 2700
 Wire Wire Line
 	2900 2700 2900 2750
-Text GLabel 2600 5450 2    50   UnSpc ~ 0
+Text GLabel 5250 3300 2    50   UnSpc ~ 0
 P1.35V
 Wire Wire Line
-	2600 5450 2000 5450
-Text GLabel 2000 2850 2    50   Input ~ 0
+	5250 3300 4650 3300
+Text GLabel 2000 2750 2    50   Input ~ 0
 RAM_A9
 Text GLabel 2400 1550 2    50   UnSpc ~ 0
 P1.35V
@@ -519,7 +519,7 @@ Text GLabel 9850 5200 0    50   UnSpc ~ 0
 P1.35V
 Wire Wire Line
 	10100 5200 9850 5200
-Text GLabel 4650 3300 2    50   Input ~ 0
+Text GLabel 4650 1500 2    50   Input ~ 0
 RAM_CKE
 Text GLabel 2000 3950 2    50   Input ~ 0
 RAM_WE#
@@ -628,10 +628,10 @@ Text GLabel 10200 3750 0    60   Input ~ 0
 JTAG_TDO
 Text GLabel 8000 3300 2    50   UnSpc ~ 0
 P3.3V
-Text GLabel 5250 1500 2    50   UnSpc ~ 0
+Text GLabel 2600 5450 2    50   UnSpc ~ 0
 P1.35V
 Wire Wire Line
-	5250 1500 4650 1500
+	2600 5450 2000 5450
 Text GLabel 5250 3100 2    50   UnSpc ~ 0
 P1.35V
 Wire Wire Line
@@ -858,17 +858,17 @@ Text GLabel 9300 1950 2    60   Input ~ 0
 IO_SCK
 NoConn ~ 7800 3600
 NoConn ~ 7800 3500
-Text GLabel 2000 1650 2    50   Input ~ 0
+Text GLabel 2000 1450 2    50   Input ~ 0
 RAM_BA0
 Text GLabel 2000 1850 2    50   Input ~ 0
 RAM_BA2
 Text GLabel 4650 3400 2    50   Input ~ 0
 RAM_RESET#
-Text GLabel 2000 2650 2    50   Input ~ 0
+Text GLabel 2000 3150 2    50   Input ~ 0
 RAM_A13
-Text GLabel 2000 3050 2    50   Input ~ 0
+Text GLabel 2000 2850 2    50   Input ~ 0
 RAM_A14
-Text GLabel 2000 1450 2    50   Input ~ 0
+Text GLabel 2000 1250 2    50   Input ~ 0
 RAM_A15
 Text GLabel 5700 4700 2    50   Input ~ 0
 ADC_MUX0

@@ -125,7 +125,7 @@ Text GLabel 8650 3100 2    50   UnSpc ~ 0
 VTT_REF
 Text GLabel 2850 4200 2    50   Input ~ 0
 RAM_A0
-Text GLabel 2850 2300 2    50   Input ~ 0
+Text GLabel 2850 4800 2    50   Input ~ 0
 RAM_A1
 Text GLabel 2850 4000 2    50   Input ~ 0
 RAM_A2
@@ -145,7 +145,7 @@ Text GLabel 2850 2400 2    50   Input ~ 0
 RAM_A9
 Text GLabel 2850 3600 2    50   Input ~ 0
 RAM_A10
-Text GLabel 2850 2200 2    50   Input ~ 0
+Text GLabel 2850 4700 2    50   Input ~ 0
 RAM_A11
 Text GLabel 2850 1600 2    50   Input ~ 0
 RAM_A12
@@ -601,7 +601,7 @@ Text GLabel 7050 4700 0    50   Input ~ 0
 RAM_BA1
 Text GLabel 7050 4600 0    50   Input ~ 0
 RAM_BA0
-Text GLabel 2850 3700 2    50   Input ~ 0
+Text GLabel 2850 2300 2    50   Input ~ 0
 RAM_BA2
 Text GLabel 2850 3500 2    50   Input ~ 0
 RAM_BA1
@@ -1082,11 +1082,11 @@ Text GLabel 7050 4300 0    50   Input ~ 0
 RAM_A14
 Text GLabel 7050 4400 0    50   Input ~ 0
 RAM_A15
-Text GLabel 2850 4800 2    50   Input ~ 0
+Text GLabel 2850 4900 2    50   Input ~ 0
 RAM_A15
-Text GLabel 2850 4600 2    50   Input ~ 0
+Text GLabel 2850 2200 2    50   Input ~ 0
 RAM_A13
-Text GLabel 2850 4700 2    50   Input ~ 0
+Text GLabel 2850 4600 2    50   Input ~ 0
 RAM_A14
 $Comp
 L Device:R_Pack04 RN8
