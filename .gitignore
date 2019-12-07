@@ -16,8 +16,13 @@ _autosave-*
 *.dsn
 *.ses
 
+# backup files
+*.sch-bak
+
 # Exported BOM files
 *.xml
+*.ods
+*.xlsx
 # *.csv
 
 
@@ -60,3 +65,7 @@ __pycache__
 *.bin
 *.elf
 *.hex
+
+# Migen/Litex artifacts
+test/csr.csv
+
