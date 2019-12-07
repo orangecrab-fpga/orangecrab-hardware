@@ -53,37 +53,37 @@ Text GLabel 7050 4000 0    50   Input ~ 0
 RAM_A11
 Text GLabel 7050 4100 0    50   Input ~ 0
 RAM_A12
-Text GLabel 8400 4650 2    50   Input ~ 0
-RAM_D0
-Text GLabel 8400 4750 2    50   Input ~ 0
-RAM_D1
-Text GLabel 8400 4850 2    50   Input ~ 0
-RAM_D2
-Text GLabel 8400 4950 2    50   Input ~ 0
-RAM_D3
-Text GLabel 8400 5050 2    50   Input ~ 0
-RAM_D4
-Text GLabel 8400 5150 2    50   Input ~ 0
-RAM_D5
-Text GLabel 8400 5250 2    50   Input ~ 0
-RAM_D6
-Text GLabel 8400 5350 2    50   Input ~ 0
-RAM_D7
 Text GLabel 8400 3750 2    50   Input ~ 0
-RAM_D8
+RAM_D0
 Text GLabel 8400 3850 2    50   Input ~ 0
-RAM_D9
+RAM_D1
 Text GLabel 8400 3950 2    50   Input ~ 0
-RAM_D10
+RAM_D2
 Text GLabel 8400 4050 2    50   Input ~ 0
-RAM_D11
+RAM_D3
 Text GLabel 8400 4150 2    50   Input ~ 0
-RAM_D12
+RAM_D4
 Text GLabel 8400 4250 2    50   Input ~ 0
-RAM_D13
+RAM_D5
 Text GLabel 8400 4350 2    50   Input ~ 0
-RAM_D14
+RAM_D6
 Text GLabel 8400 4450 2    50   Input ~ 0
+RAM_D7
+Text GLabel 8400 4650 2    50   Input ~ 0
+RAM_D8
+Text GLabel 8400 4750 2    50   Input ~ 0
+RAM_D9
+Text GLabel 8400 4850 2    50   Input ~ 0
+RAM_D10
+Text GLabel 8400 4950 2    50   Input ~ 0
+RAM_D11
+Text GLabel 8400 5050 2    50   Input ~ 0
+RAM_D12
+Text GLabel 8400 5150 2    50   Input ~ 0
+RAM_D13
+Text GLabel 8400 5250 2    50   Input ~ 0
+RAM_D14
+Text GLabel 8400 5350 2    50   Input ~ 0
 RAM_D15
 Text GLabel 8400 6000 2    50   Input ~ 0
 RAM_LDQS+
@@ -1089,10 +1089,10 @@ RAM_A13
 Text GLabel 2850 4700 2    50   Input ~ 0
 RAM_A14
 $Comp
-L Device:R_Pack04 RN?
+L Device:R_Pack04 RN8
 U 1 1 5DE28326
 P 2650 4800
-F 0 "RN?" V 2350 4700 50  0000 C CNN
+F 0 "RN8" V 2350 4700 50  0000 C CNN
 F 1 "50R" V 2350 4950 50  0000 C CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2925 4800 50  0001 C CNN
 F 3 "~" H 2650 4800 50  0001 C CNN

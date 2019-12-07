@@ -232,37 +232,37 @@ NoConn ~ 7800 4300
 NoConn ~ 7800 4400
 NoConn ~ 7800 4500
 Text GLabel 4650 1700 2    50   Input ~ 0
-RAM_D0
-Text GLabel 4650 1800 2    50   Input ~ 0
-RAM_D1
-Text GLabel 4650 2300 2    50   Input ~ 0
-RAM_D2
-Text GLabel 4650 1900 2    50   Input ~ 0
-RAM_D3
-Text GLabel 4650 2600 2    50   Input ~ 0
-RAM_D4
-Text GLabel 4650 1400 2    50   Input ~ 0
-RAM_D5
-Text GLabel 4650 2500 2    50   Input ~ 0
-RAM_D6
-Text GLabel 4650 1600 2    50   Input ~ 0
-RAM_D7
-Text GLabel 2000 5550 2    50   Input ~ 0
 RAM_D8
-Text GLabel 2000 4750 2    50   Input ~ 0
+Text GLabel 4650 1800 2    50   Input ~ 0
 RAM_D9
-Text GLabel 2000 5350 2    50   Input ~ 0
+Text GLabel 4650 2300 2    50   Input ~ 0
 RAM_D10
-Text GLabel 2000 5150 2    50   Input ~ 0
+Text GLabel 4650 1900 2    50   Input ~ 0
 RAM_D11
-Text GLabel 2000 4650 2    50   Input ~ 0
+Text GLabel 4650 2600 2    50   Input ~ 0
 RAM_D12
-Text GLabel 2000 4350 2    50   Input ~ 0
+Text GLabel 4650 1400 2    50   Input ~ 0
 RAM_D13
-Text GLabel 2000 5250 2    50   Input ~ 0
+Text GLabel 4650 2500 2    50   Input ~ 0
 RAM_D14
-Text GLabel 2000 4450 2    50   Input ~ 0
+Text GLabel 4650 1600 2    50   Input ~ 0
 RAM_D15
+Text GLabel 2000 5550 2    50   Input ~ 0
+RAM_D0
+Text GLabel 2000 4750 2    50   Input ~ 0
+RAM_D1
+Text GLabel 2000 5350 2    50   Input ~ 0
+RAM_D2
+Text GLabel 2000 5150 2    50   Input ~ 0
+RAM_D3
+Text GLabel 2000 4650 2    50   Input ~ 0
+RAM_D4
+Text GLabel 2000 4350 2    50   Input ~ 0
+RAM_D5
+Text GLabel 2000 5250 2    50   Input ~ 0
+RAM_D6
+Text GLabel 2000 4450 2    50   Input ~ 0
+RAM_D7
 Text GLabel 2000 1950 2    50   Input ~ 0
 RAM_A0
 Text GLabel 2000 2950 2    50   Input ~ 0
@@ -654,8 +654,6 @@ Text GLabel 5700 5700 2    50   Input ~ 0
 IO_13
 Text GLabel 5700 5400 2    50   Input ~ 0
 IO_12
-Text GLabel 5700 6500 2    50   Input ~ 0
-AUX_7
 Text GLabel 5700 7100 2    50   Input ~ 0
 USB_D-
 Text GLabel 5700 7200 2    50   Input ~ 0
@@ -813,7 +811,7 @@ AR Path="/5ABD38F2/5D5D6375" Ref="U?"  Part="1"
 AR Path="/5AB8ACB7/5D5D6375" Ref="U6"  Part="1" 
 F 0 "U6" H 7950 6291 60  0000 C CNN
 F 1 "AT25SF081" H 7950 6185 60  0000 C CNN
-F 2 "gkl_housings_dfn:DFN-8-1EP_3x2mm_Pitch0.5mm" H 7950 6300 60  0001 C CNN
+F 2 "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm" H 7950 6300 60  0001 C CNN
 F 3 "" H 7950 6300 60  0001 C CNN
 F 4 "1265-1275-1-ND" H 3800 1900 50  0001 C CNN "SN-DK"
 F 5 "AT25SF081-MAHD-T" H 3800 1900 50  0001 C CNN "PN"
@@ -860,34 +858,6 @@ Text GLabel 9300 1950 2    60   Input ~ 0
 IO_SCK
 NoConn ~ 7800 3600
 NoConn ~ 7800 3500
-Text GLabel 5700 4900 2    50   Input ~ 0
-AUX_6+
-Text GLabel 5700 5000 2    50   Input ~ 0
-AUX_6-
-Text GLabel 5700 5900 2    50   Input ~ 0
-AUX_3+
-Text GLabel 5700 6000 2    50   Input ~ 0
-AUX_3-
-Text GLabel 5700 6300 2    50   Input ~ 0
-AUX_0+
-Text GLabel 5700 6400 2    50   Input ~ 0
-AUX_0-
-Text GLabel 5700 5100 2    50   Input ~ 0
-AUX_1+
-Text GLabel 5700 5200 2    50   Input ~ 0
-AUX_1-
-Text GLabel 5700 5500 2    50   Input ~ 0
-AUX_2+
-Text GLabel 5700 5600 2    50   Input ~ 0
-AUX_2-
-Text GLabel 5700 4700 2    50   Input ~ 0
-AUX_5+
-Text GLabel 5700 4800 2    50   Input ~ 0
-AUX_5-
-Text GLabel 5700 6100 2    50   Input ~ 0
-AUX_4+
-Text GLabel 5700 6200 2    50   Input ~ 0
-AUX_4-
 Text GLabel 2000 1650 2    50   Input ~ 0
 RAM_BA0
 Text GLabel 2000 1850 2    50   Input ~ 0
@@ -900,4 +870,20 @@ Text GLabel 2000 3050 2    50   Input ~ 0
 RAM_A14
 Text GLabel 2000 1450 2    50   Input ~ 0
 RAM_A15
+Text GLabel 5700 4700 2    50   Input ~ 0
+ADC_MUX0
+Text GLabel 5700 4800 2    50   Input ~ 0
+ADC_MUX1
+Text GLabel 5700 5100 2    50   Input ~ 0
+ADC_MUX2
+Text GLabel 5700 5200 2    50   Input ~ 0
+ADC_MUX3
+Text GLabel 5700 5000 2    50   Input ~ 0
+ADC_CTRL1
+Text GLabel 5700 6200 2    50   Input ~ 0
+ADC_SENSE_LO
+Text GLabel 5700 6100 2    50   Input ~ 0
+ADC_SENSE_HI
+Text GLabel 5700 4900 2    50   Input ~ 0
+ADC_CTRL0
 $EndSCHEMATC
