@@ -1,0 +1,134 @@
+29480597923958
+pkl_dipol
+C_0201
+Capacitor SMD 0201, reflow soldering
+capacitor 0201
+0
+2
+2
+pkl_dipol
+C_0402
+Capacitor SMD 0402, reflow soldering
+capacitor 0402
+0
+2
+2
+pkl_dipol
+C_0603
+Capacitor SMD 0603, reflow soldering
+capacitor 0603
+0
+2
+2
+pkl_dipol
+C_0805
+Capacitor SMD 0805, reflow soldering
+capacitor 0805
+0
+2
+2
+pkl_dipol
+C_1206
+Capacitor SMD 1206, reflow soldering
+capacitor 1206
+0
+2
+2
+pkl_dipol
+C_1218
+Capacitor SMD 1218, reflow soldering
+capacitor 1218
+0
+2
+2
+pkl_dipol
+C_2010
+Capacitor SMD 2010, reflow soldering
+capacitor 2010
+0
+2
+2
+pkl_dipol
+C_2512
+Capacitor SMD 2512, reflow soldering
+capacitor 2512
+0
+2
+2
+pkl_dipol
+C_XH414HG-IV01E
+Super Capacitor SMD Coin IV01E, reflow soldering
+super capacitor IV01E
+0
+2
+2
+pkl_dipol
+D_0402
+Diode SMD 0402, reflow soldering
+diode led 0402
+0
+2
+2
+pkl_dipol
+D_0603
+Diode SMD 0603, reflow soldering
+diode led 0603
+0
+2
+2
+pkl_dipol
+D_0603_Side
+Diode SMD 0603 Side
+diode led 0603
+0
+2
+2
+pkl_dipol
+L_0402
+Inductor SMD 0402, reflow soldering
+inductor 0402
+0
+2
+2
+pkl_dipol
+L_0603
+Inductor SMD 0603, reflow soldering
+inductor 0603
+0
+2
+2
+pkl_dipol
+R_0402
+Resistor SMD 0402, reflow soldering
+resistor 0402
+0
+2
+2
+pkl_dipol
+R_0603
+Resistor SMD 0603, reflow soldering
+resistor 0603
+0
+2
+2
+pkl_dipol
+R_Array_Concave_4x0603
+Thick Film Chip Resistor Array, Wave soldering, Vishay CRA06P (see cra06p.pdf)
+resistor array
+0
+8
+8
+pkl_dipol
+R_Array_Convex_4x0402
+Thick Film Chip Resistor Array, Wave soldering, Vishay CRA06P (see cra06p.pdf)
+resistor array
+0
+8
+8
+pkl_dipol
+SC_1210
+Super Capacitor SMD 1210
+capacitor 1210
+0
+2
+2
