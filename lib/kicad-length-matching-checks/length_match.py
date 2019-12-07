@@ -69,8 +69,68 @@ There is tons of room for improvement in this script, so if you add
 any improvements please let me know so I can use them too. :)
 
 (C)2014 Angus Gratton @projectgus, Licensed under New BSD License
+(C)2019 Gregory Davill <greg.davill@gmail.com>
 
 """
+
+
+# Very proof of concept code that creates a graph of the tracks branching out from one pad.
+
+class Node():
+    """A node class to create a graph"""
+
+    def __init__(self, parent=None, length=None, position=None, track=None):
+        self.parent = parent
+        self.length = length
+        self.position = position
+        self.track = track
+        self.children = []
+
+
+
+def add_track(node, nt):
+    # if equal don't add
+    if node.track != None:
+        if node.track == nt:
+            return False
+
+    # store our position as the other end of our track
+    res = nt.IsPointOnEnds(node.position)
+    if res == STARTPOINT:
+        node.children += [Node(node, nt.GetLength(), nt.GetEnd(), nt)]
+        return True
+    elif res == ENDPOINT:
+        node.children += [Node(node, nt.GetLength(), nt.GetStart(), nt)]
+        return True
+    else:
+        for c in node.children:
+            if add_track(c, nt):
+                return True
+
+    return False
+
+def print_tree(n):
+    print('%.1f,%.1f - (%.2f)mm' % (nm_to_mm(n.position.x),nm_to_mm(n.position.y), nm_to_mm(n.length)))
+    print(' > ' + str(n.children))
+    for c in n.children:
+        print_tree(c)
+
+
+def find_length(n, stop):
+    if n.position == stop:
+        #print("found!!")
+        return n.length + 0.001 # small hack to ensure if we find the end a value propagates back.
+
+    for c in n.children:
+        length = find_length(c, stop)
+        if length > 0.0001:
+            return length + n.length
+
+    return 0.0
+            
+    
+
+
 BRIGHTGREEN = '\033[92;1m'
 BRIGHTRED = '\033[91;1m'
 ENDC = '\033[0m'
@@ -78,6 +138,17 @@ ENDC = '\033[0m'
 def print_color(color, s):
     print(color + s + ENDC)
 
+
+def FindPadByNetName(mod, n):  
+    for p in mod.Pads():
+        if p.GetNetname() == n:
+            return p
+    return None
+
+def findFirst(tracks, s):
+    for t in tracks:
+        if t.IsPointOnEnds(s):
+            return t
 
 def get_board_properties(filename):
     """
@@ -91,12 +162,16 @@ def get_board_properties(filename):
     pcb.BuildListOfNets() # required so 'pcb' contains valid netclass data
 
     tolerances = {}
-    nets = {}
 
     tracks = pcb.GetTracks() # tuples of (netname, classname)
     netclasses = list(set(t.GetNet().GetClassName()  for t in tracks)) # unique netclass names
 
     result = {}
+
+    # Device A
+    deviceA = pcb.FindModuleByReference("U3")
+    deviceB = pcb.FindModuleByReference("U4")
+    
     for netclass in netclasses:
         tolerance = get_tolerance(netclass)
         if tolerance is None:
@@ -104,7 +179,45 @@ def get_board_properties(filename):
         tracks_netclass = [t for t in tracks if t.GetNet().GetClassName() == netclass] # tracks in this netclass
         netnames = list(set([t.GetNet().GetNetname() for t in tracks_netclass])) # unique netnames in this netclass
         netnames.sort()
-        nets = [(n,int(sum(t.GetLength() for t in tracks_netclass if ((t.GetNet().GetNetname() == n) & ((netclass == "DDR3_CTRL_LM1.0") & (t.IsOnLayer(B_Cu) == False) | (netclass != "DDR3_CTRL_LM1.0")) ) ))) for n in netnames]
+
+        nets = []
+        for n in netnames:
+            length = 0
+            tracks_filtered = [t for t in tracks_netclass if (t.GetNet().GetNetname() == n ) & (t.IsTrack() == True)]
+
+            pad_a = FindPadByNetName(deviceA, n)
+            pad_b = FindPadByNetName(deviceB, n)
+
+            t = None#,start = findFirst(tracks_filtered, pad_a.GetPosition())
+            
+            for f in tracks_filtered: 
+                if f.IsPointOnEnds(pad_a.GetPosition(),mm_to_nm(0.001)):
+                    start = f.IsPointOnEnds(pad_a.GetPosition(),mm_to_nm(0.001)) == STARTPOINT
+                    t = f
+                    break
+            if start == None:
+                continue
+
+            tracks_filtered = [tr for tr in tracks_filtered if tr != t]
+
+            #print('%s %d'% (n, len(tracks_filtered)))
+
+            # got starting point
+            root = Node(position=pad_a.GetPosition(), length=0.0)
+            add_track(root,t)
+
+            done = [t]
+            for _ in range(len(tracks_filtered)):
+                for t in (set(tracks_filtered) - set(done)):
+                    if add_track(root,t):
+                        done += [t]
+                
+            #print_tree(root)
+            length = find_length(root, pad_b.GetPosition())
+        
+            nets += [(n,length)]
+
+
         result[netclass] = (tolerance, nets)
     return result
 
@@ -146,7 +259,14 @@ def test_netclass(netclass, tolerance, nets):
     # print individual net lengths, relative to the median length
     medlen = median([net[1] for net in nets])
     for (net,netlen) in nets:
-        print("   %s %.2fmm (%s%.2fmm)" % (net,nm_to_mm(netlen),"+" if netlen > medlen else "",  nm_to_mm(netlen-medlen)))
+        if (netlen == minlen) & (~meets):
+            print_color(BRIGHTRED,
+            "   %s %.2fmm (%s%.2fmm)" % (net,nm_to_mm(netlen),"+" if netlen > medlen else "",  nm_to_mm(netlen-medlen)))
+        elif (maxlen - netlen) < tolerance:
+            print_color(BRIGHTGREEN,
+            "   %s %.2fmm (%s%.2fmm)" % (net,nm_to_mm(netlen),"+" if netlen > medlen else "",  nm_to_mm(netlen-medlen)))
+        else:
+            print("   %s %.2fmm (%s%.2fmm)" % (net,nm_to_mm(netlen),"+" if netlen > medlen else "",  nm_to_mm(netlen-medlen)))
 
     return meets
 
