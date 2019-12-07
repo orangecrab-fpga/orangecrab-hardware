@@ -211,6 +211,9 @@ def get_board_properties(filename):
                 for t in (set(tracks_filtered) - set(done)):
                     if add_track(root,t):
                         done += [t]
+                        if t.IsPointOnEnds(pad_b.GetPosition()):
+                            break
+                
                 
             #print_tree(root)
             length = find_length(root, pad_b.GetPosition())
