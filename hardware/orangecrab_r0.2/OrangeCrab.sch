@@ -94,4 +94,70 @@ U 5D35D1F5
 F0 "Decoupling" 50
 F1 "decopling.sch" 50
 $EndSheet
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 5EA1EE5B
+P 10450 6650
+F 0 "FID1" H 10535 6696 50  0001 L CNN
+F 1 "Fiducial" H 10535 6605 50  0001 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10450 6650 50  0001 C CNN
+F 3 "~" H 10450 6650 50  0001 C CNN
+	1    10450 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 5EA1F2D2
+P 10600 6650
+F 0 "FID2" H 10685 6696 50  0001 L CNN
+F 1 "Fiducial" H 10685 6605 50  0001 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10600 6650 50  0001 C CNN
+F 3 "~" H 10600 6650 50  0001 C CNN
+	1    10600 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID4
+U 1 1 5EA1F5F9
+P 10450 6800
+F 0 "FID4" H 10535 6846 50  0001 L CNN
+F 1 "Fiducial" H 10535 6755 50  0001 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10450 6800 50  0001 C CNN
+F 3 "~" H 10450 6800 50  0001 C CNN
+	1    10450 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID5
+U 1 1 5EA1F603
+P 10600 6800
+F 0 "FID5" H 10685 6846 50  0001 L CNN
+F 1 "Fiducial" H 10685 6755 50  0001 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10600 6800 50  0001 C CNN
+F 3 "~" H 10600 6800 50  0001 C CNN
+	1    10600 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID3
+U 1 1 5EA1FF05
+P 10750 6650
+F 0 "FID3" H 10835 6696 50  0001 L CNN
+F 1 "Fiducial" H 10835 6605 50  0001 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10750 6650 50  0001 C CNN
+F 3 "~" H 10750 6650 50  0001 C CNN
+	1    10750 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID6
+U 1 1 5EA1FF0F
+P 10750 6800
+F 0 "FID6" H 10835 6846 50  0001 L CNN
+F 1 "Fiducial" H 10835 6755 50  0001 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10750 6800 50  0001 C CNN
+F 3 "~" H 10750 6800 50  0001 C CNN
+	1    10750 6800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

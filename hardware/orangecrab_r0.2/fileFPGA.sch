@@ -16,7 +16,7 @@ Comment4 ""
 $EndDescr
 Text GLabel 9300 2150 2    60   Input ~ 0
 SPI_CONFIG_SS
-Text GLabel 7800 3100 2    60   Input ~ 0
+Text GLabel 8100 3100 2    60   Input ~ 0
 SPI_CONFIG_SCK
 Text GLabel 9300 1750 2    60   Input ~ 0
 SPI_CONFIG_MISO
@@ -810,12 +810,12 @@ P 7950 5850
 AR Path="/5ABD38F2/5D5D6375" Ref="U?"  Part="1" 
 AR Path="/5AB8ACB7/5D5D6375" Ref="U6"  Part="1" 
 F 0 "U6" H 7950 6291 60  0000 C CNN
-F 1 "AT25SF081" H 7950 6185 60  0000 C CNN
+F 1 "W25Q128JVP" H 7950 6185 60  0000 C CNN
 F 2 "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm" H 7950 6300 60  0001 C CNN
 F 3 "" H 7950 6300 60  0001 C CNN
-F 4 "1265-1275-1-ND" H 3800 1900 50  0001 C CNN "SN-DK"
-F 5 "AT25SF081-MAHD-T" H 3800 1900 50  0001 C CNN "PN"
-F 6 "Adesto Technologies" H 7950 5850 50  0001 C CNN "Mfg"
+F 4 "" H 3800 1900 50  0001 C CNN "SN-DK"
+F 5 "W25Q128JVPIQ TR" H 3800 1900 50  0001 C CNN "PN"
+F 6 "Winbond Electronics-" H 7950 5850 50  0001 C CNN "Mfg"
 	1    7950 5850
 	1    0    0    -1  
 $EndComp
@@ -832,7 +832,7 @@ F 3 "" H 7300 6100 50  0001 C CNN
 	1    7300 6100
 	1    0    0    -1  
 $EndComp
-Text GLabel 7400 5700 0    60   Input ~ 0
+Text GLabel 7200 5700 0    60   Input ~ 0
 SPI_CONFIG_SS
 Text GLabel 8500 5900 2    60   Input ~ 0
 SPI_CONFIG_SCK
@@ -900,4 +900,60 @@ Text GLabel 5700 4700 2    50   Input ~ 0
 IO_A3
 Text GLabel 5700 4800 2    50   Input ~ 0
 IO_A4
+Wire Wire Line
+	7400 5700 7300 5700
+Wire Wire Line
+	7300 5700 7300 5500
+Connection ~ 7300 5700
+Wire Wire Line
+	7300 5700 7200 5700
+$Comp
+L Device:R R?
+U 1 1 5EA37E63
+P 7300 5350
+AR Path="/5ABC9A87/5EA37E63" Ref="R?"  Part="1" 
+AR Path="/5AB8ACB7/5EA37E63" Ref="R30"  Part="1" 
+F 0 "R30" H 7230 5304 50  0000 R CNN
+F 1 "4.7K" H 7230 5395 50  0000 R CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 7230 5350 50  0001 C CNN
+F 3 "~" H 7300 5350 50  0001 C CNN
+F 4 "‎Yageo‎" H 7300 5350 50  0001 C CNN "Mfg"
+F 5 "RC0201FR-074K7L" H 7300 5350 50  0001 C CNN "PN"
+	1    7300 5350
+	1    0    0    1   
+$EndComp
+Text GLabel 7200 5100 0    50   UnSpc ~ 0
+P3.3V
+Wire Wire Line
+	7200 5100 7300 5100
+Wire Wire Line
+	7300 5100 7300 5200
+Wire Wire Line
+	8100 3100 7950 3100
+$Comp
+L Device:R R?
+U 1 1 5EA70E98
+P 7950 2900
+AR Path="/5ABC9A87/5EA70E98" Ref="R?"  Part="1" 
+AR Path="/5AB8ACB7/5EA70E98" Ref="R?"  Part="1" 
+F 0 "R?" H 7880 2854 50  0000 R CNN
+F 1 "1K" H 7880 2945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 7880 2900 50  0001 C CNN
+F 3 "~" H 7950 2900 50  0001 C CNN
+F 4 "‎Yageo‎" H 7950 2900 50  0001 C CNN "Mfg"
+F 5 "RC0201FR-071KL" H 7950 2900 50  0001 C CNN "PN"
+	1    7950 2900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7950 3050 7950 3100
+Connection ~ 7950 3100
+Wire Wire Line
+	7950 3100 7800 3100
+Wire Wire Line
+	7950 2750 7950 2700
+Wire Wire Line
+	7950 2700 7850 2700
+Text GLabel 7850 2700 0    50   UnSpc ~ 0
+P3.3V
 $EndSCHEMATC
