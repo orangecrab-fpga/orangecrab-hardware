@@ -580,17 +580,15 @@ Wire Wire Line
 Wire Wire Line
 	6550 4100 6450 4100
 Wire Wire Line
-	6450 4200 8600 4200
+	6450 4200 7350 4200
 Wire Wire Line
-	6450 4300 8600 4300
+	6450 4300 7450 4300
 Wire Wire Line
-	6450 4400 8600 4400
+	6450 4400 7550 4400
 Wire Wire Line
-	6450 4500 8600 4500
+	6450 4500 7650 4500
 Wire Wire Line
-	6450 4600 8600 4600
-Wire Wire Line
-	6450 4700 8600 4700
+	6450 4700 7850 4700
 $Comp
 L gkl_power:GND #PWR0131
 U 1 1 5DF03DD6
@@ -796,4 +794,98 @@ Wire Wire Line
 	1750 2900 1300 2900
 Wire Wire Line
 	1300 3000 1750 3000
+Text GLabel 7350 5800 3    50   Input ~ 0
+IO_A0
+Text GLabel 7450 5800 3    50   Input ~ 0
+IO_A1
+Text GLabel 7550 5800 3    50   Input ~ 0
+IO_A2
+Text GLabel 7650 5800 3    50   Input ~ 0
+IO_A3
+Text GLabel 7750 5800 3    50   Input ~ 0
+IO_A4
+Text GLabel 7850 5800 3    50   Input ~ 0
+IO_A5
+Wire Wire Line
+	7350 5800 7350 5250
+Connection ~ 7350 4200
+Wire Wire Line
+	7350 4200 8600 4200
+Wire Wire Line
+	7450 5800 7450 5250
+Connection ~ 7450 4300
+Wire Wire Line
+	7450 4300 8600 4300
+Wire Wire Line
+	7550 5800 7550 5250
+Connection ~ 7550 4400
+Wire Wire Line
+	7550 4400 8600 4400
+Wire Wire Line
+	7650 5800 7650 5250
+Connection ~ 7650 4500
+Wire Wire Line
+	7650 4500 8600 4500
+Wire Wire Line
+	7750 5800 7750 5550
+Wire Wire Line
+	7850 5800 7850 5200
+Connection ~ 7850 4700
+Wire Wire Line
+	7850 4700 8600 4700
+Wire Wire Line
+	7350 4850 7350 4200
+Wire Wire Line
+	7450 4850 7450 4300
+Wire Wire Line
+	7550 4850 7550 4400
+Wire Wire Line
+	7650 4850 7650 4500
+$Comp
+L Device:R R6
+U 1 1 5E8EF689
+P 7750 5400
+F 0 "R6" V 7957 5400 50  0000 C CNN
+F 1 "20R" V 7866 5400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 7680 5400 50  0001 C CNN
+F 3 "~" H 7750 5400 50  0001 C CNN
+F 4 "‎Yageo‎" H 7750 5400 50  0001 C CNN "Mfg"
+	1    7750 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E903005
+P 7850 5050
+F 0 "R3" V 8057 5050 50  0000 C CNN
+F 1 "20R" V 7966 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 7780 5050 50  0001 C CNN
+F 3 "~" H 7850 5050 50  0001 C CNN
+F 4 "‎Yageo‎" H 7850 5050 50  0001 C CNN "Mfg"
+	1    7850 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 4900 7850 4700
+Wire Wire Line
+	6450 4600 7750 4600
+Wire Wire Line
+	7750 4600 8600 4600
+Connection ~ 7750 4600
+Wire Wire Line
+	7750 5250 7750 4600
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5E8ECDF4
+P 7550 5050
+AR Path="/5ABD38F2/5E8ECDF4" Ref="RN?"  Part="1" 
+AR Path="/5ABC9A87/5E8ECDF4" Ref="RN10"  Part="1" 
+F 0 "RN10" V 7250 4950 50  0000 C CNN
+F 1 "10k" V 7250 5150 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7825 5050 50  0001 C CNN
+F 3 "~" H 7550 5050 50  0001 C CNN
+F 4 "Stackpole Electronics Inc" H 7550 5050 50  0001 C CNN "Mfg"
+	1    7550 5050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
