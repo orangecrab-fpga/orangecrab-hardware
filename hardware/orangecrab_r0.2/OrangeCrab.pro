@@ -1,4 +1,4 @@
-update=Sun 08 Dec 2019 11:59:21 ACDT
+update=Sun 08 Dec 2019 12:47:28 ACDT
 version=1
 last_client=kicad
 [general]
@@ -45,6 +45,7 @@ TrackWidth4=0.105
 TrackWidth5=0.121
 TrackWidth6=0.15
 TrackWidth7=0.2
+TrackWidth8=0.25
 ViaDiameter1=0.6
 ViaDrill1=0.4
 ViaDiameter2=0.28
@@ -268,7 +269,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=DDR3_CTRL_LM1.0
-Clearance=0.1778
+Clearance=0.1016
 TrackWidth=0.121
 ViaDiameter=0.28
 ViaDrill=0.15
