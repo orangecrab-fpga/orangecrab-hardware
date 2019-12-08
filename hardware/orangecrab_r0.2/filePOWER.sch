@@ -1360,26 +1360,7 @@ F 3 "" H 2000 6400 50  0001 C CNN
 $EndComp
 Text GLabel 1450 5950 0    50   UnSpc ~ 0
 P1.35V
-Wire Wire Line
-	1550 5950 1450 5950
-$Comp
-L Device:R R?
-U 1 1 5D20B7E1
-P 1700 5950
-AR Path="/5ABD38F2/5D20B7E1" Ref="R?"  Part="1" 
-AR Path="/5D1738DB/5D20B7E1" Ref="R6"  Part="1" 
-F 0 "R6" V 1493 5950 50  0000 C CNN
-F 1 "0R" V 1584 5950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1630 5950 50  0001 C CNN
-F 3 "~" H 1700 5950 50  0001 C CNN
-F 4 "‎Yageo‎" H 1700 5950 50  0001 C CNN "Mfg"
-F 5 "RC0402FR-070RL" H 1700 5950 50  0001 C CNN "PN"
-	1    1700 5950
-	0    1    1    0   
-$EndComp
 Connection ~ 2000 5950
-Wire Wire Line
-	2000 5950 1850 5950
 Wire Wire Line
 	2000 5950 2800 5950
 Wire Wire Line
@@ -1696,4 +1677,6 @@ Text Notes 9600 4250 0    50   ~ 0
 1.35V
 Text Notes 9600 6100 0    50   ~ 0
 3.3V
+Wire Wire Line
+	1450 5950 2000 5950
 $EndSCHEMATC

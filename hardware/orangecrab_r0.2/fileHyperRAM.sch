@@ -1059,23 +1059,6 @@ Text GLabel 4650 4900 0    50   UnSpc ~ 0
 ECP5_VREF
 Text GLabel 5200 4900 2    50   UnSpc ~ 0
 VTT_REF
-$Comp
-L Device:R R3
-U 1 1 5D601972
-P 4900 4900
-F 0 "R3" V 4693 4900 50  0000 C CNN
-F 1 "0R" V 4784 4900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 4830 4900 50  0001 C CNN
-F 3 "~" H 4900 4900 50  0001 C CNN
-F 4 "‎Yageo‎" H 4900 4900 50  0001 C CNN "Mfg"
-F 5 "RC0201FR-070RL" H 4900 4900 50  0001 C CNN "PN"
-	1    4900 4900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4650 4900 4750 4900
-Wire Wire Line
-	5050 4900 5200 4900
 Text GLabel 7050 4200 0    50   Input ~ 0
 RAM_A13
 Text GLabel 7050 4300 0    50   Input ~ 0
@@ -1121,4 +1104,6 @@ Wire Wire Line
 Connection ~ 2300 4900
 Wire Wire Line
 	2300 4900 2300 4800
+Wire Wire Line
+	4650 4900 5200 4900
 $EndSCHEMATC

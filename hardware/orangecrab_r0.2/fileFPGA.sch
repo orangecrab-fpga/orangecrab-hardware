@@ -211,7 +211,7 @@ Text Notes 1300 1000 0    50   ~ 0
 1V5
 Text Notes 1300 3600 0    50   ~ 0
 1V5
-Text GLabel 9300 2350 2    60   Input ~ 0
+Text GLabel 9300 2250 2    60   Input ~ 0
 FPGA_RESET
 Text GLabel 8300 4100 2    60   Input ~ 0
 JTAG_TMS
@@ -678,9 +678,9 @@ Text GLabel 1950 7150 2    50   Input ~ 0
 IO_5
 Text GLabel 1950 7250 2    50   Input ~ 0
 IO_SDA
-Text GLabel 9300 2250 2    50   Input ~ 0
+Text GLabel 5700 6100 2    50   Input ~ 0
 LED_R
-Text GLabel 9300 2050 2    50   Input ~ 0
+Text GLabel 5700 6500 2    50   Input ~ 0
 LED_G
 Text GLabel 5700 5300 2    50   Input ~ 0
 LED_B
@@ -870,20 +870,22 @@ Text GLabel 2000 2850 2    50   Input ~ 0
 RAM_A14
 Text GLabel 2000 1250 2    50   Input ~ 0
 RAM_A15
-Text GLabel 5700 4700 2    50   Input ~ 0
-ADC_MUX0
-Text GLabel 5700 4800 2    50   Input ~ 0
-ADC_MUX1
-Text GLabel 5700 5100 2    50   Input ~ 0
-ADC_MUX2
-Text GLabel 5700 5200 2    50   Input ~ 0
-ADC_MUX3
-Text GLabel 5700 5000 2    50   Input ~ 0
-ADC_CTRL1
-Text GLabel 5700 6200 2    50   Input ~ 0
-ADC_SENSE_LO
-Text GLabel 5700 6100 2    50   Input ~ 0
-ADC_SENSE_HI
 Text GLabel 5700 4900 2    50   Input ~ 0
+ADC_MUX0
+Text GLabel 5700 5000 2    50   Input ~ 0
+ADC_MUX1
+Text GLabel 5700 5500 2    50   Input ~ 0
+ADC_MUX2
+Text GLabel 5700 6000 2    50   Input ~ 0
+ADC_MUX3
+Text GLabel 5700 5900 2    50   Input ~ 0
+ADC_CTRL1
+Text GLabel 5700 5200 2    50   Input ~ 0
+ADC_SENSE_LO
+Text GLabel 5700 5100 2    50   Input ~ 0
+ADC_SENSE_HI
+Text GLabel 5700 5600 2    50   Input ~ 0
 ADC_CTRL0
+Text GLabel 9300 2050 2    60   Input ~ 0
+USER_BUTTON
 $EndSCHEMATC
