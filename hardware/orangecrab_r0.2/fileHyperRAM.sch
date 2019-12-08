@@ -141,13 +141,13 @@ Text GLabel 2850 2500 2    50   Input ~ 0
 RAM_A7
 Text GLabel 2850 1900 2    50   Input ~ 0
 RAM_A8
-Text GLabel 2850 2400 2    50   Input ~ 0
+Text GLabel 2850 2300 2    50   Input ~ 0
 RAM_A9
 Text GLabel 2850 3600 2    50   Input ~ 0
 RAM_A10
 Text GLabel 2850 4700 2    50   Input ~ 0
 RAM_A11
-Text GLabel 2850 1600 2    50   Input ~ 0
+Text GLabel 2850 3700 2    50   Input ~ 0
 RAM_A12
 Text GLabel 10450 1950 2    50   UnSpc ~ 0
 P1.35V
@@ -601,7 +601,7 @@ Text GLabel 7050 4700 0    50   Input ~ 0
 RAM_BA1
 Text GLabel 7050 4600 0    50   Input ~ 0
 RAM_BA0
-Text GLabel 2850 2300 2    50   Input ~ 0
+Text GLabel 2850 2400 2    50   Input ~ 0
 RAM_BA2
 Text GLabel 2850 3500 2    50   Input ~ 0
 RAM_BA1

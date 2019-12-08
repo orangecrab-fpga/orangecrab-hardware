@@ -263,23 +263,23 @@ Text GLabel 2000 5250 2    50   Input ~ 0
 RAM_D6
 Text GLabel 2000 4450 2    50   Input ~ 0
 RAM_D7
-Text GLabel 2000 2050 2    50   Input ~ 0
+Text GLabel 2000 2150 2    50   Input ~ 0
 RAM_A0
-Text GLabel 2000 3250 2    50   Input ~ 0
+Text GLabel 2000 2950 2    50   Input ~ 0
 RAM_A1
 Text GLabel 2000 2450 2    50   Input ~ 0
 RAM_A2
-Text GLabel 2000 2150 2    50   Input ~ 0
+Text GLabel 2000 2650 2    50   Input ~ 0
 RAM_A3
 Text GLabel 2000 1950 2    50   Input ~ 0
 RAM_A4
-Text GLabel 2000 2650 2    50   Input ~ 0
+Text GLabel 2000 2050 2    50   Input ~ 0
 RAM_A5
 Text GLabel 2000 2350 2    50   Input ~ 0
 RAM_A6
-Text GLabel 2000 3050 2    50   Input ~ 0
+Text GLabel 2000 2750 2    50   Input ~ 0
 RAM_A7
-Text GLabel 2000 2950 2    50   Input ~ 0
+Text GLabel 2000 3050 2    50   Input ~ 0
 RAM_A8
 Text GLabel 2000 1750 2    50   Input ~ 0
 RAM_A10
@@ -435,7 +435,7 @@ Text GLabel 5250 3300 2    50   UnSpc ~ 0
 P1.35V
 Wire Wire Line
 	5250 3300 4650 3300
-Text GLabel 2000 2750 2    50   Input ~ 0
+Text GLabel 2000 3250 2    50   Input ~ 0
 RAM_A9
 Text GLabel 2400 1550 2    50   UnSpc ~ 0
 P1.35V
