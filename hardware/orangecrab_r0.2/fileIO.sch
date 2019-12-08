@@ -50,8 +50,6 @@ Text Notes 8850 3500 0    63   ~ 0
 VBAT (3 - 4.2V)\nEN\nVBUS (4.5-5.5V)\nI/O\nI/O\nI/O\nI/O\nI/O\nI/O\nI/O\nI/O - SCL\nI/O - SDA
 Text Label 8350 4200 2    50   ~ 0
 A0
-Wire Wire Line
-	8600 4000 8350 4000
 Text Label 8350 4000 2    50   ~ 0
 AREF
 Text Label 8350 4300 2    50   ~ 0
@@ -595,7 +593,7 @@ F 3 "" H 6550 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 5750 6550 4100
+	6550 5750 6550 5300
 Wire Wire Line
 	6550 4100 6450 4100
 Wire Wire Line
@@ -630,37 +628,35 @@ Wire Wire Line
 Wire Wire Line
 	5950 3650 5950 3800
 Wire Wire Line
-	6450 4800 6800 4800
+	6450 5400 6900 5400
 Wire Wire Line
-	6450 4900 6900 4900
-Wire Wire Line
-	6450 5000 7000 5000
+	6450 5500 7000 5500
 Text GLabel 6750 3650 0    50   UnSpc ~ 0
 P3.3V
 Wire Wire Line
 	6800 3650 6750 3650
 Wire Wire Line
-	6800 3650 6800 4800
+	6800 3650 6800 4900
 Text GLabel 6750 3500 0    50   UnSpc ~ 0
 P2.5V
 Wire Wire Line
 	6750 3500 6900 3500
 Wire Wire Line
-	6900 3500 6900 4900
+	6900 3500 6900 5400
 Wire Wire Line
 	7000 3350 6750 3350
 Wire Wire Line
-	7000 3350 7000 5000
+	7000 3350 7000 5500
 Text GLabel 6750 3350 0    50   UnSpc ~ 0
 P1.35V
 Wire Wire Line
 	7100 3200 6750 3200
 Text GLabel 6750 3200 0    50   UnSpc ~ 0
-P1.2V
+P1.1V
 Wire Wire Line
-	7100 5100 6450 5100
+	7100 5600 6450 5600
 Wire Wire Line
-	7100 3200 7100 5100
+	7100 3200 7100 5600
 Text GLabel 5450 4700 0    50   Input ~ 0
 ADC_MUX0
 Text GLabel 5450 4800 0    50   Input ~ 0
@@ -728,7 +724,7 @@ U 1 1 5DF6B89D
 P 3850 4850
 F 0 "C28" H 3965 4896 50  0000 L CNN
 F 1 "C" H 3965 4805 50  0000 L CNN
-F 2 "" H 3888 4700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0201_0603Metric" H 3888 4700 50  0001 C CNN
 F 3 "~" H 3850 4850 50  0001 C CNN
 	1    3850 4850
 	1    0    0    -1  
@@ -766,4 +762,32 @@ Wire Wire Line
 	3850 4500 4000 4500
 Wire Wire Line
 	3600 4300 4000 4300
+Wire Wire Line
+	6450 5000 6550 5000
+Connection ~ 6550 5000
+Wire Wire Line
+	6450 5100 6550 5100
+Connection ~ 6550 5100
+Wire Wire Line
+	6550 5100 6550 5000
+Wire Wire Line
+	6550 5200 6450 5200
+Connection ~ 6550 5200
+Wire Wire Line
+	6550 5200 6550 5100
+Wire Wire Line
+	6450 4800 7200 4800
+Wire Wire Line
+	7200 4800 7200 4000
+Wire Wire Line
+	7200 4000 8600 4000
+Wire Wire Line
+	6550 4100 6550 5000
+Wire Wire Line
+	6800 4900 6450 4900
+Wire Wire Line
+	6450 5300 6550 5300
+Connection ~ 6550 5300
+Wire Wire Line
+	6550 5300 6550 5200
 $EndSCHEMATC
