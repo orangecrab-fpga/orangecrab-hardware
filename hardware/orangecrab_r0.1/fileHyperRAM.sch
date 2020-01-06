@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:OrangeCrab-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -18,6 +17,8 @@ $Comp
 L gkl_mem:MT41K64M16TW-107_J-TR U4
 U 1 1 5CD2F1CC
 P 7700 4100
+AR Path="/5CD2F1CC" Ref="U4"  Part="1" 
+AR Path="/5ABD38F2/5CD2F1CC" Ref="U4"  Part="1" 
 F 0 "U4" H 7725 5569 50  0000 C CNN
 F 1 "MT41K64M16TW-107_J-TR" H 7725 5478 50  0000 C CNN
 F 2 "Package_BGA:BGA-96_9.0x13.0mm_Layout2x3x16_P0.8mm" H 7750 5600 50  0001 C CNN
@@ -53,49 +54,49 @@ Text GLabel 7050 4000 0    50   Input ~ 0
 RAM_A11
 Text GLabel 7050 4100 0    50   Input ~ 0
 RAM_A12
-Text GLabel 8400 4450 2    50   Input ~ 0
-RAM_D0
-Text GLabel 8400 4550 2    50   Input ~ 0
-RAM_D1
 Text GLabel 8400 4650 2    50   Input ~ 0
-RAM_D2
+RAM_D0
 Text GLabel 8400 4750 2    50   Input ~ 0
-RAM_D3
+RAM_D1
 Text GLabel 8400 4850 2    50   Input ~ 0
-RAM_D4
+RAM_D2
 Text GLabel 8400 4950 2    50   Input ~ 0
-RAM_D5
+RAM_D3
 Text GLabel 8400 5050 2    50   Input ~ 0
-RAM_D6
+RAM_D4
 Text GLabel 8400 5150 2    50   Input ~ 0
-RAM_D7
-Text GLabel 8400 3650 2    50   Input ~ 0
-RAM_D8
-Text GLabel 8400 3750 2    50   Input ~ 0
-RAM_D9
-Text GLabel 8400 3850 2    50   Input ~ 0
-RAM_D10
-Text GLabel 8400 3950 2    50   Input ~ 0
-RAM_D11
-Text GLabel 8400 4050 2    50   Input ~ 0
-RAM_D12
-Text GLabel 8400 4150 2    50   Input ~ 0
-RAM_D13
-Text GLabel 8400 4250 2    50   Input ~ 0
-RAM_D14
-Text GLabel 8400 4350 2    50   Input ~ 0
-RAM_D15
-Text GLabel 8400 5600 2    50   Input ~ 0
-RAM_LDQS+
-Text GLabel 8400 5700 2    50   Input ~ 0
-RAM_LDQS-
+RAM_D5
+Text GLabel 8400 5250 2    50   Input ~ 0
+RAM_D6
 Text GLabel 8400 5350 2    50   Input ~ 0
+RAM_D7
+Text GLabel 8400 3750 2    50   Input ~ 0
+RAM_D8
+Text GLabel 8400 3850 2    50   Input ~ 0
+RAM_D9
+Text GLabel 8400 3950 2    50   Input ~ 0
+RAM_D10
+Text GLabel 8400 4050 2    50   Input ~ 0
+RAM_D11
+Text GLabel 8400 4150 2    50   Input ~ 0
+RAM_D12
+Text GLabel 8400 4250 2    50   Input ~ 0
+RAM_D13
+Text GLabel 8400 4350 2    50   Input ~ 0
+RAM_D14
+Text GLabel 8400 4450 2    50   Input ~ 0
+RAM_D15
+Text GLabel 8400 6000 2    50   Input ~ 0
+RAM_LDQS+
+Text GLabel 8400 6100 2    50   Input ~ 0
+RAM_LDQS-
+Text GLabel 8400 5750 2    50   Input ~ 0
 RAM_UDQS+
-Text GLabel 8400 5450 2    50   Input ~ 0
+Text GLabel 8400 5850 2    50   Input ~ 0
 RAM_UDQS-
-Text GLabel 7050 5500 0    50   Input ~ 0
+Text GLabel 7050 5900 0    50   Input ~ 0
 RAM_CK+
-Text GLabel 7050 5600 0    50   Input ~ 0
+Text GLabel 7050 6000 0    50   Input ~ 0
 RAM_CK-
 Text Label 8700 2900 0    50   ~ 0
 RAM_VDD
@@ -103,23 +104,23 @@ Text Label 8700 3000 0    50   ~ 0
 RAM_VDDQ
 Text Label 8700 3500 0    50   ~ 0
 RAM_ZQ
-Text GLabel 7050 5700 0    50   Input ~ 0
+Text GLabel 7050 6100 0    50   Input ~ 0
 RAM_CKE
-Text GLabel 7050 5400 0    50   Input ~ 0
+Text GLabel 7050 5800 0    50   Input ~ 0
 RAM_CS#
-Text GLabel 7050 4600 0    50   Input ~ 0
-RAM_LDM
-Text GLabel 7050 4700 0    50   Input ~ 0
-RAM_ODT
-Text GLabel 7050 4800 0    50   Input ~ 0
-RAM_RAS#
-Text GLabel 7050 4900 0    50   Input ~ 0
-RAM_CAS#
 Text GLabel 7050 5000 0    50   Input ~ 0
-RAM_WE#
+RAM_LDM
 Text GLabel 7050 5100 0    50   Input ~ 0
-RAM_RESET#
+RAM_ODT
 Text GLabel 7050 5200 0    50   Input ~ 0
+RAM_RAS#
+Text GLabel 7050 5300 0    50   Input ~ 0
+RAM_CAS#
+Text GLabel 7050 5400 0    50   Input ~ 0
+RAM_WE#
+Text GLabel 7050 5500 0    50   Input ~ 0
+RAM_RESET#
+Text GLabel 7050 5600 0    50   Input ~ 0
 RAM_UDM
 Text GLabel 8650 3100 2    50   UnSpc ~ 0
 VTT_REF
@@ -595,11 +596,11 @@ Text GLabel 1800 4850 0    50   UnSpc ~ 0
 VTT
 Wire Wire Line
 	1800 4850 1900 4850
-Text GLabel 7050 4400 0    50   Input ~ 0
+Text GLabel 7050 4800 0    50   Input ~ 0
 RAM_BA2
-Text GLabel 7050 4300 0    50   Input ~ 0
+Text GLabel 7050 4700 0    50   Input ~ 0
 RAM_BA1
-Text GLabel 7050 4200 0    50   Input ~ 0
+Text GLabel 7050 4600 0    50   Input ~ 0
 RAM_BA0
 Text GLabel 2850 3700 2    50   Input ~ 0
 RAM_BA2
@@ -1076,4 +1077,7 @@ Wire Wire Line
 	4650 4900 4750 4900
 Wire Wire Line
 	5050 4900 5200 4900
+NoConn ~ 7050 4200
+NoConn ~ 7050 4300
+NoConn ~ 7050 4400
 $EndSCHEMATC
