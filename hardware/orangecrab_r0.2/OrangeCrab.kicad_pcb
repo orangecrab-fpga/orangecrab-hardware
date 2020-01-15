@@ -982,12 +982,12 @@
       (net 118 SD0_DAT3))
     (pad 1 smd rect (at 3.105 0 90) (size 0.75 1.1) (layers B.Cu B.Paste B.Mask)
       (net 116 SD0_DAT2))
-    (model ${KIPRJMOD}../../lib/gkl/3d/1040310811.stp
+    (model ${KIPRJMOD}/../../lib/gkl/3d/1040310811.stp
       (offset (xyz -1130.299983024597 182.879997253418 15.23999977111816))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_conn.3dshapes/MicroSD.step
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_conn.3dshapes/MicroSD.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1627,7 +1627,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_housings_bga.3dshapes/csBGA285.step
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_housings_bga.3dshapes/csBGA285.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2759,7 +2759,7 @@
       (net 13 JTAG_TMS))
     (pad 1 smd rect (at 2.54 -2 270) (size 0.74 2.8) (layers F.Cu F.Paste F.Mask)
       (net 64 P3.3V))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_conn.3dshapes/FTSH-105-01-L-DV-K-TR.stp
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_conn.3dshapes/FTSH-105-01-L-DV-K-TR.stp
       (offset (xyz 0 0 0.4))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 180))
@@ -2985,7 +2985,7 @@
       (net 1 GND))
     (pad 6 smd rect (at -2.9 1.2375 270) (size 1.2 1.9) (layers F.Cu F.Mask)
       (net 1 GND))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_conn.3dshapes/10118194c_usb_microb.step
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_conn.3dshapes/10118194c_usb_microb.step
       (offset (xyz 0 -1.25 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3043,7 +3043,7 @@
       (net 128 VBATT))
     (pad 1 smd roundrect (at -1 0.5) (size 1 4) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_conn.3dshapes/S2B-PH-SM4-TB.STEP
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_conn.3dshapes/S2B-PH-SM4-TB.STEP
       (offset (xyz 0 2 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
@@ -4166,7 +4166,7 @@
       (net 127 "Net-(D1-Pad4)"))
     (pad 3 smd roundrect (at 0.325 -0.325 180) (size 0.4 0.4) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 126 "Net-(D1-Pad3)"))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_led.3dshapes/XZxxxxxx150W.step
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_led.3dshapes/XZxxxxxx150W.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4195,7 +4195,7 @@
       (net 114 "Net-(D2-Pad4)"))
     (pad 3 smd roundrect (at 0.325 -0.325 180) (size 0.4 0.4) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 109 "Net-(D2-Pad3)"))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_led.3dshapes/XZxxxxxx150W.step
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_led.3dshapes/XZxxxxxx150W.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4261,7 +4261,7 @@
       (net 148 USER_BUTTON))
     (pad 2 smd rect (at -2.075 1.075 90) (size 1.05 0.65) (layers F.Cu F.Paste F.Mask)
       (net 148 USER_BUTTON))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_misc.3dshapes/TL3365AF180QG.stp
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_misc.3dshapes/TL3365AF180QG.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4363,7 +4363,7 @@
       (net 43 REF_CLK) (solder_paste_margin -0.08))
     (pad 2 smd roundrect (at 1.024999 0.725 90) (size 0.8 0.9) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND) (solder_paste_margin -0.08))
-    (model /home/greg/projects/OrangeCrab/lib/gkl/packages3d/gkl_time.3dshapes/TXO_2.5x2.0mm.step
+    (model ${KIPRJMOD}/../../lib/gkl/packages3d/gkl_time.3dshapes/TXO_2.5x2.0mm.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
