@@ -439,8 +439,8 @@ class ECP5DDRPHY(Module, AutoCSR):
             rddata_en = n_rddata_en
         self.sync += [phase.rddata_valid.eq(rddata_en)
             for phase in dfi.phases]
-        #self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+0] | rddata_ens[cl_sys_latency+1]) # Works only with wishbone-bridge test
-        self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+1] | rddata_ens[cl_sys_latency+2]) # Works only with SoC
+        self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+0] | rddata_ens[cl_sys_latency+1]) # Works only with wishbone-bridge test
+        #self.comb += dqs_read.eq(rddata_ens[cl_sys_latency+1] | rddata_ens[cl_sys_latency+2]) # Works only with SoC
         oe = Signal()
         last_wrdata_en = Signal(cwl_sys_latency+3)
         wrphase = dfi.phases[self.settings.wrphase]

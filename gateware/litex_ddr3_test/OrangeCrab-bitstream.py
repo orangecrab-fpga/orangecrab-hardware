@@ -9,6 +9,7 @@ from migen.genlib.resetsync import AsyncResetSynchronizer
 from litex.build.generic_platform import *
 from litex.boards.platforms import versa_ecp5
 import OrangeCrab
+import OrangeCrab_r1
 
 
 from litex.soc.cores.clock import *
@@ -19,7 +20,8 @@ from litex.soc.cores.uart import UARTWishboneBridge
 from litex.soc.interconnect import wishbone
 
 from litedram.modules import MT41K64M16
-from ecp5ddrphy import ECP5DDRPHY, ECP5DDRPHYInit
+from litedram.phy.ecp5ddrphy import ECP5DDRPHY, ECP5DDRPHYInit
+#from ecp5ddrphy import ECP5DDRPHY, ECP5DDRPHYInit
 from litedram.init import get_sdram_phy_py_header
 from litedram.frontend.bist import LiteDRAMBISTGenerator
 from litedram.frontend.bist import LiteDRAMBISTChecker
@@ -50,7 +52,6 @@ class DDR3TestCRG(Module):
         # clk / rst
         clk100 = platform.request("clk100")
         #rst_n = platform.request("rst_n")
-        rst_n = Signal(reset=1)
         platform.add_period_constraint(clk100, 20.0)
 
         # power on reset
@@ -64,23 +65,24 @@ class DDR3TestCRG(Module):
         self.submodules.pll = pll = ECP5PLL()
         pll.register_clkin(clk100, 48e6)
         pll.create_clkout(self.cd_sys2x_eb, 2*sys_clk_freq)
+        pll.create_clkout(self.cd_sys, sys_clk_freq)
         pll.create_clkout(self.cd_init, 24e6)
         self.specials += [
-            Instance("ECLKSYNCB",
-                i_ECLKI=self.cd_sys2x_i.clk,
-                i_STOP=self.stop,
-                o_ECLKO=self.cd_sys2x.clk),
-            Instance("ECLKBRIDGECS",
-                i_CLK0=self.cd_sys2x_eb.clk,
-                o_ECSOUT=self.cd_sys2x_i.clk),
-            Instance("CLKDIVF",
-                p_DIV="2.0",
-                i_ALIGNWD=0,
-                i_CLKI=self.cd_sys2x.clk,
-                i_RST=self.cd_sys2x.rst,
-                o_CDIVX=self.cd_sys.clk),
-            AsyncResetSynchronizer(self.cd_init, ~por_done | ~pll.locked | ~rst_n),
-            AsyncResetSynchronizer(self.cd_sys, ~por_done | ~pll.locked | ~rst_n)
+        #    Instance("ECLKSYNCB",
+        #        i_ECLKI=self.cd_sys2x_i.clk,
+        #        i_STOP=self.stop,
+        #        o_ECLKO=self.cd_sys2x.clk),
+        #    Instance("ECLKBRIDGECS",
+        #        i_CLK0=self.cd_sys2x_eb.clk,
+        #        o_ECSOUT=self.cd_sys2x_i.clk),
+        #    Instance("CLKDIVF",
+        #        p_DIV="2.0",
+        #        i_ALIGNWD=0,
+        #        i_CLKI=self.cd_sys2x.clk,
+        #        i_RST=self.cd_sys2x.rst,
+        #        o_CDIVX=self.cd_sys.clk),
+            AsyncResetSynchronizer(self.cd_init, ~por_done | ~pll.locked),
+            AsyncResetSynchronizer(self.cd_sys, ~por_done | ~pll.locked)
         ]
 
 # DDR3TestSoC --------------------------------------------------------------------------------------
@@ -92,7 +94,7 @@ class DDR3TestSoC(SoCSDRAM):
     }
     csr_map.update(SoCSDRAM.csr_map)
     def __init__(self, toolchain="diamond"):
-        platform = OrangeCrab.Platform(toolchain=toolchain)
+        platform = OrangeCrab_r1.Platform(toolchain=toolchain)
         
         sys_clk_freq = int(48e6)
         SoCSDRAM.__init__(self, platform, clk_freq=sys_clk_freq,
@@ -100,6 +102,8 @@ class DDR3TestSoC(SoCSDRAM):
                           with_uart=None,
                           csr_data_width=32,
                           ident="OrangeCrab test SoC", ident_version=True)
+
+        #self.comb += platform.request("rst_n").eq(1)
 
         # crg
         crg = DDR3TestCRG(platform, sys_clk_freq)
@@ -183,6 +187,42 @@ class BaseSoC(SoCSDRAM):
         self.comb += platform.request("user_led", 0).eq(led_counter[26])
 
 
+class LED(SoCCore):
+    
+    def __init__(self, toolchain="diamond", **kwargs):
+        platform = OrangeCrab.Platform(toolchain=toolchain)
+        sys_clk_freq = int(10e6)
+    
+        SoCCore.__init__(self, platform, clk_freq=sys_clk_freq,
+                          cpu_type=None,
+                          integrated_rom_size=0,
+                          ident="OrangeCrab test SoC",
+                          **kwargs)
+
+        # crg
+        crg = DDR3TestCRG(platform, sys_clk_freq)
+        self.submodules.crg = crg
+
+        
+        led = platform.request("rgb_led", 0)
+        btn = platform.request("usr_btn", 0)
+        # led blinking
+        led_counter = Signal(32)
+        latch = Signal(32)
+        self.sync += [
+            If(latch == 0xFFFF0000,
+                led_counter.eq(led_counter + 1)
+            ),
+            latch.eq(Cat(btn,latch[0:31]))
+            
+        ]
+        self.comb += [
+            led.r.eq(~led_counter[0]),
+            led.g.eq(~led_counter[1]),
+            led.b.eq(~led_counter[2]),
+        ]
+
+
 # BISTSoC --------------------------------------------------------------------------------------
 class BISTSoC(BaseSoC):
     csr_map = {
@@ -199,11 +239,8 @@ class BISTSoC(BaseSoC):
 
 def main():
 
-    toolchain = "diamond"
-    toolchain_path = "/usr/local/diamond/3.10_x64/bin/lin64"
-    if "trellis" in sys.argv[1:]:
-        toolchain = "trellis"
-        toolchain_path = "/usr/share/trellis"
+    toolchain = "trellis"
+    toolchain_path = "/usr/share/trellis"
 
 
     if "ddr3_test" in sys.argv[1:]:
@@ -212,6 +249,8 @@ def main():
         soc = BaseSoC(toolchain=toolchain)
     elif "bist" in sys.argv[1:]:
         soc = BISTSoC(toolchain=toolchain)
+    elif "led" in sys.argv[1:]:
+        soc = LED(toolchain=toolchain)
     else:
         print("missing target, supported: (ddr3_test, base, ethernet, bist)")
         exit(1)
@@ -222,7 +261,7 @@ def main():
         soc.generate_sdram_phy_py_header()
     
     # Generate svf
-    os.system("python3 openocd/bit_to_svf.py build/gateware/top.bit build/gateware/top.svf")
+    #os.system("python3 openocd/bit_to_svf.py build/gateware/top.bit build/gateware/top.svf")
 
 if __name__ == "__main__":
     main()
