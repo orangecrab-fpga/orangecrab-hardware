@@ -1,18 +1,17 @@
 EESchema Schematic File Version 4
-LIBS:OrangeCrab-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 7
 Title "Orange Crab"
-Date "2019-06-28"
-Rev "r0.1"
-Comp "GsD"
+Date "2019-12-08"
+Rev "r0.2"
+Comp "Good Stuff Department"
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "Licensed under CERN OHL v.1.2"
+Comment4 "Designed by: Greg Davill"
 $EndDescr
 Text Notes 6100 2050 2    50   ~ 0
 Battery Input
@@ -540,7 +539,7 @@ F 1 "147k" H 9520 4005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 9380 4050 50  0001 C CNN
 F 3 "~" H 9450 4050 50  0001 C CNN
 F 4 "‎Yageo‎" H 9450 4050 50  0001 C CNN "Mfg"
-F 5 "RC0201FR-07115KL" H 9450 4050 50  0001 C CNN "PN"
+F 5 "RC0201FR-07147KL" H 9450 4050 50  0001 C CNN "PN"
 	1    9450 4050
 	1    0    0    -1  
 $EndComp
@@ -1146,11 +1145,11 @@ L Device:R R8
 U 1 1 5D25A8F0
 P 1450 3500
 F 0 "R8" V 1565 3500 50  0000 C CNN
-F 1 "1.5K" V 1656 3500 50  0000 C CNN
+F 1 "4.7k" V 1656 3500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 1380 3500 50  0001 C CNN
 F 3 "~" H 1450 3500 50  0001 C CNN
 F 4 "‎Yageo‎" H 1450 3500 50  0001 C CNN "Mfg"
-F 5 "RC0201FR-071K5L" H 1450 3500 50  0001 C CNN "PN"
+F 5 "RC0201FR-074K7L" H 1450 3500 50  0001 C CNN "PN"
 	1    1450 3500
 	0    1    1    0   
 $EndComp
@@ -1159,11 +1158,11 @@ L Device:R R7
 U 1 1 5D25AEAF
 P 1450 3300
 F 0 "R7" V 1243 3300 50  0000 C CNN
-F 1 "1.5K" V 1334 3300 50  0000 C CNN
+F 1 "10k" V 1334 3300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 1380 3300 50  0001 C CNN
 F 3 "~" H 1450 3300 50  0001 C CNN
 F 4 "‎Yageo‎" H 1450 3300 50  0001 C CNN "Mfg"
-F 5 "RC0201FR-071K5L" H 1450 3300 50  0001 C CNN "PN"
+F 5 "RC0201FR-0710KL" H 1450 3300 50  0001 C CNN "PN"
 	1    1450 3300
 	0    1    1    0   
 $EndComp
@@ -1611,7 +1610,7 @@ L Device:R R26
 U 1 1 5D477BC4
 P 4250 2850
 F 0 "R26" H 4181 2804 50  0000 R CNN
-F 1 "10K" H 4181 2895 50  0000 R CNN
+F 1 "10k" H 4181 2895 50  0000 R CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 4180 2850 50  0001 C CNN
 F 3 "~" H 4250 2850 50  0001 C CNN
 F 4 "‎Yageo‎" H 4250 2850 50  0001 C CNN "Mfg"

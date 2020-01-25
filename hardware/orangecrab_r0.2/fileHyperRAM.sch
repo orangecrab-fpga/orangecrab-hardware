@@ -1,18 +1,17 @@
 EESchema Schematic File Version 4
-LIBS:OrangeCrab-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title "Orange Crab"
-Date "2019-06-28"
-Rev "r0.1"
-Comp "GsD"
+Date "2019-12-08"
+Rev "r0.2"
+Comp "Good Stuff Department"
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "Licensed under CERN OHL v.1.2"
+Comment4 "Designed by: Greg Davill"
 $EndDescr
 $Comp
 L gkl_mem:MT41K64M16TW-107_J-TR U4
