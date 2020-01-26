@@ -54,6 +54,7 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "FID1","Fiducial","Fiducial_0.75mm_Mask1.5mm",2.917000,16.955000,0.000000,bottom
 "FID3","Fiducial","Fiducial_0.75mm_Mask1.5mm",46.492000,21.855000,0.000000,bottom
 "FID5","Fiducial","Fiducial_0.75mm_Mask1.5mm",46.092000,3.280000,0.000000,bottom
+"J4","MicroSd","molex_microsd_1040310811",5.917000,11.505000,90.000000,bottom
 "R3","50R","R_0201_0603Metric",21.267000,10.980000,270.000000,bottom
 "R6","50R","R_0201_0603Metric",20.592000,10.980000,270.000000,bottom
 "R19","240R","R_0402_1005Metric",37.592000,14.405000,0.000000,bottom
