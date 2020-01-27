@@ -1,0 +1,18 @@
+baseURL = "https://gregdavill.github.io/OrangeCrab"
+languageCode = "en-us"
+title = "OrangeCrab Docs"
+theme = "book"
+
+[params]
+  BookToC = 3
+  BookSection = 'docs'
+  BookDateFormat = 'Jan 2, 2006'
+  BookSearch = true
+  BookLogo = 'logo.png'
+  
+[params.footer]
+	copyright = "[gregdavill](https://twitter.com/gregdavill)"
+	show_powered_by = true
+
+[markup.goldmark.renderer]
+unsafe= true
