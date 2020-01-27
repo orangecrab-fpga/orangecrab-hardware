@@ -1,7 +1,7 @@
 ---
 title: Introduction
 type: docs
-rev: r0_1
+rev: r0.1
 ---
 
 # Introduction

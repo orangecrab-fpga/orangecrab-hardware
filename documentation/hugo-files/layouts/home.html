@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
+  <style>
+    a:visited{color:#343a40 !important}
+    a:hover{text-decoration: none !important}
+  </style>
+</head>
+<body>
+  <main class="flex justify-center">
+    <div class="book-home markdown">
+      <div class="flex justify-center">
+        <div class="book-home" style="width: 80%; text-align: center">
+          <img src="crab.svg" width="10%">
+          <h1 style="margin: 0;">OrangeCrab Documentation</h1>
+          <h2>Select your revision:</h2>
+          <table width="100%" style="table-layout: fixed; border: none;" >
+            <tr>
+              <td style="text-align: center; width: 50%; border: none;">
+                <a href="r0.1" style="border: 0;">
+                    {{ `![r0.2 Photo](r0.1/OrangeCrab_r0.1_front.jpeg "r0.2 Photo")` | markdownify }}
+                    <h1 style="margin: 0;">R1</h1>
+                </a>
+              </td>
+              <td style="text-align: center; border: none;">
+                <a href="r0.2" style="border: 0;">
+                    {{ `![r0.2 Photo](r0.2/OrangeCrab_r0.2_front.jpeg "r0.2 Photo")` | markdownify }}
+                    <h1 style="margin: 0;">R2</h1>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {{ partial "docs/inject/body" . }}
+</body>
+
+</html>

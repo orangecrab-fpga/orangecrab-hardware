@@ -3,16 +3,22 @@ languageCode = "en-us"
 title = "OrangeCrab Docs"
 theme = "book"
 
+enableGitInfo = true
+disableKinds = ['taxonomy', 'taxonomyTerm']
+
+
 [params]
-  BookToC = 3
+  BookToC = false
+  BookMenuBundle = '/menu'
+
   BookSection = 'docs'
   BookDateFormat = 'Jan 2, 2006'
   BookSearch = true
-  BookLogo = 'logo.png'
-  
+  BookLogo = 'crab.svg'
+
 [params.footer]
 	copyright = "[gregdavill](https://twitter.com/gregdavill)"
 	show_powered_by = true
 
 [markup.goldmark.renderer]
-unsafe= true
+    unsafe= true
