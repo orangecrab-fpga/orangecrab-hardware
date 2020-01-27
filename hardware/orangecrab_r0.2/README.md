@@ -1,17 +1,18 @@
-# Orange Crab
+# Orange Crab r0.2
 
-![Front Photo](documentation/images/OrangeCrab_r0.2_front.jpeg "Front Photo")
+![Front Photo](../../documentation/images/OrangeCrab_r0.2_front.jpeg "Front Photo")
 
 ## ECP5 DDR3 memory in a Feather form-factor.
 
 	Hardware r0.2 is still in the testing stages.
-    Hardware r0.1 is functional with some small errata
+    Prototypes have been assembeled.
+    Tests show the basic functionality of ECP5/DDR3/USB/FLASH works.
 
 ## What is it
 Project goal: "Make a simple ECP5 breakout board with DDR3L memory". As that was the only design goal I also decide it might be nice to keep the overal size small and make it an adafruit feather compatible dev board.
 
 
-## Hardware r0.2
+## Hardware Overview
 * Lattice ECP5 25/45/85 variants (5G supported, but no SERDES routed)
 * DDR3L Memory upto 8Gbit (512Mbit x16)
 * Micro USB connection
@@ -25,7 +26,7 @@ Project goal: "Make a simple ECP5 breakout board with DDR3L memory". As that was
 
 
 
-![Back Photo](documentation/images/OrangeCrab_r0.2_back.jpeg "Back Photo")
+![Back Photo](../../documentation/images/OrangeCrab_r0.2_back.jpeg "Back Photo")
 
 ## Licence
 
