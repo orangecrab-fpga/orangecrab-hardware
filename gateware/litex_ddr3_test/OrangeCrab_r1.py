@@ -12,13 +12,16 @@ _io = [
     #("rst_n", 0, Pins("R16"), IOStandard("LVCMOS25")),
 
     ("user_led", 0, Pins("V17"), IOStandard("LVCMOS25")),
-    ("user_led", 1, Pins("T17"), IOStandard("LVCMOS25")),
-    ("user_led", 2, Pins("J3"), IOStandard("LVCMOS25")),
 
+    ("rgb_led", 0,
+        Subsignal("r", Pins("V17"), IOStandard("LVCMOS33")),
+        Subsignal("g", Pins("T17"), IOStandard("LVCMOS33")),
+        Subsignal("b", Pins("J3"), IOStandard("LVCMOS33")),
+    ),
 
     ("serial", 0,
-        Subsignal("tx", Pins("N17"), IOStandard("LVCMOS25")),
-        Subsignal("rx", Pins("M18"), IOStandard("LVCMOS25")),
+        Subsignal("tx", Pins("N17"), IOStandard("LVCMOS33")),
+        Subsignal("rx", Pins("M18"), IOStandard("LVCMOS33")),
     ),
 
     ("ddram", 0,
