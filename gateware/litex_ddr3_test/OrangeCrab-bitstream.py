@@ -201,22 +201,35 @@ class LED(SoCCore):
 
         
         led = platform.request("rgb_led", 0)
-        btn = platform.request("usr_btn", 0)
+        try:
+            btn = platform.request("usr_btn", 0)
+        except:
+            btn = None
+
         # led blinking
         led_counter = Signal(32)
-        latch = Signal(32)
-        self.sync += [
-            If(latch == 0xFFFF0000,
+        if btn is not None:
+            latch = Signal(32)
+            self.sync += [
+                If(latch == 0xFFFF0000,
+                    led_counter.eq(led_counter + 1)
+                ),
+                latch.eq(Cat(btn,latch[0:31]))
+            ]
+            self.comb += [
+                led.r.eq(~led_counter[0]),
+                led.g.eq(~led_counter[1]),
+                led.b.eq(~led_counter[2]),
+            ]
+        else:
+            self.sync += [
                 led_counter.eq(led_counter + 1)
-            ),
-            latch.eq(Cat(btn,latch[0:31]))
-            
-        ]
-        self.comb += [
-            led.r.eq(~led_counter[0]),
-            led.g.eq(~led_counter[1]),
-            led.b.eq(~led_counter[2]),
-        ]
+            ]
+            self.comb += [
+                led.r.eq(~led_counter[22]),
+                led.g.eq(~led_counter[23]),
+                led.b.eq(~led_counter[24]),
+            ]
 
 
 # BISTSoC --------------------------------------------------------------------------------------
