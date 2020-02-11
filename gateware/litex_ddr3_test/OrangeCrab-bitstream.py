@@ -93,9 +93,7 @@ class DDR3TestSoC(SoCSDRAM):
         "analyzer":  17
     }
     csr_map.update(SoCSDRAM.csr_map)
-    def __init__(self, toolchain="diamond"):
-        platform = OrangeCrab_r1.Platform(toolchain=toolchain)
-        
+    def __init__(self, platform):
         sys_clk_freq = int(48e6)
         SoCSDRAM.__init__(self, platform, clk_freq=sys_clk_freq,
                           cpu_type=None, l2_size=32,
@@ -154,8 +152,7 @@ class BaseSoC(SoCSDRAM):
         "ddrphy":    16,
     }
     csr_map.update(SoCSDRAM.csr_map)
-    def __init__(self, toolchain="diamond", **kwargs):
-        platform = OrangeCrab.Platform(toolchain=toolchain)
+    def __init__(self, platform, **kwargs):
         sys_clk_freq = int(48e6)
         SoCSDRAM.__init__(self, platform, clk_freq=sys_clk_freq,
                           cpu_type="vexriscv",
@@ -189,8 +186,7 @@ class BaseSoC(SoCSDRAM):
 
 class LED(SoCCore):
     
-    def __init__(self, toolchain="diamond", **kwargs):
-        platform = OrangeCrab.Platform(toolchain=toolchain)
+    def __init__(self, platform, **kwargs):
         sys_clk_freq = int(10e6)
     
         SoCCore.__init__(self, platform, clk_freq=sys_clk_freq,
@@ -241,16 +237,19 @@ def main():
 
     toolchain = "trellis"
     toolchain_path = "/usr/share/trellis"
-
+    if "r1" in sys.argv[1:]:
+        platform = OrangeCrab_r1.Platform(toolchain=toolchain)
+    else:
+        platform = OrangeCrab.Platform(toolchain=toolchain)
 
     if "ddr3_test" in sys.argv[1:]:
-        soc = DDR3TestSoC(toolchain=toolchain)
+        soc = DDR3TestSoC(platform=platform)
     elif "base" in sys.argv[1:]:
-        soc = BaseSoC(toolchain=toolchain)
+        soc = BaseSoC(platform=platform)
     elif "bist" in sys.argv[1:]:
-        soc = BISTSoC(toolchain=toolchain)
+        soc = BISTSoC(platform=platform)
     elif "led" in sys.argv[1:]:
-        soc = LED(toolchain=toolchain)
+        soc = LED(platform=platform)
     else:
         print("missing target, supported: (ddr3_test, base, ethernet, bist)")
         exit(1)
