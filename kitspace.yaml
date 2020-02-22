@@ -1,0 +1,15 @@
+multi:
+  OrangeCrab-r0.1:
+    color: orange
+    readme: hardware/orangecrab_r0.1/README.md
+    bom: hardware/orangecrab_r0.1/bom/OrangeCrab.csv
+    eda:
+      type: kicad
+      pcb: hardware/orangecrab_r0.1/OrangeCrab.kicad_pcb
+  OrangeCrab-r0.2:
+    color: orange
+    readme: hardware/orangecrab_r0.2/README.md
+    bom: hardware/orangecrab_r0.2/Production/OrangeCrab-r0.2-bom.csv
+    eda:
+      type: kicad
+      pcb: hardware/orangecrab_r0.2/OrangeCrab.kicad_pcb
