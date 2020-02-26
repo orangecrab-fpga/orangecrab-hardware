@@ -5,7 +5,7 @@
 ## ECP5 DDR3 memory in a Feather form-factor.
 
 	Hardware r0.2 is still in the testing stages.
-    Prototypes have been assembeled.
+    Prototypes have been assembled.
     Tests show the basic functionality of ECP5/DDR3/USB/FLASH works.
 
 ## What is it
