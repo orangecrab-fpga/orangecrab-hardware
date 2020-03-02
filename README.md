@@ -1,4 +1,4 @@
-# Orange Crab
+# OrangeCrab
 
 ![Front Photo](documentation/images/OrangeCrab_r0.2_front.jpeg "Front Photo")
 
