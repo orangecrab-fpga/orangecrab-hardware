@@ -69,3 +69,5 @@ __pycache__
 # Migen/Litex artifacts
 test/csr.csv
 
+# hugo files 
+documentation/hugo-files/public*
