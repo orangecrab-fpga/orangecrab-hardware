@@ -1,7 +1,7 @@
 baseURL = "https://gregdavill.github.io/OrangeCrab"
 languageCode = "en-us"
 title = "OrangeCrab Docs"
-theme = "Book"
+theme = "book"
 
 enableGitInfo = true
 disableKinds = ['taxonomy', 'taxonomyTerm']

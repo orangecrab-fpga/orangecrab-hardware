@@ -20,7 +20,7 @@ jobs:
 
       - name: Build
         working-directory: ./documentation/hugo-files
-        run: hugo --minify
+        run: hugo --minify --theme book
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
