@@ -7,10 +7,12 @@ rev: r0.2
 # Downloads
 ---
 
+
+
 ## KiCad Sources
 [OrangeCrab GitHub Repository](http://github.com/gregdavill/OrangeCrab)
 
-## Board Images
+## Board 2D Renders
 {{< columns >}}
 [![Front](https://github.com/gregdavill/OrangeCrab/raw/master/hardware/orangecrab_r0.2/Production/OrangeCrab-Front.png)](https://github.com/gregdavill/OrangeCrab/raw/master/hardware/orangecrab_r0.2/Production/OrangeCrab-Front.png)
 <--->
@@ -25,3 +27,5 @@ rev: r0.2
  * [Board CAD model (STEP)](https://github.com/gregdavill/OrangeCrab/raw/master/hardware/orangecrab_r0.2/Production/OrangeCrab-r0.2.step)
 
  * [Production Gerbers (ZIP)](https://github.com/gregdavill/OrangeCrab/raw/master/hardware/orangecrab_r0.2/Production/OrangeCrab-r0.2-gerbers-20200126_122805.zip)
+ 
+![OrangeCrab Photo](../../orangeCrab-6.jpg "OrangeCrab Photo")
