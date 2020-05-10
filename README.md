@@ -1,7 +1,7 @@
 # OrangeCrab
 
 ## ECP5 FPGA Feather development board.
-![Front Photo](documentation/images/OrangeCrab_r0.2_front.jpeg "Front Photo")
+![Front Photo](documentation/hugo-files/static/r0.2/orangeCrab-12.jpg "Front Photo")
 
 ## Latest Revision: 
 * [OrangeCrab r0.2](hardware/orangecrab_r0.2/)
@@ -58,7 +58,12 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
 
 ---
 
-![Back Photo](documentation/images/OrangeCrab_r0.2_back.jpeg "Back Photo")
+![Back Photo](documentation/hugo-files/static/r0.2/orangeCrab-4.jpg "Back Photo")
+
+## Example code
+Example code for Verilog, Litex, And RiscV can be found here:
+
+* [Orange Crab Examples](https://github.com/gregdavill/OrangeCrab-examples)
 
 ## Licence
 
