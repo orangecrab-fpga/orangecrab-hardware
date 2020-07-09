@@ -66,10 +66,16 @@ Example code for Verilog, Litex, And RiscV can be found here:
 
 * [Orange Crab Examples](https://github.com/gregdavill/OrangeCrab-examples)
 
+## Community
+
+We have an OrangeCrab group on the 1BitSquared Discord 
+
+ * https://discord.gg/c4Dnr3b
+
 ## Licence
 
  * Hardware in this repository is licenced under CERN OHL v1.2
  * Gateware/Software/Firmware in this repository is licenced under MIT unless otherise indicated
 
- ## OSHW
+ ## Open Source Hardware
 This board is an OSHWA approved design: [AU000006](https://certification.oshwa.org/au000006.html)
