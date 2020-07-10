@@ -1,0 +1,54 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Getting Started"><meta property="og:title" content="Getting Started"><meta property="og:description" content="Getting Started First time using an FPGA? This guide should cover everything you need to get the example verilog project built and loaded up on the OrangeCrab.
+Step 1: Toolchain Setup  This guide will make use of the Open Source FPGA toolchain. It is possible to build and install these from scratch, but the whole process takes around 30 minutes. So it&rsquo;s generally easier to simply use a nightly build from Open Tool Forge"><meta property="og:type" content="article"><meta property="og:url" content="https://gregdavill.github.io/OrangeCrab/r0.2/docs/getting-started/"><meta property="article:modified_time" content="2020-07-11T00:05:35+09:30"><title>Getting Started | OrangeCrab Docs</title><link rel=icon href=/OrangeCrab/favicon.png type=image/x-icon><link rel=stylesheet href=/OrangeCrab/book.min.9001cdd3af82a164c028a02f58c268e4c0dfc2dd67fd072c795a9ec392fe81d8.css integrity="sha256-kAHN06+CoWTAKKAvWMJo5MDfwt1n/QcseVqew5L+gdg="><script defer src=/OrangeCrab/en.search.min.b08cdac6f36e6bddbfbb0e59e5f84714d351b227da7103b68ad5c5725c1b131d.js integrity="sha256-sIzaxvNua92/uw5Z5fhHFNNRsifacQO2itXFclwbEx0="></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/OrangeCrab><img src=/OrangeCrab/crab.svg alt=Logo><span>OrangeCrab Docs</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/OrangeCrab/r0.2/>Introduction</a></li><li><a href=/OrangeCrab/r0.2/docs/overview/>Overview</a></li><li><a href=/OrangeCrab/r0.2/docs/getting-started/>Getting Started</a></li><li><a href=/OrangeCrab/r0.2/docs/pinout/>Pinout</a></li><li><a href=/OrangeCrab/r0.2/docs/downloads/>Downloads</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/OrangeCrab/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Getting Started</strong>
+<label for=toc-control><img src=/OrangeCrab/svg/toc.svg class=book-icon alt="Table of Contents"></label></div></header><article class=markdown><h1 id=getting-started>Getting Started</h1><p>First time using an FPGA? This guide should cover everything you need to get the example verilog project built and loaded up on the OrangeCrab.</p><h2 id=step-1-toolchain-setup>Step 1: Toolchain Setup</h2><hr><p>This guide will make use of the Open Source FPGA toolchain. It is possible to build and install these from scratch, but the whole process takes around 30 minutes. So it&rsquo;s generally easier to simply use a nightly build from <a href=https://github.com/open-tool-forge/>Open Tool Forge</a></p><hr><p>Grab the <a href=https://github.com/open-tool-forge/fpga-toolchain/releases>latest</a> build for your platform, extract them somewhere on your PC, and add the <code>fpga-toolchain\bin</code> folder to your path:</p><ul><li>MacOS: <code>export PATH=[path-to-bin]:$PATH</code></li><li>Linux: <code>export PATH=[path-to-bin]:$PATH</code></li><li>Windows <code>Powershell: $ENV:PATH = "[path-to-bin];" + $ENV:PATH</code></li><li>Windows <code>cmd.exe: PATH=[path-to-bin];%PATH%</code></li></ul><p>Check that they&rsquo;ve been correctly installed by running <code>yosys -V</code> or <code>nextpnr-ecp5 -V</code></p><div class=highlight><pre style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ yosys -V
+Yosys 0.9+2406 <span style=color:#666>(</span>open-tool-forge build<span style=color:#666>)</span> <span style=color:#666>(</span>git sha1 c0bcbe1f, gcc 9.3.0-10ubuntu2 -Os<span style=color:#666>)</span>
+
+$ nextpnr-ecp5 -V
+nextpnr-ecp5 -- Next Generation Place and Route <span style=color:#666>(</span>Version nightly-20200707<span style=color:#666>)</span>
+</code></pre></div><blockquote><p>Note: The above steps only set the PATH variable for the current terminal session. Depending on your platform there are options to ensure the tools are kept in your path.</p></blockquote><h2 id=step-2-verilog-example>Step 2: Verilog Example</h2><hr><p>Download the <a href=https://github.com/gregdavill/OrangeCrab-examples>example</a> repository. We&rsquo;ll build the verilog/blink example to test that everything is working.</p><div class=highlight><pre style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ git clone https://github.com/gregdavill/OrangeCrab-examples
+$ <span style=color:#007020>cd</span> OrangeCrab-examples/verilog/blink
+$ make
+    ... snip ...
+Info: <span style=color:#666>[</span> 81336,  81410<span style=color:#666>)</span> |* 
+Info: <span style=color:#666>[</span> 81410,  81484<span style=color:#666>)</span> | 
+Info: <span style=color:#666>[</span> 81484,  81558<span style=color:#666>)</span> | 
+Info: <span style=color:#666>[</span> 81558,  81632<span style=color:#666>)</span> |* 
+ecppack --compress --freq 38.8 --input blink_out.config --bit blink.bit
+cp blink.bit blink.dfu
+dfu-suffix -v <span style=color:#40a070>1209</span> -p 5af0 -a blink.dfu
+dfu-suffix <span style=color:#666>(</span>dfu-util<span style=color:#666>)</span> 0.9
+
+Copyright 2011-2012 Stefan Schmidt, 2013-2014 Tormod Volden
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Suffix successfully added to file
+</code></pre></div><p>Next, while holding the button on the OrangeCrab, plug it in. This enters the bootloader and enables you to upload new gateware.
+The LED sholud be smoothly fading through different colours.</p><div class=highlight><pre style=background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ make dfu
+dfu-util -D blink.dfu
+dfu-util 0.9
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2016 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Match vendor ID from file: <span style=color:#40a070>1209</span>
+Match product ID from file: 5af0
+Opening DFU capable USB device...
+ID 1209:5af0
+Run-time device DFU version <span style=color:#40a070>0101</span>
+Claiming USB DFU Interface...
+Setting Alternate Setting <span style=color:#60a0b0;font-style:italic>#0 ...</span>
+Determining device status: <span style=color:#bb60d5>state</span> <span style=color:#666>=</span> dfuIDLE, <span style=color:#bb60d5>status</span> <span style=color:#666>=</span> <span style=color:#40a070>0</span>
+dfuIDLE, continuing
+DFU mode device DFU version <span style=color:#40a070>0101</span>
+Device returned transfer size <span style=color:#40a070>4096</span>
+Copying data from PC to DFU device
+Download	<span style=color:#666>[=========================]</span> 100%        <span style=color:#40a070>99314</span> bytes
+Download <span style=color:#007020;font-weight:700>done</span>.
+state<span style=color:#666>(</span>7<span style=color:#666>)</span> <span style=color:#666>=</span> dfuMANIFEST, status<span style=color:#666>(</span>0<span style=color:#666>)</span> <span style=color:#666>=</span> No error condition is present
+state<span style=color:#666>(</span>8<span style=color:#666>)</span> <span style=color:#666>=</span> dfuMANIFEST-WAIT-RESET, status<span style=color:#666>(</span>0<span style=color:#666>)</span> <span style=color:#666>=</span> No error condition is present
+Done!
+</code></pre></div><p>You should now see the LED blinking through colours!</p><blockquote><p>On linux if dfu-util throws an error you may need to add the following udev rule:</p><p><code>ATTRS{idVendor}=="1209", ATTRS{idProduct}=="5af0", MODE="0666", GROUP="plugdev", TAG+="uaccess"</code></p></blockquote></article><footer class=book-footer><div class="flex justify-between"></div><div class=book-comments></div></footer></div></main></body></html>
