@@ -34,6 +34,14 @@ nextpnr-ecp5 -- Next Generation Place and Route (Version nightly-20200707)
 
 > Note: The above steps only set the PATH variable for the current terminal session. Depending on your platform there are options to ensure the tools are kept in your path. 
 
+---
+
+On linux based systems you may also need to add a udev rule to enable user access to the usb device, once added you'll need to un-plug and reconnect the OrangeCrab for it to take effect
+```bash
+$ cat /etc/udev/rules.d/99-orangecrab.rules
+ATTRS{idVendor}=="1209", ATTRS{idProduct}=="5af0", MODE="0666", GROUP="plugdev", TAG+="uaccess"
+```
+
 ## Step 2: Verilog Example
 ---
 Download the [example](https://github.com/gregdavill/OrangeCrab-examples) repository. We'll build the verilog/blink example to test that everything is working.
@@ -57,6 +65,8 @@ Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 
 Suffix successfully added to file
 ```
+
+---
 
 Next, while holding the button on the OrangeCrab, plug it in. This enters the bootloader and enables you to upload new gateware. 
 The LED sholud be smoothly fading through different colours.
@@ -92,6 +102,3 @@ Done!
 
 You should now see the LED blinking through colours!
 
-> On linux if dfu-util throws an error you may need to add the following udev rule:
->
-> `ATTRS{idVendor}=="1209", ATTRS{idProduct}=="5af0", MODE="0666", GROUP="plugdev", TAG+="uaccess"`
