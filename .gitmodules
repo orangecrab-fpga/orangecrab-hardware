@@ -1,7 +1,7 @@
 [submodule "lib/gkl"]
 	path = lib/gkl
-	url = git@github.com:gregdavill/gsd-kicad-libs.git
+	url = https://github.com/gregdavill/gsd-kicad-libs.git
 [submodule "documentation/hugo-files/themes/book"]
 	path = documentation/hugo-files/themes/book
-	url = git@github.com:gregdavill/hugo-book.git
+	url = https://github.com/gregdavill/hugo-book.git
 	branch = oc
