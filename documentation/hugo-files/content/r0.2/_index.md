@@ -10,7 +10,7 @@ The OrangeCrab is an electronics development board. It is FPGA based featuring a
 
 * Small Compact size (Take it anywhere!)
 * Direct USB connection to the FPGA (Operate as a DFU, MSC, CDC, or composite device!)
-* Onborad DDR3 Memory (1Gbit!)
+* Onboard DDR3 Memory (1Gbit!)
 * Preloaded DFU bootloader (No external programmer required!)
 * It's Orange!
 
