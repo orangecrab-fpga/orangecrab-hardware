@@ -1,0 +1,13 @@
+(sym_lib_table
+  (lib (name power)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_power.lib)(options "")(descr ""))
+  (lib (name gkl_rf)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_rf.lib)(options "")(descr ""))
+  (lib (name gkl_microchip)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_microchip.lib)(options "")(descr ""))
+  (lib (name gkl_pmic)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_pmic.lib)(options "")(descr ""))
+  (lib (name gkl_mosfet)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_mosfet.lib)(options "")(descr ""))
+  (lib (name gkl_mem)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_mem.lib)(options "")(descr ""))
+  (lib (name gkl_time)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_time.lib)(options "")(descr ""))
+  (lib (name gkl_misc)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_misc.lib)(options "")(descr ""))
+  (lib (name gkl_lattice)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_lattice.lib)(options "")(descr ""))
+  (lib (name gkl_power)(type Legacy)(uri ${KIPRJMOD}/../../lib/gkl/gkl_power.lib)(options "")(descr ""))
+  (lib (name ButterStick-rescue)(type Legacy)(uri ${KIPRJMOD}/ButterStick-rescue.lib)(options "")(descr ""))
+)

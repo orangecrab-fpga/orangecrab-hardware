@@ -1,0 +1,13 @@
+(fp_lib_table
+  (lib (name gkl_housings_qfn)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_housings_qfn.pretty)(options "")(descr ""))
+  (lib (name gkl_housings_bga)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_housings_bga.pretty)(options "")(descr ""))
+  (lib (name gkl_housings_son)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_housings_son.pretty)(options "")(descr ""))
+  (lib (name gkl_housings_dfn)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_housings_dfn.pretty)(options "")(descr ""))
+  (lib (name gkl_ublox)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_ublox.pretty)(options "")(descr ""))
+  (lib (name gkl_dipol)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_dipol.pretty)(options "")(descr ""))
+  (lib (name gkl_conn)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_conn.pretty)(options "")(descr ""))
+  (lib (name gkl_logos)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_logos.pretty)(options "")(descr ""))
+  (lib (name gkl_time)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_time.pretty)(options "")(descr ""))
+  (lib (name gkl_led)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_led.pretty)(options "")(descr ""))
+  (lib (name gkl_misc)(type KiCad)(uri ${KIPRJMOD}/../../lib/gkl/gkl_misc.pretty)(options "")(descr ""))
+)
