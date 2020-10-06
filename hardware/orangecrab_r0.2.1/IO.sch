@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "Orange Crab"
-Date "2020-07-18"
+Date "2020-10-06"
 Rev "r0.2.1"
 Comp "Good Stuff Department"
 Comment1 ""
@@ -871,7 +871,7 @@ L Device:R R33
 U 1 1 5E3C4BA2
 P 6150 2900
 F 0 "R33" H 6220 2946 50  0000 L CNN
-F 1 "100k" H 6220 2855 50  0000 L CNN
+F 1 "10k" H 6220 2855 50  0000 L CNN
 F 2 "gkl_dipol:R_0201_0603Metric" V 6080 2900 50  0001 C CNN
 F 3 "~" H 6150 2900 50  0001 C CNN
 F 4 "‎Yageo‎" H 6150 2900 50  0001 C CNN "Mfg"
@@ -886,7 +886,7 @@ L Device:R R32
 U 1 1 5E3D0BAC
 P 6150 2500
 F 0 "R32" H 6220 2546 50  0000 L CNN
-F 1 "100k" H 6220 2455 50  0000 L CNN
+F 1 "10k" H 6220 2455 50  0000 L CNN
 F 2 "gkl_dipol:R_0201_0603Metric" V 6080 2500 50  0001 C CNN
 F 3 "~" H 6150 2500 50  0001 C CNN
 F 4 "‎Yageo‎" H 6150 2500 50  0001 C CNN "Mfg"

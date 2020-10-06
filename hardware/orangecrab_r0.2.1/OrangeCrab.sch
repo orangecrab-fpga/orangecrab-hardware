@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "Orange Crab"
-Date "2020-07-18"
+Date "2020-10-06"
 Rev "r0.2.1"
 Comp "Good Stuff Department"
 Comment1 ""
@@ -16,32 +16,32 @@ $EndDescr
 $Sheet
 S 4050 2900 1800 900 
 U 5AB8ACB7
-F0 "sheetFPGA" 60
-F1 "fileFPGA.sch" 60
+F0 "FPGA" 60
+F1 "FPGA.sch" 60
 $EndSheet
 $Sheet
 S 4050 4200 1800 1000
 U 5ABD38F2
-F0 "sheetHyperRAM" 60
-F1 "fileHyperRAM.sch" 60
+F0 "DRAM" 60
+F1 "DRAM.sch" 60
 $EndSheet
 $Sheet
 S 1800 4200 1800 1000
 U 5AC0A2A0
-F0 "sheetSDMMC" 60
-F1 "fileSDMMC.sch" 60
+F0 "SDMMC" 60
+F1 "SDMMC.sch" 60
 $EndSheet
 $Sheet
 S 6300 2900 1900 900 
 U 5ABC9A87
-F0 "sheetIO" 60
-F1 "fileIO.sch" 60
+F0 "IO" 60
+F1 "IO.sch" 60
 $EndSheet
 $Sheet
 S 1800 2900 1900 900 
 U 5D1738DB
-F0 "sheetPower" 60
-F1 "filePOWER.sch" 60
+F0 "POWER" 60
+F1 "POWER.sch" 60
 $EndSheet
 $Comp
 L Mechanical:MountingHole H4
@@ -94,8 +94,8 @@ $EndComp
 $Sheet
 S 6300 4200 1900 1000
 U 5D35D1F5
-F0 "Decoupling" 50
-F1 "decopling.sch" 50
+F0 "DECOUPLING" 50
+F1 "DECOUPLING.sch" 50
 $EndSheet
 $Comp
 L Mechanical:Fiducial FID1
