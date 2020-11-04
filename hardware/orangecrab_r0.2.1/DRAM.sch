@@ -23,6 +23,8 @@ F 2 "Package_BGA:BGA-96_9.0x13.0mm_Layout2x3x16_P0.8mm" H 6350 5550 50  0001 C C
 F 3 "" H 6350 5550 50  0001 C CNN
 F 4 "MT41K64M16TW-107:J TR" H 6300 4050 50  0001 C CNN "PN"
 F 5 "Micron Technology Inc." H 6300 4050 50  0001 C CNN "Mfg"
+F 6 "Micron Technology Inc." H 6300 4050 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 7 "MT41K256M16TW" H 6300 4050 50  0001 C CNN "pn_product-variant: 85F/4G"
 	1    6300 4050
 	1    0    0    -1  
 $EndComp

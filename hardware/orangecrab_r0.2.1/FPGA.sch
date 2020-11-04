@@ -38,6 +38,11 @@ F 3 "" H 1950 6750 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H -600 5650 50  0001 C CNN "PN"
 F 5 "" H -600 5650 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 1950 6750 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 1950 6750 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 1950 6750 50  0001 C CNN "PN_1"
+F 9 "" H 1950 6750 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 1950 6750 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 1950 6750 50  0001 C CNN "pn_product-variant: 85F/4G"
 	1    1950 6750
 	-1   0    0    -1  
 $EndComp
@@ -52,6 +57,11 @@ F 3 "" H 3500 6750 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H 950 4550 50  0001 C CNN "PN"
 F 5 "" H 950 4550 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 3500 6750 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 3500 6750 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 3500 6750 50  0001 C CNN "PN_1"
+F 9 "" H 3500 6750 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 3500 6750 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 3500 6750 50  0001 C CNN "pn_product-variant: 85F/4G"
 	2    3500 6750
 	-1   0    0    -1  
 $EndComp
@@ -66,6 +76,11 @@ F 3 "" H 2000 1250 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H -550 -2000 50  0001 C CNN "PN"
 F 5 "" H -550 -2000 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 2000 1250 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 2000 1250 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 2000 1250 50  0001 C CNN "PN_1"
+F 9 "" H 2000 1250 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 2000 1250 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 2000 1250 50  0001 C CNN "pn_product-variant: 85F/4G"
 	3    2000 1250
 	-1   0    0    -1  
 $EndComp
@@ -80,6 +95,11 @@ F 3 "" H 5700 4700 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H 50  3450 50  0001 C CNN "PN"
 F 5 "" H 50  3450 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 5700 4700 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 5700 4700 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 5700 4700 50  0001 C CNN "PN_1"
+F 9 "" H 5700 4700 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 5700 4700 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 5700 4700 50  0001 C CNN "pn_product-variant: 85F/4G"
 	4    5700 4700
 	-1   0    0    -1  
 $EndComp
@@ -94,6 +114,11 @@ F 3 "" H 2000 3850 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H -550 -1900 50  0001 C CNN "PN"
 F 5 "" H -550 -1900 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 2000 3850 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 2000 3850 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 2000 3850 50  0001 C CNN "PN_1"
+F 9 "" H 2000 3850 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 2000 3850 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 2000 3850 50  0001 C CNN "pn_product-variant: 85F/4G"
 	6    2000 3850
 	-1   0    0    -1  
 $EndComp
@@ -108,6 +133,11 @@ F 3 "" H 9300 1150 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H 50  -100 50  0001 C CNN "PN"
 F 5 "" H 50  -100 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 9300 1150 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 9300 1150 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 9300 1150 50  0001 C CNN "PN_1"
+F 9 "" H 9300 1150 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 9300 1150 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 9300 1150 50  0001 C CNN "pn_product-variant: 85F/4G"
 	7    9300 1150
 	-1   0    0    -1  
 $EndComp
@@ -122,6 +152,11 @@ F 3 "" H 7800 3100 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H -1450 200 50  0001 C CNN "PN"
 F 5 "" H -1450 200 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 7800 3100 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 7800 3100 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 7800 3100 50  0001 C CNN "PN_1"
+F 9 "" H 7800 3100 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 7800 3100 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 7800 3100 50  0001 C CNN "pn_product-variant: 85F/4G"
 	8    7800 3100
 	-1   0    0    -1  
 $EndComp
@@ -136,6 +171,11 @@ F 3 "" H 10100 5800 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H 250 -100 50  0001 C CNN "PN"
 F 5 "" H 250 -100 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 10100 5800 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 10100 5800 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 10100 5800 50  0001 C CNN "PN_1"
+F 9 "" H 10100 5800 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 10100 5800 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 10100 5800 50  0001 C CNN "pn_product-variant: 85F/4G"
 	9    10100 5800
 	1    0    0    1   
 $EndComp
@@ -595,6 +635,11 @@ F 3 "" H 4650 1300 50  0001 C CNN
 F 4 "LFE5U-25F-8MG285C" H -1000 -3650 50  0001 C CNN "PN"
 F 5 "" H -1000 -3650 50  0001 C CNN "SN-DK"
 F 6 "Lattice Semiconductor Corporation" H 4650 1300 50  0001 C CNN "Mfg"
+F 7 "Lattice Semiconductor Corporation" H 4650 1300 50  0001 C CNN "Mfg_1"
+F 8 "LFE5U-25F-8MG285I" H 4650 1300 50  0001 C CNN "PN_1"
+F 9 "" H 4650 1300 50  0001 C CNN "product-variant: 85F/4G"
+F 10 "Lattice Semiconductor Corporation" H 4650 1300 50  0001 C CNN "mfg_product-variant:85F/4G"
+F 11 "LFE5U-85F-8MG285" H 4650 1300 50  0001 C CNN "pn_product-variant: 85F/4G"
 	5    4650 1300
 	-1   0    0    -1  
 $EndComp
