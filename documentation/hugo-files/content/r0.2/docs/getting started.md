@@ -69,7 +69,7 @@ Suffix successfully added to file
 ---
 
 Next, while holding the button on the OrangeCrab, plug it in. This enters the bootloader and enables you to upload new gateware. 
-The LED sholud be smoothly fading through different colours.
+The LED should be smoothly fading through different colours.
 
 ```bash
 $ make dfu
