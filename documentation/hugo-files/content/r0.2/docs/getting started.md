@@ -11,23 +11,26 @@ First time using an FPGA? This guide should cover everything you need to get the
 ## Step 1: Toolchain Setup
 ---
 
-This guide will make use of the Open Source FPGA toolchain. It is possible to build and install these from scratch, but the whole process takes around 30 minutes. So it's generally easier to simply use a nightly build from [Open Tool Forge](https://github.com/open-tool-forge/)
+This guide will make use of the Open Source FPGA toolchain. It is possible to build and install these from scratch, but the whole process takes around 30 minutes, and can be a bit tricky if you're just getting started. 
+
+It's advised to use an automated build from [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain)
 
 ---
 
-Grab the [latest](https://github.com/open-tool-forge/fpga-toolchain/releases) build for your platform, extract them somewhere on your PC, and add the `fpga-toolchain\bin` folder to your path:
+Grab the [latest](https://github.com/YosysHQ/fpga-toolchain/releases) build for your platform, extract them somewhere on your PC, and add the `fpga-toolchain\bin` folder to your path:
 
- - MacOS: `export PATH=[path-to-bin]:$PATH`
- - Linux: `export PATH=[path-to-bin]:$PATH`
- - Windows `Powershell: $ENV:PATH = "[path-to-bin];" + $ENV:PATH`
- - Windows `cmd.exe: PATH=[path-to-bin];%PATH%`
+```
+ - MacOS:              export PATH=[path-to-bin]:$PATH
+ - Linux:              export PATH=[path-to-bin]:$PATH
+ - Windows Powershell: $ENV:PATH = "[path-to-bin];" + $ENV:PATH
+ - Windows cmd.exe:    PATH=[path-to-bin];%PATH%
+```
 
-Check that they've been correctly installed by running `yosys -V` or `nextpnr-ecp5 -V`
+Check that they've been correctly installed by running:
 
 ```bash
 $ yosys -V
 Yosys 0.9+2406 (open-tool-forge build) (git sha1 c0bcbe1f, gcc 9.3.0-10ubuntu2 -Os)
-
 $ nextpnr-ecp5 -V
 nextpnr-ecp5 -- Next Generation Place and Route (Version nightly-20200707)
 ```
@@ -44,12 +47,14 @@ ATTRS{idVendor}=="1209", ATTRS{idProduct}=="5af0", MODE="0666", GROUP="plugdev",
 
 ## Step 2: Verilog Example
 ---
-Download the [example](https://github.com/gregdavill/OrangeCrab-examples) repository. We'll build the verilog/blink example to test that everything is working.
-```bash
-$ git clone https://github.com/gregdavill/OrangeCrab-examples
+Download the [example](https://github.com/orangecrab-fpga/orangecrab-examples) repository. We'll build the verilog/blink example to test that everything is working.
+```
+$ git clone https://github.com/orangecrab-fpga/orangecrab-examples
 $ cd OrangeCrab-examples/verilog/blink
 $ make
+
     ... snip ...
+
 Info: [ 81336,  81410) |* 
 Info: [ 81410,  81484) | 
 Info: [ 81484,  81558) | 
@@ -66,12 +71,16 @@ Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 Suffix successfully added to file
 ```
 
+**🥳 Congratulations you've successfully compiled gateware for the ECP5!**
+
+
+## Step 3: Verilog Example
 ---
 
 Next, while holding the button on the OrangeCrab, plug it in. This enters the bootloader and enables you to upload new gateware. 
 The LED should be smoothly fading through different colours.
 
-```bash
+```
 $ make dfu
 dfu-util -D blink.dfu
 dfu-util 0.9
@@ -101,4 +110,6 @@ Done!
 ```
 
 You should now see the LED blinking through colours!
+
+**🥳 Congratulations you've successfully loaded this gateware onto the ECP5 on the OrangeCrab!**
 
