@@ -1,5 +1,5 @@
 # OrangeCrab
-[OrangeCrab Web site](https://gregdavill.github.io/OrangeCrab/)
+[OrangeCrab Web site](https://orangecrab-fpga.github.io/orangecrab-hardware/)
 
 ## ECP5 FPGA Feather development board.
 ![Front Photo](documentation/hugo-files/static/r0.2/orangeCrab-12.jpg "Front Photo")
@@ -39,7 +39,7 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
     * MicroSD socket
         * 4bit SD interface (CK, CMD, DAT0-3)
 * Power supply
-    * High effeciency DCDC for main supplies
+    * High efficiency DCDC for main supplies
     * Battery charger (100mA), with charge indicator LED
     * LiPo battery connector (PH type)
 * 48MHz onboard oscillator
@@ -64,7 +64,7 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
 ## Example code
 Example code for Verilog, Litex, And RiscV can be found here:
 
-* [Orange Crab Examples](https://github.com/gregdavill/OrangeCrab-examples)
+* [Orange Crab Examples](https://github.com/orangecrab-fpga/orangecrab-examples)
 
 ## Community
 
@@ -74,8 +74,8 @@ We have an OrangeCrab group on the 1BitSquared Discord
 
 ## Licence
 
- * Hardware in this repository is licenced under CERN OHL v1.2
- * Gateware/Software/Firmware in this repository is licenced under MIT unless otherise indicated
+ * Hardware in this repository is licensed under CERN OHL v1.2
+ * Gateware/Software/Firmware in this repository is licensed under MIT unless otherwise indicated
 
  ## Open Source Hardware
 This board is an OSHWA approved design: [AU000006](https://certification.oshwa.org/au000006.html)

@@ -1,4 +1,4 @@
-baseURL = "https://gregdavill.github.io/OrangeCrab"
+baseURL = "https://orangecrab-fpga.github.io/orangecrab-hardware"
 languageCode = "en-us"
 title = "OrangeCrab Docs"
 theme = "book"
