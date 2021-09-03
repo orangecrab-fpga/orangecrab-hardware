@@ -15,7 +15,7 @@ Project goal: "Make a simple ECP5 breakout board with DDR3L memory". As that was
 * DDR3L Memory upto 1Gbit (64Mbit x16)
 * Micro USB connection
 * Full-speed (12Mbit) USB direct connection to FPGA
-* Battery charger, with charge indicator LED
+* Battery charger, with charge indicator LED (1-cell: 3.7-4.2V)
 * Reset Button 
 * 16Mbit QSPI FLASH Memory (Bitstream + User storage)
 * 4bit MicroSD socket

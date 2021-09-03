@@ -37,7 +37,7 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
 * Power supply
     * High effeciency DCDC for main supplies
     * Battery charger (100mA), with charge indicator LED
-    * LiPo battery connector (PH type)
+    * LiPo battery connector (PH type) (1-cell: 3.7-4.2V)
 * 48MHz onboard oscillator
 * Accesible 0.1" JTAG breakout
 * User I/O
