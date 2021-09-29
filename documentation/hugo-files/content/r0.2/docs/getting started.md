@@ -13,11 +13,11 @@ First time using an FPGA? This guide should cover everything you need to get the
 
 This guide will make use of the Open Source FPGA toolchain. It is possible to build and install these from scratch, but the whole process takes around 30 minutes, and can be a bit tricky if you're just getting started. 
 
-It's advised to use an automated build from [YosysHQ/fpga-toolchain](https://github.com/YosysHQ/fpga-toolchain)
+It's advised to use an automated build from [YosysHQ/oss-cad-suite-build](https://github.com/YosysHQ/oss-cad-suite-build)
 
 ---
 
-Grab the [latest](https://github.com/YosysHQ/fpga-toolchain/releases) build for your platform, extract them somewhere on your PC, and add the `fpga-toolchain\bin` folder to your path:
+Grab the [latest](https://github.com/YosysHQ/oss-cad-suite-build/releases) build for your platform, extract them somewhere on your PC, and add the `oss-cad-suite\bin` folder to your path:
 
 ```
  - MacOS:              export PATH=[path-to-bin]:$PATH
