@@ -2,7 +2,7 @@
 const characterPressed=String.fromCharCode(e.charCode);if(!isHotkey(characterPressed)){return;}
 input.focus();e.preventDefault();}
 function isHotkey(character){const dataHotkeys=input.getAttribute('data-hotkeys')||'';return dataHotkeys.indexOf(character)>=0;}
-function init(){input.removeEventListener('focus',init);input.required=true;loadScript('/orangecrab-hardware/flexsearch.min.js');loadScript('/orangecrab-hardware/en.search-data.min.9ba08881255108eaba678fcffa70b893dc4badc05a97038550523b37d356c973.js',function(){input.required=false;search();});}
+function init(){input.removeEventListener('focus',init);input.required=true;loadScript('/orangecrab-hardware/flexsearch.min.js');loadScript('/orangecrab-hardware/en.search-data.min.c361e5e57efbccea122d5d9e84c51ab2d2ba16d87da87108638d2a3c7e0bd65d.js',function(){input.required=false;search();});}
 function search(){while(results.firstChild){results.removeChild(results.firstChild);}
 if(!input.value){return;}
 const searchHits=window.bookSearchIndex.search(input.value,10);searchHits.forEach(function(page){const li=document.createElement('li'),a=li.appendChild(document.createElement('a'));a.href=page.href;a.textContent=page.title;results.appendChild(li);});}
