@@ -1,0 +1,1 @@
+ATTRS{idVendor}=="1209", ATTRS{idProduct}=="5af0", MODE="0666", GROUP="plugdev", TAG+="uaccess"
