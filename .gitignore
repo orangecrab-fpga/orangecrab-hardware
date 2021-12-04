@@ -39,7 +39,7 @@ archiv
 *.awc
 *.bak
 *.ccl
-*.cfg
+#*.cfg
 *.cmd
 *.cst
 *.fdc
