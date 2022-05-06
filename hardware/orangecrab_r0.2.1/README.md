@@ -21,7 +21,7 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
     * Internal oscillator
     * Flexible I/O for DDR3 Memory Support
 * DDR3L Memory
-    * 128 Mbytes (1Gbit) or 512Mbit (4Gbit)
+    * 128 Mbytes (1Gbit) or 512Mbytes (4Gbit)
     * x16 data width to FPGA
     * 1.35V low voltage operation
 * USB-C connection
