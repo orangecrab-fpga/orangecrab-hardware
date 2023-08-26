@@ -1,11 +1,11 @@
 baseURL = "https://orangecrab-fpga.github.io/orangecrab-hardware"
 languageCode = "en-us"
-title = "OrangeCrab Docs"
+title = "OrangeCrab"
 theme = "book"
 themesDir = "./themes"
 
 enableGitInfo = true
-disableKinds = ['taxonomy', 'taxonomyTerm']
+disableKinds = ['taxonomy']
 
 
 [params]
@@ -15,7 +15,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   BookSection = 'docs'
   BookDateFormat = 'Jan 2, 2006'
   BookSearch = true
-  BookLogo = 'crab.svg'
+
 
 [params.footer]
 	copyright = "[gregdavill](https://twitter.com/gregdavill)"

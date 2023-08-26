@@ -2,12 +2,13 @@
 [OrangeCrab Web site](https://orangecrab-fpga.github.io/orangecrab-hardware/)
 
 ## ECP5 FPGA Feather development board.
-![Front Photo](documentation/hugo-files/static/r0.2/orangeCrab-12.jpg "Front Photo")
+![Front Photo](documentation/images/OrangeCrab_r0.2.1_front.jpeg "Front Photo")
 
 ## Latest Revision: 
-* [OrangeCrab r0.2](hardware/orangecrab_r0.2/)
+* [OrangeCrab r0.2.1](hardware/orangecrab_r0.2.1/)
 
 Previous Revisions:
+* [OrangeCrab r0.2](hardware/orangecrab_r0.2/)
 * [OrangeCrab r0.1](hardware/orangecrab_r0.1/)
 
 ---
@@ -16,7 +17,7 @@ Previous Revisions:
 There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supported by an open source toolchain I decided to create one. In order to make use of the DDR3L support the ECP5 has, I've added some DDR3L memory. The board matches the feather format
 
 ## Hardware Overview
-* Lattice ECP5-25F FPGA in csfBGA285 package
+* Lattice ECP5-25F or ECP5-85F FPGA in csfBGA285 package
     * 24 K - Look Up Tables
     * 1008 Kb - Embedded Block RAM
     * 194 Kb - Distributed RAM
@@ -25,10 +26,10 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
     * Internal oscillator
     * Flexible I/O for DDR3 Memory Support
 * DDR3L Memory
-    * 128 Mbytes (1Gbit)
-    * 64M x16
+    * 128 Mbytes (1Gbit) or 512Mbytes (4Gbit)
+    * x16 data width to FPGA
     * 1.35V low voltage operation
-* Micro USB connection
+* USB-C connection
     * Full-speed (12Mbit) USB with direct connection to FPGA
 * Non-volatile Storage
     * 128Mbit QSPI FLASH Memory 
@@ -43,7 +44,7 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
     * Battery charger (100mA), with charge indicator LED
     * LiPo battery connector (PH type) (1-cell: 3.7-4.2V)
 * 48MHz onboard oscillator
-* Standard 0.05" JTAG connector
+* Accessible 0.1" JTAG breakout
 * User I/O
     * 1x Button 
     * 1x RGB LED
@@ -56,10 +57,10 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
     * Battery voltage sensing
 * Feather Format Board
     * Dimensions: 22.86mm x 50.8mm (0.9" x 2.0")
-
+    * Castellated I/O edges
 ---
 
-![Back Photo](documentation/hugo-files/static/r0.2/orangeCrab-4.jpg "Back Photo")
+![Back Photo](documentation/images/OrangeCrab_r0.2.1_back.jpeg "Back Photo")
 
 ## Example code
 Example code for Verilog, Litex, And RiscV can be found here:

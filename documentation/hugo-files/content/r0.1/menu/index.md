@@ -1,5 +1,0 @@
----
-headless: true
----
-
-- [Introduction]({{< relref ".." >}})

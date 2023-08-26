@@ -1,10 +1,10 @@
 # OrangeCrab r0.2.1
 ## ECP5 Feather development board.
 
-![Front Photo](../../documentation/images/OrangeCrab_r0.2_front.jpeg "Front Photo")
+![Front Photo](../../documentation/images/OrangeCrab_r0.2.1_front.jpeg "Front Photo")
 
 
-	Hardware r0.2.1 has been prototyped and tested and will have a production run soon™
+	Hardware r0.2.1 has run through a production run and available at GroupGets, element14.
     
 ---
 
@@ -56,7 +56,7 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
 
 ---
 
-![Back Photo](../../documentation/images/OrangeCrab_r0.2_back.jpeg "Back Photo")
+![Back Photo](../../documentation/images/OrangeCrab_r0.2.1_back.jpeg "Back Photo")
 
 ## Licence
 
