@@ -15,9 +15,16 @@ This guide will make use of the Open Source FPGA toolchain. It is possible to bu
 
 It's advised to use an automated build from [YosysHQ/oss-cad-suite-build](https://github.com/YosysHQ/oss-cad-suite-build)
 
+The guide will use Ubuntu Linux for a command reference.
+
 ---
 
-Grab the [latest](https://github.com/YosysHQ/oss-cad-suite-build/releases) build for your platform, extract them somewhere on your PC, and add the `oss-cad-suite\bin` folder to your path:
+Grab the [latest](https://github.com/YosysHQ/oss-cad-suite-build/releases/latest) build for your platform, extract them somewhere on your PC, and add the `oss-cad-suite/bin` folder to your path:
+
+```bash
+$ tar -xvf oss-cad-suite-linux-x64-[version].tgz
+$ export PATH=$(pwd)/oss-cad-suite/bin:$PATH
+```
 
 ```
  - MacOS:              export PATH=[path-to-bin]:$PATH
@@ -30,22 +37,36 @@ Check that they've been correctly installed by running:
 
 ```bash
 $ yosys -V
-Yosys 0.9+2406 (open-tool-forge build) (git sha1 c0bcbe1f, gcc 9.3.0-10ubuntu2 -Os)
-$ nextpnr-ecp5 -V
-nextpnr-ecp5 -- Next Generation Place and Route (Version nightly-20200707)
+Yosys 0.32+63 (git sha1 de54cf1a0, clang 10.0.0-4ubuntu1 -fPIC -Os)$ nextpnr-ecp5 -V
+"nextpnr-ecp5" -- Next Generation Place and Route (Version nextpnr-0.6-46-ge08471df)
 ```
 
 > Note: The above steps only set the PATH variable for the current terminal session. Depending on your platform there are options to ensure the tools are kept in your path. 
 
 ---
 
-On linux based systems you may also need to add a udev rule to enable user access to the usb device, once added you'll need to un-plug and reconnect the OrangeCrab for it to take effect
+On linux based systems you may also need to add a udev rule to enable user access to the usb device, once added you'll need to reload the rules or un-plug and reconnect the OrangeCrab for it to take effect
 ```bash
-$ cat /etc/udev/rules.d/99-orangecrab.rules
-ATTRS{idVendor}=="1209", ATTRS{idProduct}=="5af0", MODE="0666", GROUP="plugdev", TAG+="uaccess"
+$ echo "ATTRS{idVendor}==\"1209\", ATTRS{idProduct}==\"5af0\", MODE=\"0666\", GROUP=\"plugdev\", TAG+=\"uaccess\"" | sudo tee /etc/udev/rules.d/99-orangecrab.rules
+$ sudo udevadm trigger
 ```
 
-## Step 2: Verilog Example
+You can check the connection and permissions using `dfu-util`
+
+```bash
+dfu-util --list
+dfu-util 0.11-dev
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2021 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Found DFU: [1209:5af0] ver=0101, devnum=53, cfg=1, intf=0, path="1-1", alt=0, name="0x00080000 Bitstream", serial="UNKNOWN"
+Found DFU: [1209:5af0] ver=0101, devnum=53, cfg=1, intf=0, path="1-1", alt=1, name="0x00100000 RISC-V Firmware", serial="UNKNOWN"
+```
+
+## Step 2: Build Verilog Example
 ---
 Download the [example](https://github.com/orangecrab-fpga/orangecrab-examples) repository. We'll build the verilog/blink example to test that everything is working.
 ```
@@ -62,7 +83,7 @@ Info: [ 81558,  81632) |*
 ecppack --compress --freq 38.8 --input blink_out.config --bit blink.bit
 cp blink.bit blink.dfu
 dfu-suffix -v 1209 -p 5af0 -a blink.dfu
-dfu-suffix (dfu-util) 0.9
+dfu-suffix (dfu-util) 0.11
 
 Copyright 2011-2012 Stefan Schmidt, 2013-2014 Tormod Volden
 This program is Free Software and has ABSOLUTELY NO WARRANTY
@@ -71,7 +92,13 @@ Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 Suffix successfully added to file
 ```
 
-**🥳 Congratulations you've successfully compiled gateware for the ECP5!**
+If you have an OrangeCrab with a ECP5-85F installed then add the DENSITY flag when making
+
+```bash
+$ make DENSITY=85F
+```
+
+**🥳 Congratulations you've successfully compiled gateware for the ECP5 on the orangecrab!**
 
 
 ## Step 3: Verilog Example
@@ -83,7 +110,7 @@ The LED should be smoothly fading through different colours.
 ```
 $ make dfu
 dfu-util -D blink.dfu
-dfu-util 0.9
+dfu-util 0.11
 
 Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
 Copyright 2010-2016 Tormod Volden and Stefan Schmidt
