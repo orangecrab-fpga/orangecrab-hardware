@@ -54,7 +54,7 @@ $ sudo udevadm trigger
 You can check the connection and permissions using `dfu-util`
 
 ```bash
-dfu-util --list
+$ dfu-util --list
 dfu-util 0.11-dev
 
 Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
@@ -139,4 +139,3 @@ Done!
 You should now see the LED blinking through colours!
 
 **🥳 Congratulations you've successfully loaded this gateware onto the ECP5 on the OrangeCrab!**
-
