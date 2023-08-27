@@ -8,7 +8,7 @@ rev: r0.2
 
 First time using an FPGA? This guide should cover everything you need to get the example verilog project built and loaded up on the OrangeCrab.
 
-## Step 1: Toolchain Setup
+## Toolchain Setup
 ---
 
 This guide will make use of the Open Source FPGA toolchain. It is possible to build and install these from scratch, but the whole process takes around 30 minutes, and can be a bit tricky if you're just getting started. 
@@ -21,7 +21,7 @@ The guide will use Ubuntu Linux for a command reference.
 
 Grab the [latest](https://github.com/YosysHQ/oss-cad-suite-build/releases/latest) build for your platform, extract them somewhere on your PC, and add the `oss-cad-suite/bin` folder to your path:
 
-```bash
+```
 $ tar -xvf oss-cad-suite-linux-x64-[version].tgz
 $ export PATH=$(pwd)/oss-cad-suite/bin:$PATH
 ```
@@ -35,25 +35,27 @@ $ export PATH=$(pwd)/oss-cad-suite/bin:$PATH
 
 Check that they've been correctly installed by running:
 
-```bash
+```
 $ yosys -V
 Yosys 0.32+63 (git sha1 de54cf1a0, clang 10.0.0-4ubuntu1 -fPIC -Os)$ nextpnr-ecp5 -V
 "nextpnr-ecp5" -- Next Generation Place and Route (Version nextpnr-0.6-46-ge08471df)
 ```
 
-> Note: The above steps only set the PATH variable for the current terminal session. Depending on your platform there are options to ensure the tools are kept in your path. 
+{{< hint warning >}}
+The above steps only set the PATH variable for the current terminal session. Depending on your platform there are options to ensure the tools are kept in your path. 
+{{< /hint >}}
 
 ---
 
 On linux based systems you may also need to add a udev rule to enable user access to the usb device, once added you'll need to reload the rules or un-plug and reconnect the OrangeCrab for it to take effect
-```bash
+```
 $ echo "ATTRS{idVendor}==\"1209\", ATTRS{idProduct}==\"5af0\", MODE=\"0666\", GROUP=\"plugdev\", TAG+=\"uaccess\"" | sudo tee /etc/udev/rules.d/99-orangecrab.rules
 $ sudo udevadm trigger
 ```
 
 You can check the connection and permissions using `dfu-util`
 
-```bash
+```
 $ dfu-util --list
 dfu-util 0.11-dev
 
@@ -66,9 +68,10 @@ Found DFU: [1209:5af0] ver=0101, devnum=53, cfg=1, intf=0, path="1-1", alt=0, na
 Found DFU: [1209:5af0] ver=0101, devnum=53, cfg=1, intf=0, path="1-1", alt=1, name="0x00100000 RISC-V Firmware", serial="UNKNOWN"
 ```
 
-## Step 2: Build Verilog Example
+## Build Verilog Example
 ---
 Download the [example](https://github.com/orangecrab-fpga/orangecrab-examples) repository. We'll build the verilog/blink example to test that everything is working.
+
 ```
 $ git clone https://github.com/orangecrab-fpga/orangecrab-examples
 $ cd OrangeCrab-examples/verilog/blink
@@ -92,16 +95,18 @@ Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 Suffix successfully added to file
 ```
 
+{{< hint info >}}
 If you have an OrangeCrab with a ECP5-85F installed then add the DENSITY flag when making
 
 ```bash
 $ make DENSITY=85F
 ```
+{{< /hint >}}
 
 **🥳 Congratulations you've successfully compiled gateware for the ECP5 on the orangecrab!**
 
 
-## Step 3: Verilog Example
+## Upload Verilog Example
 ---
 
 Next, while holding the button on the OrangeCrab, plug it in. This enters the bootloader and enables you to upload new gateware. 

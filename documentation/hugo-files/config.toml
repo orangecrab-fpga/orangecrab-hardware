@@ -24,6 +24,7 @@ disableKinds = ['taxonomy']
 
 [markup.goldmark.renderer]
     unsafe= true
+    hardWraps = true
   
 [markup.highlight]
     codeFences = true
@@ -33,6 +34,5 @@ disableKinds = ['taxonomy']
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
-    noClasses = true
-    style = "friendly"
-    background = "#2D2E27"
+    noClasses = false
+    style = "manni"
