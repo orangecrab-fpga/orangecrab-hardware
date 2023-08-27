@@ -9,7 +9,8 @@ disableKinds = ['taxonomy']
 
 
 [params]
-  BookToC = false
+  BookTheme = 'light'
+  BookToC = true
   BookMenuBundle = '/menu'
 
   BookSection = 'docs'
