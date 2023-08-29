@@ -26,6 +26,9 @@ disableKinds = ['taxonomy']
     unsafe= true
     hardWraps = true
   
+[markup.goldmark.parser.attribute]
+block = true # default is false
+
 [markup.highlight]
     codeFences = true
     pygmentscodefences = true
