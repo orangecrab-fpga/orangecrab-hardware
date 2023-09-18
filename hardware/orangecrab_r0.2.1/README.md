@@ -60,8 +60,8 @@ There aren't many OSHW ECP5 boards available. Given that this FPGA is fully supp
 
 ## Licence
 
- * Hardware in this repository is licenced under CERN OHL v1.2
- * Gateware/Software/Firmware in this repository is licenced under MIT unless otherise indicated
+ * Hardware in this repository is licensed under CERN OHL v1.2
+ * Gateware/Software/Firmware in this repository is licensed under MIT unless otherwise indicated
 
-## OSHW
-    TBD, this board may require recertification with OSHWA.
+ ## Open Source Hardware
+This board is an OSHWA approved design: [AU000015](https://certification.oshwa.org/au000015.html)

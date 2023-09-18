@@ -79,4 +79,4 @@ We have an OrangeCrab group on the 1BitSquared Discord
  * Gateware/Software/Firmware in this repository is licensed under MIT unless otherwise indicated
 
  ## Open Source Hardware
-This board is an OSHWA approved design: [AU000006](https://certification.oshwa.org/au000006.html)
+This board is an OSHWA approved design: [AU000015](https://certification.oshwa.org/au000015.html)
