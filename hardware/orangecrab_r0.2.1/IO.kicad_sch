@@ -5324,6 +5324,7 @@
 	)
 	(label "A3"
 		(at 218.44 114.3 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5334,6 +5335,7 @@
 	)
 	(label "_USB_D_P"
 		(at 63.5 64.77 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5344,6 +5346,7 @@
 	)
 	(label "A0"
 		(at 218.44 106.68 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5354,6 +5357,7 @@
 	)
 	(label "A2"
 		(at 218.44 111.76 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5364,6 +5368,7 @@
 	)
 	(label "A4"
 		(at 218.44 116.84 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5374,6 +5379,7 @@
 	)
 	(label "AREF"
 		(at 218.44 101.6 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5384,6 +5390,7 @@
 	)
 	(label "A1"
 		(at 218.44 109.22 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5394,6 +5401,7 @@
 	)
 	(label "A5"
 		(at 218.44 119.38 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5404,6 +5412,7 @@
 	)
 	(label "_USB_D_N"
 		(at 63.5 67.31 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5414,6 +5423,7 @@
 	)
 	(label "_USB_D_P"
 		(at 33.02 140.97 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5424,6 +5434,7 @@
 	)
 	(label "_USB_D_N"
 		(at 33.02 143.51 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6542,7 +6553,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d0a61da")
-		(property "Reference" "J?"
+		(property "Reference" "J2"
 			(at 232.41 140.97 0)
 			(effects
 				(font
@@ -6644,10 +6655,6 @@
 		)
 		(instances
 			(project "OrangeCrab"
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005d1738db"
-					(reference "J?")
-					(unit 1)
-				)
 				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
 					(reference "J2")
 					(unit 1)
@@ -6665,7 +6672,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d1698ae")
-		(property "Reference" "J?"
+		(property "Reference" "J1"
 			(at 220.98 53.34 0)
 			(effects
 				(font
@@ -6757,10 +6764,6 @@
 		)
 		(instances
 			(project "OrangeCrab"
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005d1738db"
-					(reference "J?")
-					(unit 1)
-				)
 				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
 					(reference "J1")
 					(unit 1)
@@ -7293,10 +7296,6 @@
 			(project "OrangeCrab"
 				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
 					(reference "#PWR0121")
-					(unit 1)
-				)
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005d1738db"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -10711,10 +10710,6 @@
 			(project "OrangeCrab"
 				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
 					(reference "#PWR0109")
-					(unit 1)
-				)
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005d1738db"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)

@@ -3257,6 +3257,7 @@
 	)
 	(label "RAM_VDDQ"
 		(at 185.42 74.93 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3267,6 +3268,7 @@
 	)
 	(label "RAM_VDDQ"
 		(at 134.62 48.26 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3277,6 +3279,7 @@
 	)
 	(label "RAM_ZQ"
 		(at 185.42 87.63 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3287,6 +3290,7 @@
 	)
 	(label "RAM_VDD"
 		(at 185.42 72.39 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3297,6 +3301,7 @@
 	)
 	(label "RAM_VDD"
 		(at 134.62 29.21 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6863,10 +6868,6 @@
 					(reference "R5")
 					(unit 1)
 				)
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
-					(reference "R?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -6968,10 +6969,6 @@
 			(project "OrangeCrab"
 				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abd38f2"
 					(reference "R13")
-					(unit 1)
-				)
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
-					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -7079,10 +7076,6 @@
 					(reference "R1")
 					(unit 1)
 				)
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
-					(reference "R?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -7186,10 +7179,6 @@
 			(project "OrangeCrab"
 				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abd38f2"
 					(reference "R2")
-					(unit 1)
-				)
-				(path "/e2139f5f-1e2a-4e6a-b8f5-bf5d629175a9/00000000-0000-0000-0000-00005abc9a87"
-					(reference "R?")
 					(unit 1)
 				)
 			)
